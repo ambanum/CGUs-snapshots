@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# weheartit-tl: http://ogp.me/ns/fb/weheartit-tl#">
+    <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5b52aba749","applicationID":"126300297","transactionName":"JQxbTEJfDg5TQxZEFQcXXFtvQAMFU0IWQw4V","queueTime":2,"applicationTime":77,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"5b52aba749",applicationID:"126300297"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+
+<title>Terms of Service - We Heart It</title>
+
+<meta name="author" content="We Heart It | Get lost in what you love" />
+  <meta name="description" content="Discover photos, videos and articles from friends that share your passion for beauty, fashion, photography, travel, music, wallpapers and more. Browse endless inspiration and create mood boards to share with friends or save for later." />
+  <meta name="keywords" content="inspiration, images, image search, picture gallery, beautiful images" />
+<meta name="verify-v1" content="yWQd1QQOfyW6rzPkONyfqW5FWN893CD28NUQk30n2Po=" />
+<meta name="apple-itunes-app" content="app-id=539124565"/>
+<meta name="google" value="notranslate" />
+<meta name="google-site-verification" content="2CvSp512_iBKdx3E2WmmD14XybjcyQUa7hn9L2Non98" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<!-- pinterest domain verify -->
+<meta name="p:domain_verify" content="ffbe899db827967e40cf58e30bed6c38"/>
+
+  
+  <meta property="al:ios:url" content="whi://about/terms-of-service" />
+<meta property="al:ios:app_store_id" content="539124565" />
+<meta property="al:ios:app_name" content="We Heart It" />
+
+<meta property="al:android:url" content="whi://about/terms-of-service" />
+<meta property="al:android:app_name" content="We Heart It" />
+<meta property="al:android:package" content="com.weheartit" />
+
+<meta property="al:web:url" content="https://weheartit.com/about/terms-of-service" />
+<meta property="al:web:should_fallback" content="false" />
+
+  
+  
+
+  <link rel="manifest" href="/manifest.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="https://assets.whicdn.com/assets/favicon-acfe5c2d81119e375156c82cd638c2baa64f367772c1c93ca3d6e436306e53b1.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://assets.whicdn.com/assets/apple-touch-icon-8931e5fb1a152ab346a7e686cee68947f500005a2bcf688243f36f9185e7ac07.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://assets.whicdn.com/assets/favicon-32x32-b87167c22631401b1264a3255366236bb20fe668cc358a649a3aa4f8b6457b78.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://assets.whicdn.com/assets/favicon-16x16-d2cb79e1987cc80f53bcaac37c6e11025f49f39b48440070e1b392d6cd6873de.png">
+<link rel="mask-icon" href="https://assets.whicdn.com/assets/safari-pinned-tab-22b569b09abd0360e129c661c62c48993b9ff0e1a5defcdf07a9a21f79cc3d3a.svg" color="#ff4477">
+<meta name="msapplication-TileColor" content="#ff4477">
+<meta name="theme-color" content="#ff4477">
+
+
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/iblenkmcolcdonmlfknbpbgjebabcoae" />
+
+
+
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/Yj2TRJ1edYc3CrJ4x5V5YniMsnOR37maddoUr80jU39tgNRCO0/oozgughJaY1C66oY/vvVgJTvGkZNpLS7XQ==" />
+
+<link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-8191728d380e4778f04010a227ff30e895329e41bb1e27a6a437ac8b52856258.css" />
+
+<script type="text/javascript">
+
+(function () {
+  var width = window.innerWidth;
+  var screenSize = 'unknown';
+  if (width) {
+    if (width >= 1440) {
+      screenSize = 'xl';
+    } else if (width >= 1280) {
+      screenSize = 'lg';
+    } else if (width >= 1024) {
+      screenSize = 'md';
+    } else if (width >= 768) {
+      screenSize = 'sm';
+    } else {
+      screenSize = 'xs';
+    }
+  }
+
+  window.whiConfig = {
+
+    pagePath: 'static_pages/tos',
+    authenticated : 'no',
+    article_features : '',
+    disable_anonymous_registration : false,
+    user_authenticated : false,
+    experiment : null,
+    current_locale : "en",
+    new_language_notification : false,
+    entry_exists : false,
+    mobile_app : false,
+    mobile_site : false,
+    platform : 'web',
+    dev_mode : false,
+    request_type : "GET",
+    facebook : { appId: '200368456664008', api_version: 'v6.0', user_token : "" },
+    pink_snake_loader_path: 'https://assets.whicdn.com/assets/pink_snake_loader-9e7a4ef0068a73f7d2ff7dfc834c46201d5f17f122f0e99fefbed642ce68e170.gif',
+    screen_size: screenSize,
+    witleeEnabled: false,
+    env: "production",
+    prebidTimeout: 2000,
+    networkAdsEnabled: true,
+    pageBlocked: false,
+    recaptchaSiteKey: '6Lct9KUZAAAAANpjbKp49nKjrfmDN9yRsEoRrAil'
+  }
+}())
+</script>
+
+<script src="https://assets.whicdn.com/assets/application-header-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  
+    ga('create', 'UA-20250234-16', 'auto', {
+      sampleRate: 50
+    });
+
+
+
+  if (!window.whiConfig.uid) {
+    ga(function(tracker){
+      whiConfig.uid = "anonymous." + tracker.get('clientId');
+    });
+  }
+</script>
+
+
+    <script type="text/javascript" src="//native.sharethrough.com/assets/sfp.js"></script>
+
+    <script async src="//js-sec.indexww.com/ht/p/190492-96139365094532.js"></script>
+
+  <script type="text/javascript">
+      // Amazon A9
+      !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+      apstag.init({
+        pubID: '3431',
+        adServer: 'googletag'
+      });
+
+    // DFP
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+
+    // Wait for header bidding
+    googletag.cmd.push(function () {
+      googletag.pubads().disableInitialLoad();
+    });
+
+    (function() {
+      var gads = document.createElement('script');
+      gads.async = true;
+      gads.type = 'text/javascript';
+      var useSSL = 'https:' == document.location.protocol;
+      gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+      var node = document.getElementsByTagName('script')[0];
+      node.parentNode.insertBefore(gads, node);
+    })();
+  </script>
+
+
+
+  </head>
+
+
+  <body class="loggedout  body-xs-double-navbar " >
+    <!-- container used to render all modals in -->
+    <div class="modal js-modal-container noskim noskimwords"></div>
+
+    <!-- empty lightbox -->
+    <!-- lightbox -->
+<div id="lightbox" style="display:none;">
+  <div class="spinner"></div>
+</div> <!-- close lightbox -->
+
+
+    
+
+    
+
+    <!-- navbar -->
+    <!-- navbar wrapper -->
+<nav id="navbar" class="js-navbar panel panel-navbar no-padding navbar-light noskim noskimwords">
+  <div class="container">
+
+    <div class="grid-flex no-wrap">
+
+      <!-- logo horizontal -->
+      <div class="col hide-xs hide-sm">
+          <a href="/"><img class="img-static" alt="We Heart It" style="height: 28px" src="https://assets.whicdn.com/assets/weheartit-42e2538b2440ef84f47b25402883bb255ef589c10193a8b323892a0f718749ab.png" /></a>
+        &nbsp;&nbsp;&nbsp;
+      </div>
+
+      <!-- logo square -->
+      <div class="col hide-md hide-lg hide-xl">
+        <a href="/"><img class="img-static" title="We Heart It" alt="We Heart It" style="width:32px;margin-left:0.5em" src="https://assets.whicdn.com/assets/weheartit_logo_square-3f849727a15abb21f66c5740d7f5106dad42f07e512a1d98be5699ad5361da10.png" /></a>
+      </div>
+
+      <!-- main area -->
+      <div class="col span-12">
+        <div class="grid-flex text-center">
+
+          <!-- links -->
+          <div class="col">
+            <ul class="tabs-light no-shadow">
+
+              <!-- home link -->
+              <li class=" ">
+                <a href="/dashboard">
+                  <i class="icon icon-home "></i>
+                  <span class="hide-xs hide-sm">Home</span>
+</a>              </li>
+
+              <!-- discover link -->
+              <li class="">
+                <a href="/">
+                  <i class="icon icon-discover"></i>
+                  <span class="hide-xs hide-sm">Discover</span>
+</a>              </li>
+
+              <!-- articles link -->
+              <li class="">
+                <a href="/articles">
+                  <i class="icon icon-article"></i>
+                  <span class="hide-xs hide-sm">Articles</span>
+</a>              </li>
+
+              <!-- inspiration link -->
+              <li class="">
+                <a href="/inspirations">
+                  <i class="icon icon-channels"></i>
+                  <span class="hide-xs hide-sm hide-md">Channels</span>
+</a>              </li>
+
+            </ul>
+          </div> <!-- /links -->
+
+          <!-- spacer -->
+          <div class="col">&nbsp;&nbsp;&nbsp;</div>
+
+          <!-- search field -->
+          <div class="col span-12">
+            <form id="image-search-form" class="navbar-search" action="/search/entries" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+                <input type="hidden" name="ac" id="ac" value="0" class="autocomplete-clicked" />
+                <input type="search" name="query" id="text" placeholder="Search for things you love..." maxlength="140" class="js-autocomplete-field searchfield btn btn-block btn-small text-left bg-offwhite input-icon icon-search" />
+</form>          </div> <!-- /search field -->
+        </div> <!-- grid-flex -->
+      </div> <!-- /col main area -->
+
+       <div class="col no-wrap">
+         <div class="grid-flex">
+            <!-- sign up button -->
+            <div class="col no-wrap text-right pad-right">
+              <a class="js-sign-up btn btn-small bg-primary js-sign-up" href="/join">Join</a>
+            </div>
+
+            <!-- login button -->
+            <div class="col no-wrap text-right pad-right">
+              <a class="btn btn-small text-primary js-login" href="/login">Log in</a>
+            </div>
+
+            <!-- more stuff -->
+            <div class="col hide-xs">
+              <div class="dropdown dropdown-right">
+                <a href="#" class="btn btn-link text-gray">▾</a>
+<ul class="dropdown-menu-light panel">
+  <li class="text-small"><a href="/about">About We Heart It</a></li>
+  <!-- <li class="text-small"><a href="http://business.weheartit.com/">Business</a></li> -->
+  <!-- <li class="text-small"><a href="http://business.weheartit.com/careers">Careers</a></li> -->
+  <!-- <li class="text-small"><a href="http://blog.weheartit.com">Blog</a></li> -->
+  <li class="dropdown-divider"></li>
+  <li class="push-down"><div><a class="btn btn-small btn-block btn-wrap bg-gradient" href="/about/app">Download the App</a></div></li>
+  <li><div><a class="btn btn-small btn-block btn-wrap text-primary" href="/heart-button">Heart Button</a></div></li>
+  <li class="dropdown-divider"></li>
+  <li class="text-small"><a onclick="$(&#39;#languages-picker&#39;).show(); return false;" href="#">Language</a></li>
+  <li class="text-small"><a href="/about/terms-of-service">Terms</a></li>
+  <li class="text-small"><a href="/about/privacy-policy">Privacy</a></li>
+  <li class="text-small"><a target="_blank" href="/contact">Contact us</a></li>
+  <li class="text-small"><a href="/help">Help</a></li>
+</ul>
+
+              </div>
+            </div> <!-- /more stuff -->
+          </div>
+        </div>
+
+    </div> <!-- /grid flex -->
+
+
+  </div> <!-- /container light -->
+</nav> <!-- /navbar -->
+
+<!-- //////////////////////////// -->
+
+
+
+  <!-- connection error modal -->
+  <div class="floating-window" id="connection-error" style="display:none">
+    <span class="close"></span>
+    <div class="floating-window-content">
+      <span class="closex"></span>
+      <div class="unstlyed popup">
+        <span><strong>connection lost:</strong></span>
+        <span><a href="">try refreshing to keep hearting</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Languages modal -->
+  <div class="floating-window" id="languages-picker" style="display:none">
+    <span class="close"></span>
+    <div class="floating-window-content">
+      <span class="closex"></span>
+      <p>Language</p>
+      <hr>
+      <ul class="list-unstyled languages popup">
+        
+  <div class="col span-4 span-xs-4">
+    <ul class="list-unstyled">
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=en">English</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=de">Deutsch</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=el">Ελληνικά</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=es">Español</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=fi">Suomi</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=fr">Français</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=hu">Magyar</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=id">Bahasa Indonesia</a></small></li>
+    </ul>
+  </div>
+  <div class="col span-4 span-xs-4">
+    <ul class="list-unstyled">
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=it">Italiano</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=ja">日本語</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=ko">한국어</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=nb">Norsk</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=nl">Nederlands</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=pl">Polski</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=pt-br">Português (BR)</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=ro">Română</a></small></li>
+    </ul>
+  </div>
+  <div class="col span-4 span-xs-4">
+    <ul class="list-unstyled">
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=ru">Русский</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=sv">Svenska</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=th">ภาษาไทย</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=tr">Türkçe</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=zh-cn">简体字</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=zh-tw">繁體字</a></small></li>
+    </ul>
+  </div>
+
+      </ul>
+    </div>
+  </div>
+
+<!-- Add images modal -->
+<div class="floating-window" id="addimages" style="display:none">
+  <span class="close"></span>
+  <div class="floating-window-content">
+    <span class="closex position-top-right"></span>
+    <p class="text-strong">New Post</p>
+    <hr class="no-padding">
+    <br>
+    <div class="grid text-center">
+      <div class="col span-4">
+        <a class="js-upload-image" href="javascript:void(0);">
+          <i class="icon icon-upload icon-huge icon-primary push-down"></i><br>
+          Post Image
+</a>      </div>
+      <div class="col span-4">
+        <a href="/articles/new">
+          <i class="icon icon-article icon-huge icon-primary push-down">
+            <span class="btn btn-tiny bg-success position-top-right text-uppercase">new</span>
+          </i><br>
+          Write an Article
+</a>      </div>
+      <div class="col span-4">
+        <a class="js-add-from-url" href="javascript:void(0);">
+          <i class="icon icon-web icon-huge icon-primary push-down"></i><br>
+          Add From URL
+</a>      </div>
+    </div>
+
+    <hr>
+
+    <div class="grid">
+      <div class="col span-6 text-center"><small><a class="heartbutton-link text-primary" data-track="event" data-category="AddImage" data-action="ClickedGetHeartButton" data-label="false" href="/heart-button">Get the Heart Button</a></small></div>
+      <div class="col span-6 text-center"><small><a class="goodies-link text-primary" data-track="event" data-category="AddImage" data-action="ClickedAddButtonSite" data-label="false" href="/settings/goodies">Add button to my site</a></small></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Cookie warning -->
+<div class="panel position-bottom-left position-fixed push-around text-center js-cookie-warning" style="left: 110px; max-width:25em; display:none;">
+  <p>
+    This website uses cookies to ensure you get the best experience on our website.
+    <a class="text-underline" target="_blank" href="/about/privacy-policy">Learn more</a>
+  </p>
+  <p>
+    <a href="#" class="btn btn-mini btn-wide bg-primary js-cookie-warning-dismiss">
+      Got it!
+    </a>
+  </p>
+</div>
+
+
+    <!-- interstitial for apps -->
+
+
+    <main style="">
+      <div class="container" id="main-container" data-title="Terms of Service - We Heart It">
+        <br>
+<div class="grid-responsive">
+
+  <!-- sidebar -->
+  <div class="cel span-3 span-xs-12 span-sm-4">
+    <!-- hiding part of the menu on xs devices to comply with google -->
+<!-- but ideally would just link to #content so page jumps to right place -->
+
+<div class="panel panel-large list list-tabs hide-xs">
+  <div class="list-item ">
+    <a title="About We Heart It" href="/about">About</a>
+  </div>
+  <!-- <div class="list-item ">
+    <span class="right">➚</span>
+    <a title="Careers" href="http://business.weheartit.com/careers">Careers</a>
+  </div>
+  <div class="list-item">
+    <span class="right">➚</span>
+    <a title="Press" href="http://business.weheartit.com/press">Press</a>
+  </div> -->
+  <div class="list-item">
+    <a title="Need Help?" target="_blank" href="/help">Help</a>
+  </div>
+  <div class="list-item ">
+    <a title="Talk To Us" target="_blank" href="/contact">Contact</a>
+  </div>
+  <div class="list-item ">
+    <a title="Claim Copyright" href="/contact/copyright">Copyright</a>
+  </div>
+</div>
+
+<br>
+
+<div class="panel panel-large list list-tabs">
+  <div class="list-item bg-offwhite">
+    <a href="/about/terms-of-service">Terms and Privacy</a>
+  </div>
+
+    <div class="list-item list-item-small active">
+      <a href="https://weheartit.com/about/terms-of-service">Terms of Service</a>
+    </div>
+    <div class="list-item list-item-small ">
+      <a href="https://weheartit.com/about/privacy-policy">Privacy Policy</a>
+    </div>
+    <div class="list-item list-item-small ">
+      <a href="https://weheartit.com/about/ca-privacy">California Privacy Rights</a>
+    </div>
+    <div class="list-item list-item-small ">
+      <a href="/contact/copyright">Claim Copyright</a>
+    </div>
+      <div class="list-item list-item-small">
+        <a href="/about/monetized-links">Links monetized by Skimlinks</a>
+      </div>
+
+</div>
+
+<br class="show-xs">
+<br class="show-xs">
+<br class="show-xs">
+
+  </div>
+
+  <!-- main -->
+  <div class="cel span-9 span-xs-12 span-sm-8">
+
+    <div class="panel panel-large">
+      <h4 class="h4">Table of contents:</h4>
+      <ul class="list-spaced">
+        <li><a class="js-toc-link" href="#I">   I.    Terms of Service                        </a></li>
+        <li><a class="js-toc-link" href="#II">  II.   User Accounts                           </a></li>
+        <li><a class="js-toc-link" href="#III"> III.  General Terms                           </a></li>
+        <li><a class="js-toc-link" href="#IV">  IV.   User Posted and Third Party Content     </a></li>
+        <li><a class="js-toc-link" href="#V">   V.    CONTENT OWNERSHIP AND GRANT OF RIGHTS   </a></li>
+        <li><a class="js-toc-link" href="#VI">  VI.   Prohibited Actions                      </a></li>
+        <li><a class="js-toc-link" href="#VII"> VII.  Digital Millennium Copyright Actions    </a></li>
+        <li><a class="js-toc-link" href="#VIII">VIII. Account Termination Policy              </a></li>
+        <li><a class="js-toc-link" href="#IX">  IX.   Indemnification                         </a></li>
+        <li><a class="js-toc-link" href="#X">   X.    Electronic Communications               </a></li>
+        <li><a class="js-toc-link" href="#XI">  XI.   Feeds                                   </a></li>
+        <li><a class="js-toc-link" href="#XII"> XII.  Governing Law; Dispute Resolution       </a></li>
+        <li><a class="js-toc-link" href="#XIII">XIII. Disclaimers and Limitation of Liability </a></li>
+        <li><a class="js-toc-link" href="#XIV"> XIV.  Miscellaneous                           </a></li>
+      </ul>
+    </div>
+
+    <hr id="content">
+    <br>
+
+    <h2 class="h2" id="I">I. Terms of Service</h2>
+    <p><strong>Effective Date</strong>: This Terms of Service is effective and was last updated as of October 16, 2019 (the "Terms of Service").</p>
+    <p><strong>A.</strong> The We Heart It website (our "Website") and the We Heart It mobile applications are owned and operated by Super Basic, LLC. ("We Heart It", "we", "us" or "our"). By accessing or using the services available through our Website or our mobile applications (the "Services"), you agree to be bound by this Terms of Service and our Privacy Policy currently found at https://weheartit.com/about/privacy-policy and incorporated herein by reference. This Terms of Service governs your and our rights and obligations with respect to any pictures, videos, information, tags, messages, graphics or other materials and any “collections” or “canvases” of the foregoing (collectively, the "Content") Hearted (as defined in Section III below), uploaded, transmitted, tagged or posted (altogether, "Posted") by you or our other users in connection with the Services. In order to agree to the Terms of Service and use the Services, you need to (1) be 18 or older or have your parent or guardian’s consent to agree to the Terms of Service, and (2) have the power to enter a binding contract with us and not be barred from doing so under any applicable law. If you do not agree to be bound by this Terms of Service, you are not permitted to use our Services. </p>
+    <p><strong>B.</strong> We may, at our sole discretion, modify or revise this Terms of Service and policies at any time by giving notice on our Website and/or through the Services, and you agree to be bound by such modifications or revisions. Although We Heart It may attempt to notify you when major changes are made to this Terms of Service, you should periodically click on our Terms of Service to review any updates. All changes shall be effective immediately when we post them and shall apply to all access to and use of our Website and Services thereafter. Nothing in this Terms of Service shall be deemed to confer any third-party rights or benefits hereunder.</p>
+
+    <br><br>
+    <h2 class="h2" id="II">II. User Accounts</h2>
+    <p><strong>A.</strong> Creation of a User Account. In order to create a user account for our Services (a "User Account"), you must (i) agree to be bound by this Terms of Service, (ii) provide a valid email address, and (iii) provide any other information required during the registration process. You are responsible for providing complete and accurate information when registering for a User Account, and for keeping such information current. You are responsible for maintaining the security of the User Account and any password associated therewith. You agree to keep your password secure and confidential and to not allow anyone else to use your username or password to access our Website. You also agree not to create additional User Accounts for the purpose of abusing the functionality of our Website or to seek to pass yourself off as another user. You agree that you will not solicit, collect or use the login credentials of other We Heart It users. You are responsible for all Content that is Posted to our Website or through the Services using the User Account we provide to you, as well as any other activity originating from the User Account we provide to you. We reserve the right to deny registration of any individual and to deny access to our Services to any individual, and to modify or terminate the Services, in each case, for any reason, with or without notice and at any time. Notwithstanding anything to the contrary herein, you acknowledge and agree that you shall have no ownership or other property interest in the User Account we provide to you.</p>
+    <p><strong>B.</strong> Suspension and Termination of Account and Service. Generally, a User Account will be considered active until we receive a user request to deactivate or delete it. We reserve the right to limit, suspend, terminate, modify, or delete (i) the User Account we provide to you or (ii) your access to our Services or portions thereof (including any Content you or other users submit) for any reason, with or without notice and at any time, including, without limitation, if you are, or we suspect that you are, improperly using the Services, violating any applicable laws or failing to comply with this Terms of Service (including, without limitation, the "prohibited actions" set forth in Section VI below). We reserve the right to force forfeiture of or reassign any username for any reason, with or without notice and at any time. We also reserve the right to stop offering and/or supporting the Services or any part of the Services at any time either permanently or temporarily, for any reason, with or without notice to you, at which point your use of the Services or any part thereof will be automatically terminated or suspended. We will not provide refunds, benefits or other compensation to users in connection with our exercise of any of our rights hereunder. You may cancel any User Account registered to you at any time by following the instructions <a href="https://weheartit.com/settings/delete">here</a>.</p>
+
+    <br><br>
+    <h2 class="h2" id="III">III. General Terms</h2>
+    <p><strong>A.</strong> You are responsible for your use of our Services, for any Content you Post using the Services, and for any consequences or liability arising therefrom. As part of the Services, you will be provided the opportunity to contribute inspirational Content to the We Heart It community ("Hearting"). You can Heart Content by (i) uploading Content from your computer to our servers or (ii) if you have downloaded and installed our web browser extension and/or bookmarklet, by clicking on the Heart icon in your web browser and selecting the Content you want to Post to our Website through the Services. Please note that other users of the Services will be able to view any Content you Heart. In addition, if another user ReHearts (as defined in Section V(B)) any Content you Post, such Content will become part of such other user’s profile and will be available to such other user and anyone wishing to view or ReHeart such ReHearted Content even if you later decide to remove the Content from your own user profile. As such, you should only provide Content you are comfortable sharing under this Terms of Service.</p>
+    <p><strong>B.</strong> The Services may include advertisements targeted to users, Content or queries made through the Services, or other information. The types and extent of advertising by us on the Services are subject to change. In consideration for us granting you access to and use of the Services, you agree that we and our third-party providers and partners may place such advertising on the Services or in connection with the display of Content or information from the Services whether submitted by you or others. You acknowledge that we may not always identify paid services, sponsored Content or commercial communications as such.</p>
+    <p><strong>C.</strong> The Services that we provide are always evolving and the form and nature of the Services may change from time to time without prior notice to you. We also retain the right to create limits on use and storage at our sole discretion at any time without prior notice to you.</p>
+    <p><strong>D.</strong> You are solely responsible for your interaction with other users of the Services, whether online or offline. We reserve the right, but have no obligation, to monitor or become involved in disputes between you and other users.</p>
+
+    <br><br>
+    <h2 class="h2" id="IV">IV. User Posted and Third Party Content</h2>
+    <p><strong>A.</strong> We do not review new Content prior to it being Posted on our Website or through the Services. By Posting Content to our server, you guarantee us that you have the right to make this Content available for use in accordance herewith. You further agree that Content you Post to the Services will not contain third-party copyrighted material, or material that is subject to other third-party rights (including rights relating to publicity and privacy), unless you have permission from the rightful owner of the material or you are otherwise legally entitled to Post the material and to grant We Heart It all of the license rights granted herein.</p>
+    <p><strong>B.</strong> Any use or reliance on Content Posted using the Services or obtained by you through the Services, including any Content you Reheart, is at your own risk.</p>
+    <p><strong>C.</strong> We do not guarantee, support or represent the completeness, reliability, truthfulness or accuracy of any Content appearing on our Website or the Services. You understand that by using the Services, you may be exposed to Content you may find offensive, inaccurate or otherwise inappropriate, deceptive or in some cases, mislabeled. We expressly disclaim any liability for any Content, including, but not limited to, any errors or omissions within any Content, or any loss or damage of any kind incurred as a result of the use of any Content Posted, emailed or otherwise made available via the Services.</p>
+    <p><strong>D.</strong> The Services may contain links to third-party websites that are not owned or controlled by us. Functionality of the Services may also permit interactions between the Services and third-party applications or features, including applications that connect the Services or your profile with a third-party website or feature. For example, the Services may include a feature that enables you to share Content from the Services or your Content with a third party, which may be publicly posted on that third party’s service or application. We have no control over, and assume no responsibility for, the content, privacy policies or practices of any third-party website, service, feature or application. In addition, we will not and cannot censor or edit the content of any third-party website, service, feature or application. By using the Services, you expressly relieve us of any and all liability arising from your use of any third-party website, service, feature or application. Accordingly, we encourage you to be aware when you leave the Services and to read the terms and conditions and privacy policy of each other website that you visit. Your correspondence and dealings with third parties in connection with the Services are solely between you and such third parties.</p>
+    <p><strong>E.</strong> We reserve the right to remove hosted content and take technical and legal steps to bar users from our Website and/or the Services if we believe them to be in violation of this Terms of Service. If you feel that any Content currently Posted on our Website or the Services is in violation of this Terms of Service, please click on the "Report this Entry" link next to the non-compliant Content and follow the instructions provided.</p>
+
+    <br><br>
+    <h2 class="h2" id="V">V. CONTENT OWNERSHIP AND GRANT OF RIGHTS</h2>
+    <p><strong>A.</strong> We Heart It and/or its third-party licensors retain ownership of all intellectual property rights in this Website, the Services and any software, mobile applications, web browser extensions and/or bookmarklets made available to you in connection with the Services. However, we do not claim any ownership in the Content you or our other users Post.</p>
+    <p><strong>B.</strong> So that We Heart It can operate, maintain, market and improve our Website, our mobile applications and our Services and our users can use and enjoy the same, when you Post Content through our Services (including any Content you have Hearted), you give We Heart It, its affiliates and its third-party providers and partners a non-exclusive, worldwide, royalty-free, sublicensable, transferable right and license to use, host, store, cache, reproduce, publish, display (publicly or otherwise), perform (publicly or otherwise), distribute, transmit, modify, adapt (including, without limitation, in order to conform it to the requirements of any networks, devices, services, or media through which the Services are available), copy and create derivative works of such Content (either alone or as part of a collective work). As part of the foregoing license grant (the "User Content License"), and without limiting the User Content License, you agree that (i) the other users of our Services shall have the right to comment on your Content and/or to <u>use, publish, display, modify or include</u> a copy of your Content as part of their own user profile and Hearted Content ("ReHearting") and (ii) we have the right to make any of your publicly-Posted Content available to third parties, so that those third parties can distribute, make derivative works of, comment on and/or analyze your Content on other media and services (either alone or as part of a collective work). For the avoidance of doubt, you agree that our third-party content providers, partners and advertisers may display or feature any Content that you Post through our Services in their own Content and promotional material on our Website, including in their profiles on our Website.</p>
+    <p><strong>C.</strong> Because of the social nature of Content shared through our Services, when you Post something publicly on our Website or through our Services, others may choose to add descriptive commentary and tags to your Content and/or to ReHeart your Content, making your Content part of a social conversation that cannot later be erased without retroactively censoring the speech of others and/or removing Content from another user’s profile. You may adjust your privacy settings to make certain portions of your profile private, but the content that you post will still be available through our Services, and others may choose to add descriptive commentary and tags to your Content and/or to ReHeart your Content. As such, and in order to maintain the integrity of the Services, you agree that the rights that you have granted under the User Content License will continue to survive in perpetuity even if you stop using the Services or your account is otherwise terminated.</p>
+    <p><strong>D.</strong> Upon termination of your Account or upon your deletion of any Content from the Services, We Heart It shall make reasonable efforts to disassociate such Content from your User Account; however, you acknowledge and agree that: (a) caching of, copies of, or references to such Content may not be immediately removed; (b) such removed Content may persist in backups for a reasonable period of time; and (c) such removed Content may continue to be publicly available (and stored on our or third party servers) through the accounts of other users, if the same has been ReHearted.</p>
+
+    <br><br>
+    <h2 class="h2" id="VI">VI. Prohibited Actions</h2>
+    <p><strong>A.</strong> You agree that you will not:
+      <ul class="list-spaced">
+        <li>take any actions with respect to your use of our Website or our Services that are unlawful, false, misleading, harmful, threatening, embarrassing, abusive, harassing, tortious, defamatory, vulgar, obscene, libelous, deceptive, fraudulent, invasive of another’s privacy, hateful, or contains explicit or graphic descriptions, accounts or photographic depictions of sexual or violent acts;</li>
+        <li>Post any Content that victimizes, harasses, degrades, or intimidates an individual or group of individuals on the basis of any impermissible classification, including, but not limited to, Posting discriminatory, racist or xenophobic Content;</li>
+        <li>Post any Content that includes images or videos portraying realistic images of people or animals being killed or maimed, shot, stabbed, tortured or injured;</li>
+        <li>Post any Content that infringes any patent, trademark, trade secret, copyright, or other intellectual or proprietary right of any party;</li>
+        <li>Post any Content that you do not have a right to do so under any law or under any contractual or fiduciary relationship;</li>
+        <li>Post any Content that encourages excessive consumption of alcohol or illegal substances, or encourages minors to consume alcohol or smoke cigarettes;</li>
+        <li>Post web links to any material that contains software viruses or any other computer code, files, or programs designed to interrupt, destroy, or limit the functionality of our Website, our mobile applications or the Services, or any system or computer from which our visitors and users access our Website, mobile applications or Services;</li>
+        <li>use any robot, spider or other automatic device, process or means to access our Website or Services for any purpose, including monitoring or copying any of the material on our Website, in violation of our robot.txt;</li>
+        <li>interfere with or disrupt our Website or our Services or servers or networks linked to our Website or our Services, or disobey any requirements, procedures, policies, or regulations of networks linked to our Website or our Services;</li>
+        <li>violate any applicable local, state, national, or international law;</li>
+        <li>Post any Content that includes images or videos of children, without first obtaining the consent of their parent or guardian to Post such Content;</li>
+        <li>Post any Content, or take any other actions with respect to your use of our Website or our Services, that would constitute, or would otherwise encourage, criminal conduct or conduct that could give rise to civil liability;</li>
+        <li>Send unsolicited messages to users (spam) for commercial purposes;</li>
+        <li>Use our Website or our Services for commercial purposes without our prior written consent;</li>
+        <li>Solicit other guests of our Website or our Services to become members of any commercial on-line service or other group or organization without first obtaining our express written consent; or</li>
+        <li>Post any Content that encourages thinspiration, depression, suicide, self-harm, eating disorder, drug use or any behavior that can negatively influence other users.</li>
+      </ul>
+    </p>
+
+    <br><br>
+    <h2 class="h2" id="VII">VII. Digital Millennium Copyright Actions</h2>
+    <p><strong>A.</strong> DMCA Take-Down Notices. If you are a copyright owner or an agent thereof and believe that any Content Posted on our Website or through our Services infringes upon your copyrights, you may submit a written notification pursuant to the Digital Millennium Copyright Act ("DMCA") by providing our Copyright Agent (set forth in Section VII(B)) with the following information (see 17 U.S.C 512(c)(3) for further detail):
+      <ul class="list-spaced">
+        <li>a signature (physical or electronic) of the owner or a person who has been authorized by the owner of the allegedly infringed right to act on their behalf;</li>
+        <li>identification of the copyrighted work or other intellectual property that has allegedly been infringed;</li>
+        <li>identify the material on our Website or our Services that alleged to be infringing, with enough detail so that we are able to locate it on our Website. Providing a URL or URLs is the most effective method of identifying such material;</li>
+        <li>a statement that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;</li>
+        <li>information reasonably sufficient to permit We Heart It to contact the complaining party, such as an address, telephone number, and, if available, an electronic mail address at which the complaining party may be contacted; and</li>
+        <li>a statement that the information provided in the notice is accurate, and under penalty of perjury, that you are the owner of the copyright interest involved or that you are authorized to act on behalf of that owner.</li>
+      </ul>
+    </p>
+    <p>To expedite our ability to process your request, such written notice may be sent to our designated agent via our online copyright complaint form below. You will need a We Heart It account in order to utilize this tool.</p>
+    <p><a href="https://weheartit.com/contact/copyright" class="btn text-primary">Copyright Complaint Webform</a></p>
+    <p>If you prefer to contact us via postal mail or email you may do so here: Copyright Agent, Super Basic, LLC, Copyright Team, 1880 Century Park East Suite 209 Los Angeles, CA 90067 USA. Email: legal@weheartit.com</p>
+    <p><strong>B.</strong> We Heart It’s designated Copyright Agent to receive notifications of claimed infringement is: Copyright team.</p>
+    <p><strong>C.</strong> For clarity, only DMCA notices should go to the Copyright Agent; any other feedback, comments, requests for technical support, and other communications should be directed to We Heart It customer support at hello@weheartit.com. You acknowledge that if you fail to comply with all of the requirements of this Section 5(C), your DMCA notice may not be valid.</p>
+    <p><strong>D.</strong> Counter-Notices. If you believe that your Content that has been removed from our Website or our Services is not infringing, or that you have the authorization from the copyright owner, the copyright owner’s agent, or pursuant to the law, to Post and use the Content in the manner so Posted or used, you may send a counter-notice containing the following information to our copyright agent using the contact information set forth above:
+      <ul class="list-spaced">
+        <li>your physical or electronic signature;</li>
+        <li>a description of the Content that has been removed and the location at which the content appeared before it was removed;</li>
+        <li>a statement that you have a good faith belief that the Content was removed as a result of mistake or a misidentification of the Content; and</li>
+        <li>your name, address, telephone number, and email address, a statement that you consent to the jurisdiction of the federal court in the State of New York, and a statement that you will accept service of process from the person who provided notification of the alleged infringement.</li>
+      </ul>
+    </p>
+    <p><strong>E.</strong> If a counter-notice is received by our copyright agent, We Heart It may send a copy of the counter-notice to the original complaining party informing such person that We Heart It may reinstate the removed Content in ten (10) business days. Unless the copyright owner files an action seeking a court order against the Content provider, member or user, the removed Content may (in We Heart It’s discretion) be reinstated on our Website and our Services by We Heart It in ten (10) to fourteen (14) business days or more after receipt of the counter-notice.</p>
+
+    <br><br>
+    <h2 class="h2" id="VIII">VIII. Account Termination Policy</h2>
+    <p>We will terminate a user’s access to the Services if, under appropriate circumstances, the user is determined to be a repeat infringer. We also reserve the right to decide whether Content violates this Terms of Service for reasons other than copyright infringement, such as, but not limited to, pornography, obscenity, or excessive length. We may at any time, without prior notice and at our sole discretion, remove such Content and/or terminate a user’s account for submitting such material in violation of this Terms of Service.</p>
+
+    <br><br>
+    <h2 class="h2" id="IX">IX. Indemnification</h2>
+    <p>You hereby agree to defend, indemnify and hold us, our business partners, third-party suppliers and providers, licensors, officers, directors, employees, distributors and agents (collectively, the "Indemnified Parties") harmless from and against any damages, losses, liabilities, settlements, and expenses (including without limitation costs and reasonable attorneys’ fees) in connection with any claim or action that (i) arises from any alleged breach by you of this Terms of Service or any representations, warranties and/or covenants contained herein, (ii) arises from the Content or effects of any messages you Post using our Services, or (iii) otherwise arises from or relates to your use of our Services. In addition, you acknowledge and agree that the Indemnified Parties have the right to seek damages from you when you use our Services for unlawful purposes, in an unlawful manner, and/or in a manner inconsistent with this Terms of Service, and that such damages may include, without limitation, direct, indirect, special, incidental, cover, reliance and/or consequential damages.</p>
+
+    <br><br>
+    <h2 class="h2" id="X">X. Electronic Communications</h2>
+    <p>You consent to receive communications from us electronically. We will communicate with you by e-mail to your registered email address or by posting notices on this Website and/or through our Services. You agree that all agreements, notices, disclosures and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.</p>
+
+    <br><br>
+    <h2 class="h2" id="XI">XI. Feeds</h2>
+    <p>We Heart It provides access to portions of its Website and Services via RSS feeds; for the purposes of this Terms of Service, such access constitutes use of our Website and Services. We ask that you use these features respectfully. You may not use these or any other features to allow the display of a substantial portion of the We Heart It database or reproduce, duplicate or copy our Website or our Services. We reserve the rights to change these features at any time and to disable access to the feeds and the application program interface at any time for any reason.</p>
+
+    <br><br>
+    <h2 class="h2" id="XII">XII. Governing Law; Dispute Resolution</h2>
+    <p>In order to expedite and control the cost of disputes, you and We Heart It agree that any legal or equitable claim relating to this Terms of Service (referred to as a "Claim") will be resolved as set forth in this Section XII.</p>
+    <p><strong>A.</strong> Informal Resolution. You and We Heart It agree that we will first try to resolve any Claim informally. Accordingly, neither of us may start a formal proceeding for at least thirty (30) days after one of us notifies the other of a Claim in writing. We Heart It will send its notice to your email address. You will send your notice to hello@weheartit.com.</p>
+    <p><strong>B.</strong> Arbitration. Please read this carefully. It affects your rights. We Heart It and you (such references include our respective predecessors in interest, successors and assigns) agree to arbitrate all disputes and claims arising out of or relating to this Terms of Service between We Heart It and you. The arbitration shall be governed by the Commercial Dispute Resolution Procedures and the Supplementary Procedures for Consumer Related Disputes (collectively, "AAA Rules") of the American Arbitration Association ("AAA"), as modified by this Terms of Service, and shall be administered by the AAA. All issues are for the arbitrator to decide, including the scope of this arbitration clause, but the arbitrator is bound by this Terms of Service. Except as otherwise provided for herein, We Heart It will pay all AAA filing, administration and arbitrator fees. If, however, the arbitrator finds that either the substance of your claim or the relief sought is improper or not warranted, as measured by the standards set forth in Federal Rule of Civil Procedure 11(b), then the payment of all such fees shall be governed by the AAA Rules. In such case, you agree to reimburse We Heart It for all monies previously disbursed by it that are otherwise your obligation to pay under the AAA Rules. If the arbitrator grants relief to you that is equal to or greater than the value of your demand, We Heart It shall reimburse you for your reasonable attorneys’ fees and expenses incurred for the arbitration. You agree that, by entering into this Terms of Service, you and We Heart It are waiving the right to a trial by jury. You and We Heart It agree that YOU AND We Heart It MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, and not as a plaintiff or class member in any purported class or representative proceeding. Further, you agree that the arbitrator may not consolidate proceedings or more than one person's claims, and may not otherwise preside over any form of a representative or class proceeding, and that if this specific proviso is found to be unenforceable, then the entirety of this arbitration clause shall be null and void. </p>
+    <p><strong>C.</strong> Formal Resolution. If we cannot resolve a Claim informally, you and We Heart It each agree to submit to personal jurisdiction in New York and agree that any and all Claims either of us asserts shall be exclusively brought in the appropriate state or federal court in the Southern District of the State of New York, provided that neither you nor We Heart It shall be precluded from filing a Claim in small claims court, regardless of whether such small claims court is located in New York, for disputes within the jurisdiction of a small claims court.</p>
+    <p><strong>D.</strong> Governing Law and Jurisdictional Issues. This Terms of Service is governed in all respects by the substantive laws of the State of New York and of the United States of America. The UN Convention on Contracts for the International Sale of Goods is expressly disclaimed. Those who choose to access our Website or our Services from other locations do so on their own initiative and are responsible for compliance with local laws, if and to the extent local laws are applicable. Access to our Website or our Services from any territory where the content is illegal is prohibited. You may not use or export any of the materials available on our Website or through our Services in violation of U.S. export laws and regulations.</p>
+
+    <br><br>
+    <h2 class="h2" id="XIII">XIII. Disclaimers and Limitation of Liability</h2>
+    <p><strong>A.</strong> No Express or Implied Warranties. OUR WEBSITE AND SERVICES ARE PROVIDED "AS IS" AND WE EXPRESSLY DISCLAIM ALL WARRANTIES OR CONDITIONS OF ANY KIND, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT, WE HEART IT MAKES NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THIS WEBSITE'S CONTENT OR THE CONTENT OF ANY SITES LINKED TO THIS WEBSITE AND ASSUMES NO LIABILITY OR RESPONSIBILITY FOR ANY (I) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT, (II) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF OUR SERVICES, (III) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN, (IV) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM OUR SERVICES, (V) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE TRANSMITTED TO OR THROUGH OUR SERVICES BY ANY THIRD PARTY, AND/OR (VI) ANY ERRORS OR OMISSIONS IN ANY CONTENT OR FOR ANY LOSS OR DAMAGE OF ANY KIND (INCLUDING LOSS OR DAMAGE TO CONTENT). WE HEART IT DOES NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE SERVICES OR ANY HYPERLINKED SERVICES OR FEATURED IN ANY BANNER OR OTHER ADVERTISING, AND WE HEART IT WILL NOT BE A PARTY TO OR IN ANY WAY BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES. AS WITH THE PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM OR IN ANY ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE. SOME JURISDICTIONS DO NOT ALLOW WARRANTIES TO BE EXCLUDED, RESTRICTED OR MODIFIED AND CONTAIN LIMITATIONS AS TO HOW LONG AN IMPLIED WARRANTY LASTS, SO THE ABOVE LIMITATIONS OF LIABILITY MAY NOT APPLY TO YOU. YOU MAY ALSO HAVE OTHER LEGAL RIGHTS WHICH VARY DEPENDING ON YOUR PLACE OF RESIDENCE. WE ARE NOT LIABLE FOR ANY DELAY OR FAILURE TO PERFORM RESULTING FROM ANY CAUSES BEYOND OUR REASONABLE CONTROL. AS SUCH, WE ARE NOT LIABLE FOR ANY ACTS OR OMISSIONS BY ANY OTHER PARTY FURNISHING A PORTION OF OUR SERVICES. USE OF OUR SERVICES AND ANY RELIANCE BY YOU UPON OUR SERVICES IS AT YOUR SOLE RISK. THIS INCLUDES ANY ACTION TAKEN BY YOU BECAUSE OF SUCH USE OR RELIANCE.</p>
+    <p><strong>B.</strong> Limitation of Liability. IN NO EVENT SHALL WE HEART IT, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS, BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES WHATSOEVER RESULTING FROM ANY (I) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT, (II) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF OUR SERVICES, (III) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN, (IV) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM OUR SERVICES, (V) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE, WHICH MAY BE TRANSMITTED TO OR THROUGH OUR SERVICES BY ANY THIRD PARTY, AND/OR (VI) ANY ERRORS OR OMISSIONS IN ANY CONTENT OR FOR ANY LOSS OR DAMAGE OF ANY KIND (INCLUDING LOSS OR DAMAGE TO CONTENT), IN EACH CASE WHETHER BASED ON WARRANTY, CONTRACT, TORT, OR ANY OTHER LEGAL THEORY, AND WHETHER OR NOT WE HEART IT IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. YOU SPECIFICALLY ACKNOWLEDGE THAT WE HEART IT SHALL NOT BE LIABLE FOR CONTENT OR THE DEFAMATORY, OFFENSIVE, OR ILLEGAL CONDUCT OF ANY THIRD PARTY AND THAT THE RISK OF HARM OR DAMAGE FROM THE FOREGOING RESTS ENTIRELY WITH YOU. BY ENTERING INTO THIS AGREEMENT, YOU AGREE THAT OUR LIABILITY TO YOU SHALL NOT EXCEED THE AMOUNT OF THE MONTHLY SUBSCRIPTION FEE WE COLLECT FROM YOU, IF ANY. BECAUSE SOME STATES OR JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR THE LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, IN SUCH STATES OR JURISDICTIONS THE ABOVE LIMITATIONS AND EXCLUSIONS MAY NOT APPLY TO YOU. IN SUCH STATES OR JURISDICTIONS, OUR LIABILITY IS LIMITED TO THE EXTENT PERMITTED BY LAW, THEREBY MINIMIZING OUR LIABILITY TO YOU TO THE LOWEST AMOUNT PERMITTED BY APPLICABLE LAW. The Services are controlled and offered by We Heart It from its facilities in the United States of America. We Heart It makes no representations that the Services are appropriate or available for use in other locations. Those who access or use the Services from other jurisdictions do so at their own volition and are responsible for compliance with local law.</p>
+
+    <br><br>
+    <h2 class="h2" id="XIV">XIV. Miscellaneous</h2>
+    <p><strong>A.</strong> Suggestions and Feedback. We welcome feedback or inquiries about our services. However, if you elect to provide any feedback or comments of any nature to us, all of such feedback and comments shall be our sole and exclusive property and we will have the right to use such feedback in any manner and for any purpose at our discretion without remuneration, compensation or attribution to you, provided that we are under no obligation to use such feedback.</p>
+    <p><strong>B.</strong> Right to Assign. This Terms of Service, and any rights and licenses granted hereunder, may not be transferred or assigned by you, and any purported assignment shall be null and void, but may be assigned or delegated by us, in whole or in part, without restriction.</p>
+    <p><strong>C.</strong> No Agency. No agency, partnership, joint venture, or employment is created as a result of the Terms of Service, and you do not have any authority of any kind to bind us in any respect whatsoever.</p>
+    <p><strong>D.</strong> Interpretation and Entire Agreement. This Terms of Service, together with our Privacy Policy, form the complete and exclusive agreement between you and us, and they supersede all prior or contemporaneous proposals, oral or written, understandings, representations, conditions, warranties, and all other communications between you and us relating to the subject products. No waiver by either party of any breach or default hereunder shall be deemed to be a waiver of any preceding or subsequent breach or default. The section headings used herein are for convenience only and shall not affect the interpretation of this Terms of Service. If any provision of this Terms of Service shall be unlawful, void, or for any reason unenforceable, the other provisions of this Terms of Service shall be unimpaired and the invalid or unenforceable provision shall be deemed modified so that it is valid and enforceable to the maximum extent permitted by law.</p>
+    <p><strong>E.</strong> Consumer Rights Notice. Under California Civil Code Section 1789.3, California users of our Website and/or Services are entitled to receive the following specific consumer rights notice: The provider of our Website and Services is Super Basic, LLC., and can be contacted at the address found in Section XIV(G). As of the date of these terms, no direct charges are imposed by our Website or the download of our mobile applications. If you have a complaint with the services provided on our Website or through our Services or wish to request further information, please contact us at the physical address set forth in in Section XIV(G) with a description of your request. We cannot guarantee a response in any particular time period. If you remain unsatisfied, contact The Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs may be contacted in writing at 1625 North Market Blvd., Suite N 112, Sacramento, California 95834, or by telephone at 1-800-952-5210.</p>
+    <p><strong>F.</strong> For Parents and Guardians. This Website and our Services are not intended for children under the age of 13. If you are under 18, your parent/guardian may request the termination of your Account by contacting We Heart It customer support at hello@weheartit.com. Control tools are available from online services and software manufacturers that can help provide a safe online environment for kids. You can find out about software that protects your kids at https://www.consumer.ftc.gov/topics/protecting-kids-online and at https://www.getnetwise.org/.</p>
+    <p><strong>G.</strong> Contact Us. If you have any questions, comments or concerns about this Terms of Service, our Website, our mobile applications and/or our Services you may contact us via email at legal@weheartit.com.  However, please note that communications made through our Website’s and/or our Services’ e-mail and messaging system shall in no way be deemed to constitute legal notice to us or any of its officers, employees, agents or representatives, such as where notice to us is required by contract, or any federal, state or local laws, rules or regulations. You may provide legal notice to us here: Super Basic, LLC, 387 Park Ave S, 5th Floor, New York, NY 10016.</p>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+      <!-- login modal -->
+  <div class="floating-window" id="first-heart-window" style="display: none;">
+    <div class="floating-window-content text-center">
+      <h3>Is this your first heart?</h3>
+      <hr />
+      <p>Sign in with Facebook or Twitter to start your gallery.</p>
+      <p>
+        <a class="button facebook huge" rel="nofollow" href="https://weheartit.com/join/facebook?heart=1&amp;registration_source=facebook.heart">Sign in with Facebook</a>
+        <a class="button twitter huge" rel="nofollow" href="https://weheartit.com/join/twitter?heart=1&amp;registration_source=twitter.heart">Sign in with Twitter</a>
+      </p>
+      <small><a href="https://weheartit.com/join?full=1">Don&#39;t have Twitter or Facebook? Skip this step!</a></small>
+      <br />
+      <div class="footer">
+        <p>Have a We Heart It account?</p>
+        <a class="button" href="https://weheartit.com/login?heart=1">Log in now</a>
+      </div>
+    </div>
+    <span class="close"></span>
+  </div> <!-- close floating window -->
+
+
+    <!-- infinite scroll pagination -->
+    <div class="text-small text-center position-fixed position-bottom push-around hidden js-pagination-counter" style="opacity:0.95; width: auto; right: 0; left: auto;">
+  <a class="btn btn-block text-primary hidden js-pagination-scroll-top" href="/about/terms-of-service">Scroll to Top</a>
+  <form class="panel js-pagination-counter-form push-up hide-xs">
+    <span>Page</span>
+    <input type="text" class="btn-mini text-center js-pagination-counter-current" value="1" style="width:4em">
+    <span class="js-pagination-counter-total"></span>
+  </form>
+</div>
+
+
+    <div class="floating-window js-popup" style="display: none;">
+  <div class="floating-window-content text-center">
+    <br>
+    <h4 class="h4 js-popup-title"></h4>
+    <p class="js-popup-message"></p>
+    <button class="btn btn-small js-popup-cancel">Cancel</button>
+    <button class="btn btn-small bg-primary btn-wide js-popup-confirm">Opt out</button>
+  </div>
+</div>
+
+    
+
+      <footer class="panel panel-bar no-padding bg-offwhite overflow-hidden push-up-2em noskim noskimwords">
+  <div class="container text-center-xs push-up-2em">
+
+
+    <div class="grid-responsive">
+
+      <div class="col span-2 span-xs-12">
+        <div class="text-center">
+          <a data-track="event" data-category="AppPromo" data-action="Footer" data-label="https://weheartit.com/about/terms-of-service" href="/about/app">
+            <img class="img-static" src="https://assets.whicdn.com/assets/weheartit_logo_square-3f849727a15abb21f66c5740d7f5106dad42f07e512a1d98be5699ad5361da10.png" alt="Weheartit logo square" /> <br><br>
+            <small>Download our app for iOS and Android!</small>
+</a>        </div>
+      </div>
+
+        <div class="col span-5 span-xs-12">
+          <p class="h5">&nbsp;</p>
+          <div class="grid">
+            <div class="col span-6 span-xs-12">
+              <ul class="list-unstyled">
+                <li><small><a href="/about">About the site</a></small></li>
+                <li><small><a href="/help">Need help? Read this</a></small></li>
+                <li><small><a href="/bookmarklet">Get the Heart Button</a></small></li>
+                <li><small><a target="_blank" href="/contact">Contact the Support Team</a></small></li>
+                <!-- <li><small><a href="http://business.weheartit.com/">We Heart It for Business</a></small></li> -->
+              </ul>
+            </div>
+
+            <div class="col span-6 span-xs-12">
+              <ul class="list-unstyled">
+                <li><small><a href="/about/terms-of-service">Terms of Service</a></small></li>
+                <li><small><a href="/about/privacy-policy">Privacy Policy</a></small></li>
+                <li><small><a href="/about/ca-privacy">California Privacy Rights</a></small></li>
+                  <li><small><a href="/about/monetized-links">Links monetized by Skimlinks</a></small></li>
+                <li><small><a href="/contact/copyright">Claim Copyright</a></small></li>
+              </ul>
+            </div>
+            <div class="cel span-12">
+              <p><small>© All images are copyrighted by their respective authors.</small></p>
+              <p>
+                <small>
+                  This site is protected by reCAPTCHA and the Google
+                  <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                  <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col span-4 span-xs-12">
+          <div class="show-xs">
+            <a onclick="$(&#39;#languages-picker&#39;).show(); return false;" class="btn btn-small text-muted" href="#">Language</a>
+          </div>
+          <div class="hide-xs">
+            <p class="h5">Languages:</p>
+            <div class="grid">
+              
+  <div class="col span-4 span-xs-4">
+    <ul class="list-unstyled">
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=en">English</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=de">Deutsch</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=el">Ελληνικά</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=es">Español</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=fi">Suomi</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=fr">Français</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=hu">Magyar</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=id">Bahasa Indonesia</a></small></li>
+    </ul>
+  </div>
+  <div class="col span-4 span-xs-4">
+    <ul class="list-unstyled">
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=it">Italiano</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=ja">日本語</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=ko">한국어</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=nb">Norsk</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=nl">Nederlands</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=pl">Polski</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=pt-br">Português (BR)</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=ro">Română</a></small></li>
+    </ul>
+  </div>
+  <div class="col span-4 span-xs-4">
+    <ul class="list-unstyled">
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=ru">Русский</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=sv">Svenska</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=th">ภาษาไทย</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=tr">Türkçe</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=zh-cn">简体字</a></small></li>
+        <li class="push-down-xs"><small><a rel="nofollow" data-method="put" href="/settings/locale?locale=zh-tw">繁體字</a></small></li>
+    </ul>
+  </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col span-1 span-xs-12 hide-xs">
+          <br class="show-xs"><br class="show-xs"><br class="show-xs">
+          <img class="img-static" src="https://assets.whicdn.com/assets/pink_heart-c5ef333f3ec0e55b8499d882c73c7ae2b99b0e24514310908c316faa50f0c842.png" alt="Pink heart" />
+        </div>
+    </div>
+
+  </div>
+  <br><br><br>
+</footer>
+
+
+    <div id="fb-root" style="display:none"></div>
+
+    <div style="width:0;height:0;overflow:hidden">
+    <img src="https://assets.whicdn.com/assets/ajax-heart-gray-65c2a9c251ef70bad698c2330bd8d28c70284684ab1f034f336478fdee0e1f7d.gif" />
+    <img src="https://assets.whicdn.com/assets/ajax-heart-white-fda8a547384de31097feeb795bb1ee9bc135ad7bb4725f3d858fefc6c83e3586.gif" />
+    </div>
+
+    <!-- Quantcast Tag Part 1 -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+</script>
+<!-- End Quantcast Tag Part 1 -->
+
+<!-- Quantcast Tag Part 2-->
+<script type="text/javascript" data-ajaxscript>
+_qevents.push({
+  qacct:"p-fBh533QDgpSsR"
+});
+</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-45nh8QKbsf2Xk.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast Tag Part 2 -->
+
+
+  <script type="text/javascript" src="//b-code.liadm.com/a-028f.min.js" async="true" charset="utf-8"></script>
+
+
+<script src="https://assets.whicdn.com/assets/application-d29dcd5a756dcc5a3d8db93c3538f8862a1f586bd3e4a75c029aab4199806e89.js"></script>
+
+  <script>
+  $.getScript("https://s.skimresources.com/js/28678X866187.skimlinks.js")
+</script>
+
+
+  <script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js"></script>
+
+
+<script src="https://assets.whicdn.com/assets/i18n/en-6d11721d1f5d0a915e78dead84011204adb566343a1af3eaa9ae2b5bf7b9f08e.js"></script>
+<script type="text/javascript">
+  I18n.defaultLocale = "en";
+  I18n.locale = "en";
+  I18n.fallbacks = true;
+</script>
+
+<script>
+var WeHeartIt = require('/modules/whi')
+new WeHeartIt({
+  views : ["follow_button", "catalog/catalog", "catalog/vimeo_thumbs", "widgets", "entry/create_entry_set", "entry/youtube_autoplay", "entry/report_button", "entry/add_to_collection", "entry/tag_form", "entry/share_buttons", "entry/entry_group", "entry/entry_ftue", "entry/entry", "prompts/app_promo_ad", "file_preview", "block_warning", "user_account/facebook_timeline", "user_account/edit_profile", "user_account/email_suggestion", "user_account/link_account", "user_account/edit_notices", "user_account/verify_age", "user_account/find_friends", "modal", "collaborate", "email_bounced", "inspirations/inspirations", "doubleclick_ads", "new_account/new_confirmation", "postcard", "user_profile/profile", "navbar/notifications", "navbar/topbar_touches", "navbar/navbar", "text_preview", "postcard_button", "cookie_warning", "dummy_ads", "recaptcha", "activation", "actions/new_entry_form_sign_in", "actions/too_many_tags", "actions/heart_success", "actions/add_image", "actions/new_entry_form", "sidebar", "toggle_element", "dashboard/box_contacts", "dashboard/userFilter", "static/facebook_timeline", "static/app", "static/popular", "static/postcards_gallery", "static/postcards", "static/download_heart_button", "static/left_share_buttons", "inbox", "banner_join", "modals/create_new_collection_modal", "modals/add_to_collection_modal", "modals/collections_modal", "heart_button_new_entry", "registration/login", "registration/join_tracker", "registration/testimonials", "registration/registration", "registration/email_signup", "onboarding_inspirations", "heart_button_container", "article_draft", "reactions", "dropdown", "interstitial", "facebook_widget", "add_favorite_keyword", "branchio", "click_out", "article_preview", "user_set", "follow_collection_button", "heart_button", "share_modal", "floating_window"],
+  modules : [
+    'notifications',
+    'search',
+    'lightbox',
+    'hover_flicker_fix',
+    'entry_frame_buster',
+    'infinite_scroll',
+    'prevent_double_submission',
+    'global_events',
+    'registration_intercept',
+    'popup_message'
+  ]
+})
+</script>
+
+
+<script type="text/javascript">
+  jQuery(function($){
+    // English (Template)
+jQuery.timeago.settings.strings = {
+  prefixAgo: null,
+  prefixFromNow: null,
+  suffixAgo: "ago",
+  suffixFromNow: "from now",
+  seconds: "less than a minute",
+  minute: "about a minute",
+  minutes: "%d minutes",
+  hour: "about an hour",
+  hours: "about %d hours",
+  day: "a day",
+  days: "%d days",
+  month: "about a month",
+  months: "%d months",
+  year: "about a year",
+  years: "%d years",
+  wordSeparator: " ",
+  numbers: []
+};
+
+
+    $(document).ready(function() {
+      $("abbr.timeago").timeago();
+      // Close notices
+      $('.closable').append('<span class="close">close</span>')
+                    .find('.close').click(function(){ $(this).parent().slideUp(); });
+    });
+  })
+</script>
+
+  <script>
+//<![CDATA[
+jQuery.ajax({url: '//platform.twitter.com/widgets.js', dataType: 'script', cache: true, success: function() {
+    // Google analytics events for tracking tweets
+    twttr.events.bind('tweet', function(event) {
+      if (event) {
+        var targetUrl;
+        if (event.target && event.target.nodeName == 'IFRAME') {
+          targetUrl = extractParamFromUri(event.target.src, 'url');
+        }
+        $.publish('trackSocial',['twitter','tweet',targetUrl])
+      }
+    });
+    // Google analytics events for tracking follows
+    twttr.events.bind('follow', function(event) {
+      var followed_screen_name = event.data.screen_name;
+      $.publish('trackSocial',['twitter','follow',followed_screen_name])
+    });
+}});
+//]]>
+</script>
+
+
+
+  </body>
+</html>
