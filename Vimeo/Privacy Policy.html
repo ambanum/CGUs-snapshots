@@ -23,19 +23,19 @@
             <link rel="canonical" href="/privacy">
         <link rel="apple-touch-icon-precomposed" href="https://i.vimeocdn.com/favicon/main-touch_180">
 
-<link rel="mask-icon" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg?7f9cc8c62c8db338b8532072c59197c0cc898e57" color="#17272e">
+<link rel="mask-icon" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg?6bbf8b563085b1c891b6375f3b155c88e8d6c261" color="#17272e">
 
-    <link rel="shortcut icon" href="https://f.vimeocdn.com/images_v6/favicon.ico?7f9cc8c62c8db338b8532072c59197c0cc898e57" data-play="https://i.vimeocdn.com/favicon/play_32" data-pause="https://i.vimeocdn.com/favicon/pause_32">
+    <link rel="shortcut icon" href="https://f.vimeocdn.com/images_v6/favicon.ico?6bbf8b563085b1c891b6375f3b155c88e8d6c261" data-play="https://i.vimeocdn.com/favicon/play_32" data-pause="https://i.vimeocdn.com/favicon/pause_32">
 
 <meta name="msapplication-TileImage" content="https://i.vimeocdn.com/favicon/main-touch_144">
 <meta name="msapplication-TileColor" content="#00adef">
         <title>Privacy Policy on Vimeo</title>
-                    <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?7f9cc8c62c8db338b8532072c59197c0cc898e57">
+                    <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?6bbf8b563085b1c891b6375f3b155c88e8d6c261">
 
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global_legacy_combined.min.css?17f04e6d">
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global_legacy_shared_combined.min.css?7518cd8f">
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/topnav_cart_button_combined.min.css?a20a7566">
-    <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/pages/legal.min.css?6757ff22">
+    <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/pages/legal.min.css?a0785921">
 
 
 
@@ -1191,7 +1191,7 @@ window.addEventListener('load', handleGDPR);
 
                 <aside id="footer_tip" class="footer_v2__tip" aria-live="polite">
             <h4 class="footer_v2__tip-header">Did you know?</h4>
-            <p class="active footer_v2__tip-content">Our panel for Adobe Premiere Pro uploads to Vimeo and <a href="https://join.vimeo.com/adobe-premiere-panel/" data-fatal-attraction="container:did_you_know_box|component:upgrade_link">simplifies your workflow.</a></p>
+            <p class="active footer_v2__tip-content">Help keep Vimeo safe and clean. Learn how to <a href="/help/violations" data-fatal-attraction="container:did_you_know_box|component:help">report a violation</a>.</p>
         </aside>
     </section>
     
@@ -1272,7 +1272,7 @@ window.addEventListener('load', handleGDPR);
         IMAGE_DIR = 'https://f.vimeocdn.com/images_v6/',
         FONT_DIR = 'https://f.vimeocdn.com/fonts/',
         SVG_DIR = 'https://f.vimeocdn.com/svg/',
-                BUILD_HASH = 'e1d55';
+                BUILD_HASH = '5224b';
 
     
         var vimeo = _extend((window.vimeo || {}), {"app_version":"v6","domain":"vimeo.com","url":"vimeo.com","cur_user":false,"origin_user_id":null,"origin_user":false,"is_mobile":false});
@@ -1347,6 +1347,18 @@ window.addEventListener('load', handleGDPR);
             }
         }
 
+        function drawYellowBoxAroundNotices() {
+            const noticeSectionRegex = RegExp('^Notice:');
+            const yellowBoxStyle = "border:1px solid black; background-color:#FFF2CC; padding:10px;";
+            document.querySelectorAll('.legal_doc .otnotice p').forEach(
+                (node) => {
+                    if (noticeSectionRegex.test(node.outerText)) {
+                        node.style = yellowBoxStyle;
+                    }
+                }
+            );
+        }
+
         function renameOneTrustHeaderTags() {
             const ONETRUST_CLASS_SELECTOR = '.otnotice'
             const punctuationRegex = /[ '"`.,\/\\><#!$%?@\^&\*+;:{}=\~()-]/g;
@@ -1374,7 +1386,10 @@ window.addEventListener('load', handleGDPR);
 
         (function fetchPolicyDocumentFromOneTrust() {
             OneTrust.NoticeApi.Initialized.then(function() {
-                                    OneTrust.NoticeApi.LoadNotices(["https://appds8093.blob.core.windows.net/c7e704ed-33be-4f93-85f9-373c45916aeb/privacy-notices/a4ee449f-2400-479a-98b7-ba27050904b4.json"]).then(renameOneTrustHeaderTags).then(updateFocusToHashAnchor);
+                                    OneTrust.NoticeApi.LoadNotices(["https://appds8093.blob.core.windows.net/c7e704ed-33be-4f93-85f9-373c45916aeb/privacy-notices/a4ee449f-2400-479a-98b7-ba27050904b4.json"])
+                        .then(renameOneTrustHeaderTags)
+                        .then(drawYellowBoxAroundNotices)
+                        .then(updateFocusToHashAnchor);
                             });
         })();
 
