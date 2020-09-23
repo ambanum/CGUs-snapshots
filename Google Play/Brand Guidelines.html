@@ -2496,14 +2496,21 @@ least one week.</p>
       </section></section>
     <devsite-sitemask></devsite-sitemask>
     
-<devsite-snackbar 
-                  ></devsite-snackbar>
+<devsite-snackbar type="notification-survey"
+                  
+                  notification-survey-link-txt="Take survey"
+                  notification-survey-link="https://developer.android.com/surveySep2020"
+                  
+                  notification-survey-message="Please help us improve the Android Developer experience by taking a survey."
+                  notification-survey-store-key
+                  >
+</devsite-snackbar>
 
     <devsite-tooltip ></devsite-tooltip>
     <devsite-heading-link></devsite-heading-link>
     <devsite-analytics >
       
-        <script type="application/json" analytics>[{"gaid": "UA-5831155-1", "dimensions": {"dimension5": "en", "dimension4": "Google Play", "dimension6": "en", "dimension11": false, "dimension1": "Signed out", "dimension3": false}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}, {"gaid": "UA-49880327-2", "dimensions": {"dimension5": "en", "dimension4": "Google Play", "dimension6": "en", "dimension11": false, "dimension1": "Signed out", "dimension3": false}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}]</script>
+        <script type="application/json" analytics>[{"gaid": "UA-5831155-1", "dimensions": {"dimension1": "Signed out", "dimension4": "Google Play", "dimension6": "en", "dimension3": false, "dimension11": false, "dimension5": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}, {"gaid": "UA-49880327-2", "dimensions": {"dimension1": "Signed out", "dimension4": "Google Play", "dimension6": "en", "dimension3": false, "dimension11": false, "dimension5": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
 <script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "Google Play", "scriptsafe": null, "signedIn": "False", "tenant": "android"}, "tags": ["GTM-KMSWPCJ"]}</script>
       
     </devsite-analytics>
