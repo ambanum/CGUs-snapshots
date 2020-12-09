@@ -316,6 +316,58 @@
       
 
 
+<style>
+  .legal-content ul.accordion {
+    padding: 0;
+  }
+
+  .legal-content ul.accordion > li:not(.accordion-group) {
+    border-bottom: solid 1px #e5e3e8;
+    border: solid 1px #efeef1;
+    display: block;
+    list-style: none;
+    margin: 0 0 0.5rem 0;
+    padding: 1rem;
+  }
+
+  .legal-content ul.accordion > .accordion-group,
+  .legal-content ul.accordion .accordion-group-header,
+  .legal-content ul.accordion .accordion-group-body {
+    display: block;
+    padding: 1rem;
+  }
+
+  .legal-content ul.accordion > .accordion-group {
+    border: solid 1px #efeef1;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .legal-content ul.accordion .accordion-group-header {
+    background-color: #efeef1;
+    border-bottom: solid 1px #e5e3e8;
+    cursor: pointer;
+  }
+
+  .legal-content ul.accordion > .accordion-group.collapsed .accordion-group-header {
+    border-bottom: solid 1px transparent;
+  }
+
+  .legal-content ul.accordion > .accordion-group.collapsed .accordion-group-body {
+    display: none;
+  }
+
+  .legal-content ul.accordion > .accordion-group .accordion-group-body {
+    padding-left: 2rem;
+  }
+
+  .legal-content ul.accordion > .accordion-group .accordion-group-body > ul {
+    margin: 0;
+  }
+</style>
+
+
 
   <div class="container">
     <div class="tower">
@@ -2106,6 +2158,6 @@
   </div>
 </footer>
 
-<script type="text/javascript" src="/p/assets/main.js?v=0f71a040fff949770351cad269a6d13f"></script>
+<script type="text/javascript" src="/p/assets/main.js?v=06eb40cd7a314a9594b1f9bbe2efef0d"></script>
 
 </html>
