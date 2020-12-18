@@ -1420,9 +1420,26 @@ function cpwmLocalStore() {
 	}, 1000);
 //	console.log("SELECTED LOCAL STORE: " + cpwmLocalCheck)
 }
+	function cpwmFindStateProv() {
+		var cpwmUpToTwelve = 0;
+		var cpwmFindStateProvReady = setInterval(function () {
+			cpwmUpToTwelve = cpwmUpToTwelve + 1;
+			if(cpwmUpToTwelve < 12){
+				if(mlStateProv.length > 0){
+					console.log(cpwmUpToTwelve + ": Finally mlStateProv: " + mlStateProv);
+					clearInterval(cpwmFindStateProvReady);
+				}
+				console.log("cpwmUpToTwelve: " + cpwmUpToTwelve);
+			} else {
+				console.log("Find mlStateProv: " + mlStateProv);
+				clearInterval(cpwmFindStateProvReady);
+			}
+		}, 1000);
+	}
 // Load pdp-popups.js if (1) we are on a Product Description Page AND (2) file has not already been loaded.
 jQuery(document).ready(function() {
 	console.log("US STATE/PROV: " + mlStateProv);
+//	cpwmFindStateProv();
 //	var cpwmPendant = getCookiePromo("cpwmFurniture");
 //	setCookiePromo("cpwmFurniture", "notSpecific", 1);
 //	utm_campaign=20200827_WK26_Furniture_I49_V1
@@ -3366,53 +3383,8 @@ $(document).ready(function(){
                 <li class="ml-sibling-group" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c"></li>
     
         <li class="ml-category-nav-item ml-category-nav-id-116851" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c">
-        <a href="/category/outdoor/plants-gardening.do" class="ml-category-nav-name" data-category-type="1">Plants &amp; Gardening Tools</a>
-					  <button type="button" class="dl-custom-chevron">
-					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
-					<span class="ml-srOnly-content">Plants &amp; Gardening Tools menu open</span>
-			  </button>
-		                                <span class="ml-category-nav-arrow"></span>
-		<ul>
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116853" >
-        <a href="/category/outdoor/plants-gardening/garden-tools.do" class="ml-category-nav-name" data-category-type="1">Planters &amp; Garden Tools</a>
+        <a href="/category/outdoor/plants-gardening.do" class="ml-category-nav-name" data-category-type="1">Outdoor Planters &amp; Garden Tools</a>
 		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116852" >
-        <a href="/category/outdoor/plants-gardening/plants.do" class="ml-category-nav-name" data-category-type="1">Outdoor Plants</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116855" >
-        <a href="/category/outdoor/plants-gardening/terrariums.do" class="ml-category-nav-name" data-category-type="1">Terrariums</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116856" >
-        <a href="/category/outdoor/plants-gardening/wreaths.do" class="ml-category-nav-name" data-category-type="1">Wreaths</a>
-		            </li>
-
-        
-        
-</ul>
-    
-
-
-            </li>
 
         
         
@@ -3493,43 +3465,7 @@ $(document).ready(function(){
         
         <li class="ml-category-nav-item ml-category-nav-id-116842" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
         <a href="/category/outdoor/lighting.do" class="ml-category-nav-name" data-category-type="1">Outdoor Lighting</a>
-					  <button type="button" class="dl-custom-chevron">
-					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
-					<span class="ml-srOnly-content">Outdoor Lighting menu open</span>
-			  </button>
-		                                <span class="ml-category-nav-arrow"></span>
-		<ul>
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116843" >
-        <a href="/category/outdoor/lighting/string-lights.do" class="ml-category-nav-name" data-category-type="1">String Lights</a>
 		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116844" >
-        <a href="/category/outdoor/lighting/lanterns.do" class="ml-category-nav-name" data-category-type="1">Lanterns</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116845" >
-        <a href="/category/outdoor/lighting/candles.do" class="ml-category-nav-name" data-category-type="1">Candles</a>
-		            </li>
-
-        
-        
-</ul>
-    
-
-
-            </li>
 
         
         
@@ -3555,7 +3491,7 @@ $(document).ready(function(){
         
         
         <li class="ml-category-nav-item ml-category-nav-id-116859" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
-        <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Outdoor Food &amp; Drink</a>
+        <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Picnic Foods &amp; Drink</a>
 		            </li>
 
         
@@ -3588,17 +3524,6 @@ $(document).ready(function(){
 			  </button>
 		                                <span class="ml-category-nav-arrow"></span>
 		<ul>
-                <li class="ml-category-nav-header-snippet" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"><span>1</span></li>
-    
-                <li class="ml-sibling-group" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"></li>
-    
-        <li class="ml-category-nav-item ml-category-nav-id-119598" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/8-x-10-area-rugs.do" class="ml-category-nav-name" data-category-type="1">8' x 10' Area Rugs</a>
-		            </li>
-
-        
-        
-
                 <li class="ml-category-nav-header-snippet" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3"><span>3</span></li>
     
                 <li class="ml-sibling-group" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3"></li>
@@ -3610,10 +3535,12 @@ $(document).ready(function(){
         
         
 
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-119564" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/extended-sizes.do" class="ml-category-nav-name" data-category-type="1">Large Area Rugs</a>
+                <li class="ml-category-nav-header-snippet" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"><span>1</span></li>
+    
+                <li class="ml-sibling-group" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"></li>
+    
+        <li class="ml-category-nav-item ml-category-nav-id-119598" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/8-x-10-area-rugs.do" class="ml-category-nav-name" data-category-type="1">8' x 10' Area Rugs</a>
 		            </li>
 
         
@@ -3623,6 +3550,24 @@ $(document).ready(function(){
         
         <li class="ml-category-nav-item ml-category-nav-id-119596" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
         <a href="/category/rugs/5-x-8-area-rugs.do" class="ml-category-nav-name" data-category-type="1">5' x 8' Area Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119597" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/6-x-9-area-rugs.do" class="ml-category-nav-name" data-category-type="1">6' x 9' Area Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119564" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/extended-sizes.do" class="ml-category-nav-name" data-category-type="1">Large Area Rugs</a>
 		            </li>
 
         
@@ -3652,15 +3597,6 @@ $(document).ready(function(){
     
         <li class="ml-category-nav-item ml-category-nav-id-119556" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c">
         <a href="/category/rugs/area-rugs.do" class="ml-category-nav-name" data-category-type="1">Area Rugs</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-119597" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/6-x-9-area-rugs.do" class="ml-category-nav-name" data-category-type="1">6' x 9' Area Rugs</a>
 		            </li>
 
         
@@ -8156,6 +8092,123 @@ $(document).ready(function(){
 			  </button>
 		                                <span class="ml-category-nav-arrow"></span>
 		<ul>
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119425" >
+        <a href="/category/sale/clearance.do" class="ml-category-nav-name" data-category-type="1">Clearance </a>
+					  <button type="button" class="dl-custom-chevron">
+					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
+					<span class="ml-srOnly-content">Clearance  menu open</span>
+			  </button>
+		                                <span class="ml-category-nav-arrow"></span>
+		<ul>
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119426" >
+        <a href="/category/sale/clearance/furniture.do" class="ml-category-nav-name" data-category-type="1">Furniture</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119427" >
+        <a href="/category/sale/clearance/rugs.do" class="ml-category-nav-name" data-category-type="1">Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119428" >
+        <a href="/category/sale/clearance/lighting.do" class="ml-category-nav-name" data-category-type="1">Lighting</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119429" >
+        <a href="/category/sale/clearance/decor-pillows.do" class="ml-category-nav-name" data-category-type="1">Decor &amp; Pillows</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119430" >
+        <a href="/category/sale/clearance/bed-bath.do" class="ml-category-nav-name" data-category-type="1">Bed &amp; Bath</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119431" >
+        <a href="/category/sale/clearance/dining.do" class="ml-category-nav-name" data-category-type="1">Dining</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119432" >
+        <a href="/category/sale/clearance/kitchen.do" class="ml-category-nav-name" data-category-type="1">Kitchen</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120465" >
+        <a href="/category/sale/clearance/food-drink.do" class="ml-category-nav-name" data-category-type="1">Food &amp; Drink</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120466" >
+        <a href="/category/sale/clearance/jewelry-clothing.do" class="ml-category-nav-name" data-category-type="1">Jewelry &amp; Clothing</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119935" >
+        <a href="/category/sale/clearance/gifts.do" class="ml-category-nav-name" data-category-type="1">Gifts</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119433" >
+        <a href="/category/sale/clearance/toys.do" class="ml-category-nav-name" data-category-type="1">Toys</a>
+		            </li>
+
+        
+        
+</ul>
+    
+
+
+            </li>
+
+        
+        
+
                 <li class="ml-category-nav-header-snippet" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c"><span>2</span></li>
     
                 <li class="ml-sibling-group" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c"></li>
@@ -9218,53 +9271,8 @@ $(document).ready(function(){
                 <li class="ml-sibling-group" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c"></li>
     
         <li class="ml-category-nav-item ml-category-nav-id-116851" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c">
-        <a href="/category/outdoor/plants-gardening.do" class="ml-category-nav-name" data-category-type="1">Plants &amp; Gardening Tools</a>
-					  <button type="button" class="dl-custom-chevron">
-					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
-					<span class="ml-srOnly-content">Plants &amp; Gardening Tools menu open</span>
-			  </button>
-		                                <span class="ml-category-nav-arrow"></span>
-		<ul>
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116853" >
-        <a href="/category/outdoor/plants-gardening/garden-tools.do" class="ml-category-nav-name" data-category-type="1">Planters &amp; Garden Tools</a>
+        <a href="/category/outdoor/plants-gardening.do" class="ml-category-nav-name" data-category-type="1">Outdoor Planters &amp; Garden Tools</a>
 		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116852" >
-        <a href="/category/outdoor/plants-gardening/plants.do" class="ml-category-nav-name" data-category-type="1">Outdoor Plants</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116855" >
-        <a href="/category/outdoor/plants-gardening/terrariums.do" class="ml-category-nav-name" data-category-type="1">Terrariums</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116856" >
-        <a href="/category/outdoor/plants-gardening/wreaths.do" class="ml-category-nav-name" data-category-type="1">Wreaths</a>
-		            </li>
-
-        
-        
-</ul>
-    
-
-
-            </li>
 
         
         
@@ -9345,43 +9353,7 @@ $(document).ready(function(){
         
         <li class="ml-category-nav-item ml-category-nav-id-116842" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
         <a href="/category/outdoor/lighting.do" class="ml-category-nav-name" data-category-type="1">Outdoor Lighting</a>
-					  <button type="button" class="dl-custom-chevron">
-					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
-					<span class="ml-srOnly-content">Outdoor Lighting menu open</span>
-			  </button>
-		                                <span class="ml-category-nav-arrow"></span>
-		<ul>
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116843" >
-        <a href="/category/outdoor/lighting/string-lights.do" class="ml-category-nav-name" data-category-type="1">String Lights</a>
 		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116844" >
-        <a href="/category/outdoor/lighting/lanterns.do" class="ml-category-nav-name" data-category-type="1">Lanterns</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116845" >
-        <a href="/category/outdoor/lighting/candles.do" class="ml-category-nav-name" data-category-type="1">Candles</a>
-		            </li>
-
-        
-        
-</ul>
-    
-
-
-            </li>
 
         
         
@@ -9407,7 +9379,7 @@ $(document).ready(function(){
         
         
         <li class="ml-category-nav-item ml-category-nav-id-116859" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
-        <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Outdoor Food &amp; Drink</a>
+        <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Picnic Foods &amp; Drink</a>
 		            </li>
 
         
@@ -9440,17 +9412,6 @@ $(document).ready(function(){
 			  </button>
 		                                <span class="ml-category-nav-arrow"></span>
 		<ul>
-                <li class="ml-category-nav-header-snippet" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"><span>1</span></li>
-    
-                <li class="ml-sibling-group" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"></li>
-    
-        <li class="ml-category-nav-item ml-category-nav-id-119598" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/8-x-10-area-rugs.do" class="ml-category-nav-name" data-category-type="1">8' x 10' Area Rugs</a>
-		            </li>
-
-        
-        
-
                 <li class="ml-category-nav-header-snippet" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3"><span>3</span></li>
     
                 <li class="ml-sibling-group" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3"></li>
@@ -9462,10 +9423,12 @@ $(document).ready(function(){
         
         
 
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-119564" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/extended-sizes.do" class="ml-category-nav-name" data-category-type="1">Large Area Rugs</a>
+                <li class="ml-category-nav-header-snippet" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"><span>1</span></li>
+    
+                <li class="ml-sibling-group" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"></li>
+    
+        <li class="ml-category-nav-item ml-category-nav-id-119598" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/8-x-10-area-rugs.do" class="ml-category-nav-name" data-category-type="1">8' x 10' Area Rugs</a>
 		            </li>
 
         
@@ -9475,6 +9438,24 @@ $(document).ready(function(){
         
         <li class="ml-category-nav-item ml-category-nav-id-119596" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
         <a href="/category/rugs/5-x-8-area-rugs.do" class="ml-category-nav-name" data-category-type="1">5' x 8' Area Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119597" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/6-x-9-area-rugs.do" class="ml-category-nav-name" data-category-type="1">6' x 9' Area Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119564" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/extended-sizes.do" class="ml-category-nav-name" data-category-type="1">Large Area Rugs</a>
 		            </li>
 
         
@@ -9504,15 +9485,6 @@ $(document).ready(function(){
     
         <li class="ml-category-nav-item ml-category-nav-id-119556" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c">
         <a href="/category/rugs/area-rugs.do" class="ml-category-nav-name" data-category-type="1">Area Rugs</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-119597" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/6-x-9-area-rugs.do" class="ml-category-nav-name" data-category-type="1">6' x 9' Area Rugs</a>
 		            </li>
 
         
@@ -14008,6 +13980,123 @@ $(document).ready(function(){
 			  </button>
 		                                <span class="ml-category-nav-arrow"></span>
 		<ul>
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119425" >
+        <a href="/category/sale/clearance.do" class="ml-category-nav-name" data-category-type="1">Clearance </a>
+					  <button type="button" class="dl-custom-chevron">
+					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
+					<span class="ml-srOnly-content">Clearance  menu open</span>
+			  </button>
+		                                <span class="ml-category-nav-arrow"></span>
+		<ul>
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119426" >
+        <a href="/category/sale/clearance/furniture.do" class="ml-category-nav-name" data-category-type="1">Furniture</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119427" >
+        <a href="/category/sale/clearance/rugs.do" class="ml-category-nav-name" data-category-type="1">Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119428" >
+        <a href="/category/sale/clearance/lighting.do" class="ml-category-nav-name" data-category-type="1">Lighting</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119429" >
+        <a href="/category/sale/clearance/decor-pillows.do" class="ml-category-nav-name" data-category-type="1">Decor &amp; Pillows</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119430" >
+        <a href="/category/sale/clearance/bed-bath.do" class="ml-category-nav-name" data-category-type="1">Bed &amp; Bath</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119431" >
+        <a href="/category/sale/clearance/dining.do" class="ml-category-nav-name" data-category-type="1">Dining</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119432" >
+        <a href="/category/sale/clearance/kitchen.do" class="ml-category-nav-name" data-category-type="1">Kitchen</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120465" >
+        <a href="/category/sale/clearance/food-drink.do" class="ml-category-nav-name" data-category-type="1">Food &amp; Drink</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120466" >
+        <a href="/category/sale/clearance/jewelry-clothing.do" class="ml-category-nav-name" data-category-type="1">Jewelry &amp; Clothing</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119935" >
+        <a href="/category/sale/clearance/gifts.do" class="ml-category-nav-name" data-category-type="1">Gifts</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119433" >
+        <a href="/category/sale/clearance/toys.do" class="ml-category-nav-name" data-category-type="1">Toys</a>
+		            </li>
+
+        
+        
+</ul>
+    
+
+
+            </li>
+
+        
+        
+
                 <li class="ml-category-nav-header-snippet" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c"><span>2</span></li>
     
                 <li class="ml-sibling-group" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c"></li>
@@ -17093,53 +17182,8 @@ privacy@cpwm.com<br>
                 <li class="ml-sibling-group" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c"></li>
     
         <li class="ml-category-nav-item ml-category-nav-id-116851" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c">
-        <a href="/category/outdoor/plants-gardening.do" class="ml-category-nav-name" data-category-type="1">Plants &amp; Gardening Tools</a>
-					  <button type="button" class="dl-custom-chevron">
-					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
-					<span class="ml-srOnly-content">Plants &amp; Gardening Tools menu open</span>
-			  </button>
-		                                <span class="ml-category-nav-arrow"></span>
-		<ul>
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116853" >
-        <a href="/category/outdoor/plants-gardening/garden-tools.do" class="ml-category-nav-name" data-category-type="1">Planters &amp; Garden Tools</a>
+        <a href="/category/outdoor/plants-gardening.do" class="ml-category-nav-name" data-category-type="1">Outdoor Planters &amp; Garden Tools</a>
 		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116852" >
-        <a href="/category/outdoor/plants-gardening/plants.do" class="ml-category-nav-name" data-category-type="1">Outdoor Plants</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116855" >
-        <a href="/category/outdoor/plants-gardening/terrariums.do" class="ml-category-nav-name" data-category-type="1">Terrariums</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116856" >
-        <a href="/category/outdoor/plants-gardening/wreaths.do" class="ml-category-nav-name" data-category-type="1">Wreaths</a>
-		            </li>
-
-        
-        
-</ul>
-    
-
-
-            </li>
 
         
         
@@ -17220,43 +17264,7 @@ privacy@cpwm.com<br>
         
         <li class="ml-category-nav-item ml-category-nav-id-116842" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
         <a href="/category/outdoor/lighting.do" class="ml-category-nav-name" data-category-type="1">Outdoor Lighting</a>
-					  <button type="button" class="dl-custom-chevron">
-					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
-					<span class="ml-srOnly-content">Outdoor Lighting menu open</span>
-			  </button>
-		                                <span class="ml-category-nav-arrow"></span>
-		<ul>
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116843" >
-        <a href="/category/outdoor/lighting/string-lights.do" class="ml-category-nav-name" data-category-type="1">String Lights</a>
 		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116844" >
-        <a href="/category/outdoor/lighting/lanterns.do" class="ml-category-nav-name" data-category-type="1">Lanterns</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-116845" >
-        <a href="/category/outdoor/lighting/candles.do" class="ml-category-nav-name" data-category-type="1">Candles</a>
-		            </li>
-
-        
-        
-</ul>
-    
-
-
-            </li>
 
         
         
@@ -17282,7 +17290,7 @@ privacy@cpwm.com<br>
         
         
         <li class="ml-category-nav-item ml-category-nav-id-116859" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
-        <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Outdoor Food &amp; Drink</a>
+        <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Picnic Foods &amp; Drink</a>
 		            </li>
 
         
@@ -17315,17 +17323,6 @@ privacy@cpwm.com<br>
 			  </button>
 		                                <span class="ml-category-nav-arrow"></span>
 		<ul>
-                <li class="ml-category-nav-header-snippet" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"><span>1</span></li>
-    
-                <li class="ml-sibling-group" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"></li>
-    
-        <li class="ml-category-nav-item ml-category-nav-id-119598" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/8-x-10-area-rugs.do" class="ml-category-nav-name" data-category-type="1">8' x 10' Area Rugs</a>
-		            </li>
-
-        
-        
-
                 <li class="ml-category-nav-header-snippet" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3"><span>3</span></li>
     
                 <li class="ml-sibling-group" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3"></li>
@@ -17337,10 +17334,12 @@ privacy@cpwm.com<br>
         
         
 
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-119564" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/extended-sizes.do" class="ml-category-nav-name" data-category-type="1">Large Area Rugs</a>
+                <li class="ml-category-nav-header-snippet" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"><span>1</span></li>
+    
+                <li class="ml-sibling-group" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b"></li>
+    
+        <li class="ml-category-nav-item ml-category-nav-id-119598" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/8-x-10-area-rugs.do" class="ml-category-nav-name" data-category-type="1">8' x 10' Area Rugs</a>
 		            </li>
 
         
@@ -17350,6 +17349,24 @@ privacy@cpwm.com<br>
         
         <li class="ml-category-nav-item ml-category-nav-id-119596" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
         <a href="/category/rugs/5-x-8-area-rugs.do" class="ml-category-nav-name" data-category-type="1">5' x 8' Area Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119597" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/6-x-9-area-rugs.do" class="ml-category-nav-name" data-category-type="1">6' x 9' Area Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119564" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
+        <a href="/category/rugs/extended-sizes.do" class="ml-category-nav-name" data-category-type="1">Large Area Rugs</a>
 		            </li>
 
         
@@ -17379,15 +17396,6 @@ privacy@cpwm.com<br>
     
         <li class="ml-category-nav-item ml-category-nav-id-119556" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c">
         <a href="/category/rugs/area-rugs.do" class="ml-category-nav-name" data-category-type="1">Area Rugs</a>
-		            </li>
-
-        
-        
-
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-119597" data-sibling-group-id="c4ca4238a0b923820dcc509a6f75849b">
-        <a href="/category/rugs/6-x-9-area-rugs.do" class="ml-category-nav-name" data-category-type="1">6' x 9' Area Rugs</a>
 		            </li>
 
         
@@ -21883,6 +21891,123 @@ privacy@cpwm.com<br>
 			  </button>
 		                                <span class="ml-category-nav-arrow"></span>
 		<ul>
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119425" >
+        <a href="/category/sale/clearance.do" class="ml-category-nav-name" data-category-type="1">Clearance </a>
+					  <button type="button" class="dl-custom-chevron">
+					<i class="ml-icon-lib ml-chevron-icon" aria-hidden="true"></i>
+					<span class="ml-srOnly-content">Clearance  menu open</span>
+			  </button>
+		                                <span class="ml-category-nav-arrow"></span>
+		<ul>
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119426" >
+        <a href="/category/sale/clearance/furniture.do" class="ml-category-nav-name" data-category-type="1">Furniture</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119427" >
+        <a href="/category/sale/clearance/rugs.do" class="ml-category-nav-name" data-category-type="1">Rugs</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119428" >
+        <a href="/category/sale/clearance/lighting.do" class="ml-category-nav-name" data-category-type="1">Lighting</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119429" >
+        <a href="/category/sale/clearance/decor-pillows.do" class="ml-category-nav-name" data-category-type="1">Decor &amp; Pillows</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119430" >
+        <a href="/category/sale/clearance/bed-bath.do" class="ml-category-nav-name" data-category-type="1">Bed &amp; Bath</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119431" >
+        <a href="/category/sale/clearance/dining.do" class="ml-category-nav-name" data-category-type="1">Dining</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119432" >
+        <a href="/category/sale/clearance/kitchen.do" class="ml-category-nav-name" data-category-type="1">Kitchen</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120465" >
+        <a href="/category/sale/clearance/food-drink.do" class="ml-category-nav-name" data-category-type="1">Food &amp; Drink</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120466" >
+        <a href="/category/sale/clearance/jewelry-clothing.do" class="ml-category-nav-name" data-category-type="1">Jewelry &amp; Clothing</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119935" >
+        <a href="/category/sale/clearance/gifts.do" class="ml-category-nav-name" data-category-type="1">Gifts</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-119433" >
+        <a href="/category/sale/clearance/toys.do" class="ml-category-nav-name" data-category-type="1">Toys</a>
+		            </li>
+
+        
+        
+</ul>
+    
+
+
+            </li>
+
+        
+        
+
                 <li class="ml-category-nav-header-snippet" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c"><span>2</span></li>
     
                 <li class="ml-sibling-group" data-sibling-group-id="c81e728d9d4c2f636f067f89cc14862c"></li>
