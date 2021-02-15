@@ -233,7 +233,7 @@ function w3_getStyleValue(elmnt,style) {
           <a class="w3-bar-item w3-button" href='/r/default.asp'>Learn R</a>
           <a class="w3-bar-item w3-button" href='/python/python_ml_getting_started.asp'>Learn Machine Learning</a>
           <a class="w3-bar-item w3-button" href='/datascience/default.asp'>Learn Data Science</a>
-          <a class="w3-bar-item w3-button" href='/python/pandas_tutorial.asp'>Learn Pandas</a>
+          <a class="w3-bar-item w3-button" href='/python/pandas/default.asp'>Learn Pandas</a>
           <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
         </div>
         <div class='w3-col l3 m6'>
@@ -915,6 +915,7 @@ function loadUser() {
   if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
   pos = pathname.indexOf("/");
   foldername = pathname.substr(0, pos);
+  if (pathname.indexOf("pandas") > -1) {foldername = "python/pandas";}
   filename = pathname.substr(pos + 1);
   typ = foldername;
   if (foldername == "quiztest") {
@@ -928,7 +929,7 @@ function loadUser() {
       y = this.responseText;
       x = y.substr(0, 1);
       if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
-       console.log(x);
+        console.log(x);
         activateElse();
       } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
         console.log(x);
@@ -950,6 +951,7 @@ function finishedPage() {
   if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
   pos = pathname.indexOf("/");
   foldername = pathname.substr(0, pos);
+  if (pathname.indexOf("pandas") > -1) {foldername = "python/pandas";}
   filename = pathname.substr(pos + 1);
   typ = foldername;
   var xhttp = new XMLHttpRequest();
