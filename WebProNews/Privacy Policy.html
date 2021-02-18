@@ -35,7 +35,7 @@
 <link rel="preconnect" href="//fonts.gstatic.com/" crossorigin> 
 <script src="//www.googletagmanager.com/gtag/js?id=UA-10133450-43" type="text/javascript" data-cfasync="false"></script>
 <script type="text/javascript" data-cfasync="false">
-var em_version = '6.6.0';
+var em_version = '6.6.1';
 var em_track_user = true;
 var em_no_track_reason = '';
 var disableStr = 'ga-disable-UA-10133450-43';
@@ -93,17 +93,36 @@ return;
 var f = arguments[len - 1];
 if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
 if ( 'send' === arguments[0] ) {
+var hitConverted, hitObject = false, action;
 if ( 'event' === arguments[1] ) {
-__gtagTracker( 'event', arguments[3], {
-'event_category': arguments[2],
-'event_label': arguments[4],
-'value': 1
-} );
+if ( 'undefined' !== typeof arguments[3] ) {
+hitObject = {
+'eventAction': arguments[3],
+'eventCategory': arguments[2],
+'eventLabel': arguments[4],
+'value': arguments[5] ? arguments[5] : 1,
+}
+}
+}
+if ( typeof arguments[2] === 'object' ) {
+hitObject = arguments[2];
+}
+if ( 'undefined' !== typeof (
+arguments[1].hitType
+) ) {
+hitObject = arguments[1];
+}
+if ( hitObject ) {
+action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+hitConverted = mapArgs( hitObject );
+__gtagTracker( 'event', action, hitConverted );
+}
+}
 return;
 }
-if ( 'undefined' !== typeof ( arguments[1].hitType ) ) {
-var hitDetails = {};
-var gagtag_map = {
+function mapArgs( args ) {
+var gaKey, hit = {};
+var gaMap = {
 'eventCategory': 'event_category',
 'eventAction': 'event_action',
 'eventLabel': 'event_label',
@@ -114,17 +133,12 @@ var gagtag_map = {
 'timingValue': 'value',
 'timingLabel': 'event_label',
 };
-var gaKey;
-for ( gaKey in gagtag_map ) {
-if ( 'undefined' !== typeof arguments[1][gaKey] ) {
-hitDetails[gagtag_map[gaKey]] = arguments[1][gaKey];
+for ( gaKey in gaMap ) {
+if ( 'undefined' !== typeof args[gaKey] ) {
+hit[gaMap[gaKey]] = args[gaKey];
 }
 }
-var action = 'timing' === arguments[1].hitType ? 'timing_complete' : arguments[1].eventAction;
-__gtagTracker( 'event', action, hitDetails );
-}
-}
-return;
+return hit;
 }
 try {
 f.hitCallback();
@@ -177,6 +191,9 @@ padding: 0 !important;
 <style id='wp-block-library-inline-css' type='text/css'>
 .has-text-align-justify{text-align:justify;}
 </style>
+
+<link rel="stylesheet" type="text/css" href="//www.webpronews.com/wp-content/cache/wpfc-minified/m0terqm4/a4x20.css" media="all" />
+<link rel='stylesheet' id='dashicons-css' href='https://c0.wp.com/c/5.6.1/wp-includes/css/dashicons.min.css' media='all' />
 
 
 
@@ -471,6 +488,7 @@ c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.
 </li>
 </ul>
 </li>
+<li id="menu-item-509382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509382"><a href="https://www.webpronews.com/subscribe/"><span class="dashicons dashicons-format-aside after-menu-image-icons"></span><span class="menu-image-title-after menu-image-title">Newsletter</span></a></li>
 </ul> </nav>
 </div>
 <div class="large-3 columns">
@@ -752,6 +770,7 @@ aj_pv = true; aj_click = '';
 </li>
 </ul>
 </li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509382"><a href="https://www.webpronews.com/subscribe/"><span class="dashicons dashicons-format-aside after-menu-image-icons"></span><span class="menu-image-title-after menu-image-title">Newsletter</span></a></li>
 </ul> <div class="menu-right-content">
 <div class="secondary-holder">
 <div class="secondary-toggle">
@@ -781,7 +800,7 @@ aj_pv = true; aj_click = '';
 <p>You may occasionally get cookies from our advertisers. These cookies are sent from third-party computers and are subject to such third parties’ policies. Most browsers are initially set to accept cookies. If you’d prefer, you can set yours to refuse cookies. However, it is likely that most areas of the site will not function properly if you do so.</p>
 <p>&nbsp;</p>
 <h2>Removal from our Database</h2>
-<p>Should you ever wish to be removed from our database, simply contact us and we will be happy to fulfill your request. Additionally, should you wish further clarification of this policy, please do not hesitate to email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c0f090c0c130e083c2b191e2c0e1332190b0f521f131152">[email&#160;protected]</a></p>
+<p>Should you ever wish to be removed from our database, simply contact us and we will be happy to fulfill your request. Additionally, should you wish further clarification of this policy, please do not hesitate to email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b585e5b5b44595f6b7c4e497b5944654e5c580548444605">[email&#160;protected]</a></p>
 <p>&nbsp;</p>
 </div>
 </div>
@@ -792,7 +811,7 @@ aj_pv = true; aj_click = '';
 <div class="small-12 columns">
 <div class="subfooter-menu-holder text-center">
 <div class="subfooter-menu"><ul id="menu-footer-menu" class="footer-menu"><li id="menu-item-444955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-444955"><a title="Contact Us" href="https://www.webpronews.com/contact-us/">Contact Us</a></li>
-<li id="menu-item-497149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-497149"><a title="Advertise" href="https://www.webpronews.com/advertise/">Request Our Media Kit</a></li>
+<li id="menu-item-497149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-497149"><a title="Advertise" href="https://www.webpronews.com/advertise/" class="menu-image-title-after menu-image-not-hovered"><img width="142" height="30" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="menu-image menu-image-title-after thb-lazyload lazyload" alt="Advertise" loading="lazy" data-src="https://www.webpronews.com/wp-content/uploads/2019/09/advertisebutton.png" data-sizes="auto" data-srcset="https://i0.wp.com/www.webpronews.com/wp-content/uploads/2019/09/advertisebutton.png?w=142&amp;ssl=1 142w, https://i0.wp.com/www.webpronews.com/wp-content/uploads/2019/09/advertisebutton.png?resize=20%2C4&amp;ssl=1 20w" /><span class="menu-image-title-after menu-image-title">Request Our Media Kit</span></a></li>
 <li id="menu-item-480225" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-480225"><a title="Privacy Policy" href="https://www.webpronews.com/privacy-policy/" aria-current="page">Privacy Policy</a></li>
 <li id="menu-item-503244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503244"><a href="https://www.webpronews.com/terms-of-service/">Terms of Service</a></li>
 <li id="menu-item-480221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-480221"><a title="Sitemap" href="https://www.webpronews.com/sitemap_index.xml">Sitemap</a></li>
@@ -981,6 +1000,7 @@ aj_pv = true; aj_click = '';
 </li>
 </ul>
 </li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-509382"><a href="https://www.webpronews.com/subscribe/"><span class="dashicons dashicons-format-aside after-menu-image-icons"></span><span class="menu-image-title-after menu-image-title">Newsletter</span></a></li>
 </ul> <ul id="menu-subheader-menu-2" class="mobile-menu secondary"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy current-menu-item page_item page-item-480559 current_page_item menu-item-500810"><a href="https://www.webpronews.com/privacy-policy/" aria-current="page">Privacy Policy</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-500811"><a href="https://www.webpronews.com/contact-us/">Contact Us</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-500812"><a href="https://www.webpronews.com/subscribe/">Newsletter Signup</a></li>
@@ -1037,7 +1057,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <input type="hidden" name="action" value="thb_reset_password" />
 <button class="btn " type="submit">Get new password</button>
 </div>
-<input type="hidden" id="password-security" name="password-security" value="4666351675" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" /> </form>
+<input type="hidden" id="password-security" name="password-security" value="ca5e47136e" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" /> </form>
 </div>
 <div class="thb-login">
 <form id="thb_login_form" action="https://www.webpronews.com/" method="post">
@@ -1055,7 +1075,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <input type="hidden" name="action" value="thb_login_member" />
 <button class="btn " type="submit">Login</button>
 </div>
-<input type="hidden" id="login-security" name="login-security" value="4666351675" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" /> </form>
+<input type="hidden" id="login-security" name="login-security" value="ca5e47136e" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" /> </form>
 </div>
 <div class="thb-register">
 <div class="alert alert-warning">Registration is disabled.</div> </div>
