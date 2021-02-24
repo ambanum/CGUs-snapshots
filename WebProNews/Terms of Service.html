@@ -36,7 +36,7 @@
 <link rel="preconnect" href="//fonts.gstatic.com/" crossorigin> 
 <script src="//www.googletagmanager.com/gtag/js?id=UA-10133450-43" type="text/javascript" data-cfasync="false"></script>
 <script type="text/javascript" data-cfasync="false">
-				var em_version = '6.6.1';
+				var em_version = '6.6.2';
 				var em_track_user = true;
 				var em_no_track_reason = '';
 				
@@ -65,9 +65,7 @@
 				}
 								window.dataLayer = window.dataLayer || [];
 				if ( em_track_user ) {
-					function __gtagTracker() {
-						dataLayer.push( arguments );
-					}
+					function __gtagTracker() {dataLayer.push( arguments );}
 					__gtagTracker( 'js', new Date() );
 					__gtagTracker( 'set', {
 						'developer_id.dNDMyYj' : true,
@@ -81,8 +79,8 @@
 							var noopfn = function () {
 								return null;
 							};
-							var noopnullfn = function () {
-								return null;
+							var newtracker = function () {
+								return new Tracker();
 							};
 							var Tracker = function () {
 								return null;
@@ -90,7 +88,11 @@
 							var p = Tracker.prototype;
 							p.get = noopfn;
 							p.set = noopfn;
-							p.send = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
 							var __gaTracker = function () {
 								var len = arguments.length;
 								if ( len === 0 ) {
@@ -153,10 +155,8 @@
 								} catch ( ex ) {
 								}
 							};
-							__gaTracker.create = function () {
-								return new Tracker();
-							};
-							__gaTracker.getByName = noopnullfn;
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
 							__gaTracker.getAll = function () {
 								return [];
 							};
@@ -205,7 +205,7 @@ img.emoji {
 <link rel='stylesheet' id='tp-fontello-css' href='https://www.webpronews.com/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=3.0.11' media='all' />
 <link rel='stylesheet' id='menu-image-css' href='https://www.webpronews.com/wp-content/plugins/menu-image/includes/css/menu-image.css?ver=3.0.4' media='all' />
 <link rel='stylesheet' id='dashicons-css' href='https://c0.wp.com/c/5.6.2/wp-includes/css/dashicons.min.css' media='all' />
-<link rel='stylesheet' id='exactmetrics-popular-posts-style-css' href='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/css/frontend.min.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='exactmetrics-popular-posts-style-css' href='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/css/frontend.min.css?ver=6.6.2' media='all' />
 <link rel='stylesheet' id='thb-fa-css' href='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/css/font-awesome.min.css?ver=4.7.0' media='all' />
 <link rel='stylesheet' id='thb-app-css' href='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/css/app.css?ver=4.5.0' media='all' />
 <style id='thb-app-inline-css' type='text/css'>
@@ -221,7 +221,7 @@ body {font-family:PT Sans, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucid
 var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,mp3,mpeg,pdf,docx,pptx,xlsx,rar","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/out\\\/\",\"label\":\"Affiliate\"}]","home_url":"https:\/\/www.webpronews.com","hash_tracking":"true","ua":"UA-10133450-43"};
 /* ]]> */
 </script>
-<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.6.1' id='exactmetrics-frontend-script-js'></script>
+<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.6.2' id='exactmetrics-frontend-script-js'></script>
 <link rel="https://api.w.org/" href="https://www.webpronews.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.webpronews.com/wp-json/wp/v2/pages/503239" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.webpronews.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.webpronews.com/wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 5.6.2" />
@@ -826,7 +826,7 @@ oneSignal_options['notifyButton']['colors'] = {};
 <p>When you visit iEntry Network or WebProNews.com or send emails to us, you are communicating with us electronically, and therefore you are consenting to receive communications from us electronically or by other means available&nbsp;— such as&nbsp;electronically, by telephone, by physical mail, or by facsimile. It is also understood that all agreements, disclosures, notices, and other communications that we provide to you electronically satisfy any legal requirement that such communication is in writing.</p>
 <h3>Copyright and Licenses</h3>
 <p>The entire contents of this website, including but not limited to: text, graphics, logos, button icons, Flash movies, images, audio clips, digital downloads, data compilations, and software, are the property of iEntry Network or WebProNews.com, its collaborators, or its clients and are protected by domestic and international copyright and trademark laws. You may not modify, copy, reproduce, republish, upload, post, transmit, or distribute any portion of the website contents without the prior expressed written consent of iEntry Network or WebProNews.com.”</p>
-<p>You may print or download portions of the materials from various areas of this website solely for your own non-commercial use provided that you agree not to change or delete any copyright or proprietary notices from the materials. If you believe any content appearing on our website constitutes a copyright infringement of another party&#8217;s rights, please contact us immediately at&nbsp;<em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2d5e585d5d425f596d444843595f54034e4240">[email&#160;protected]</a></em>&nbsp;to notify us of this infringement.</p>
+<p>You may print or download portions of the materials from various areas of this website solely for your own non-commercial use provided that you agree not to change or delete any copyright or proprietary notices from the materials. If you believe any content appearing on our website constitutes a copyright infringement of another party&#8217;s rights, please contact us immediately at&nbsp;<em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8bbbdb8b8a7babc88a1ada6bcbab1e6aba7a5">[email&#160;protected]</a></em>&nbsp;to notify us of this infringement.</p>
 <p>Your submissions of files including, but not limited to: resumes, email, Flash movies, images, logos, audio loops, and other software hereby constitutes your agreement to grant iEntry Network or WebProNews.com a non-exclusive, royalty-free, worldwide, sub-licensable, perpetual license to reproduce, distribute, transmit, adapt, sub-license, and publicly display any such submissions. You also grant iEntry Network or WebProNews.com the right to utilize your name in connection with all advertising, marketing, and promotional materials related thereto.</p>
 <h3>License and Website Access</h3>
 <p>iEntry Network or WebProNews.com grants you limited license to access and make personal use of our website&#8217;s and email newsletter and not to download (other than for page caching purposes) or modify it, or any portion of it, except with the express written consent of the iEntry Network or WebProNews.com. This website or any portion of this website may not be reproduced, duplicated, adapted, copied, sold, resold, transmitted, or otherwise exploited for any commercial purpose without the express written consent of iEntry Network or WebProNews.com. You may not frame, or use any framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, Flash movie, page layout, or form) of iEntry Network or WebProNews.com without the express written consent of iEntry Network or WebProNews.com.</p>
@@ -847,7 +847,7 @@ oneSignal_options['notifyButton']['colors'] = {};
 <h3>Other Provisions</h3>
 <p>iEntry Network or WebProNews.com&#8217;s failure to insist upon or enforce strict performance of any provision of these Conditions of Use shall not be construed as a waiver of any provision or right. Neither the course of conduct between the parties nor trade practice shall act to modify any provision of these Terms of Service. The iEntry Network or WebProNews.com may assign its rights and duties under these Terms of Service to any party at any time without notice to you. If any of these conditions shall be deemed invalid, void, or for any reason unenforceable, that condition shall be deemed severable and shall not affect the validity or enforceability of any remaining condition. Any rights not expressly granted herein are reserved.</p>
 <h3>Contact Info</h3>
-<p>Please send notices by care of email to&nbsp;<em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8dbddd8d8c7dadce8c1cdc6dcdad186cbc7c5">[email&#160;protected]</a></em>&nbsp;or reach us at our physical mailing&nbsp;address or by telephone.</p>
+<p>Please send notices by care of email to&nbsp;<em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86f5f3f6f6e9f4f2c6efe3e8f2f4ffa8e5e9eb">[email&#160;protected]</a></em>&nbsp;or reach us at our physical mailing&nbsp;address or by telephone.</p>
 <p>iEntry, Inc.</p>
 <p>PO Box 5507<br>Lexington, Kentucky 40503<br>United States</p>
 <p>859-514-2720</p>
@@ -1113,7 +1113,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <input type="hidden" name="action" value="thb_reset_password" />
 <button class="btn " type="submit">Get new password</button>
 </div>
-<input type="hidden" id="password-security" name="password-security" value="a6aeb0b705" /><input type="hidden" name="_wp_http_referer" value="/terms-of-service/" /> </form>
+<input type="hidden" id="password-security" name="password-security" value="b970f5d95b" /><input type="hidden" name="_wp_http_referer" value="/terms-of-service/" /> </form>
 </div>
 <div class="thb-login">
 <form id="thb_login_form" action="https://www.webpronews.com/" method="post">
@@ -1131,7 +1131,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <input type="hidden" name="action" value="thb_login_member" />
 <button class="btn " type="submit">Login</button>
 </div>
-<input type="hidden" id="login-security" name="login-security" value="a6aeb0b705" /><input type="hidden" name="_wp_http_referer" value="/terms-of-service/" /> </form>
+<input type="hidden" id="login-security" name="login-security" value="b970f5d95b" /><input type="hidden" name="_wp_http_referer" value="/terms-of-service/" /> </form>
 </div>
 <div class="thb-register">
 <div class="alert alert-warning">Registration is disabled.</div> </div>
