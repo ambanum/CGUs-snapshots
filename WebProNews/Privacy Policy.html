@@ -35,7 +35,7 @@
 <link rel="preconnect" href="//fonts.gstatic.com/" crossorigin> 
 <script src="//www.googletagmanager.com/gtag/js?id=UA-10133450-43" type="text/javascript" data-cfasync="false"></script>
 <script type="text/javascript" data-cfasync="false">
-				var em_version = '6.6.1';
+				var em_version = '6.6.2';
 				var em_track_user = true;
 				var em_no_track_reason = '';
 				
@@ -64,9 +64,7 @@
 				}
 								window.dataLayer = window.dataLayer || [];
 				if ( em_track_user ) {
-					function __gtagTracker() {
-						dataLayer.push( arguments );
-					}
+					function __gtagTracker() {dataLayer.push( arguments );}
 					__gtagTracker( 'js', new Date() );
 					__gtagTracker( 'set', {
 						'developer_id.dNDMyYj' : true,
@@ -80,8 +78,8 @@
 							var noopfn = function () {
 								return null;
 							};
-							var noopnullfn = function () {
-								return null;
+							var newtracker = function () {
+								return new Tracker();
 							};
 							var Tracker = function () {
 								return null;
@@ -89,7 +87,11 @@
 							var p = Tracker.prototype;
 							p.get = noopfn;
 							p.set = noopfn;
-							p.send = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
 							var __gaTracker = function () {
 								var len = arguments.length;
 								if ( len === 0 ) {
@@ -152,10 +154,8 @@
 								} catch ( ex ) {
 								}
 							};
-							__gaTracker.create = function () {
-								return new Tracker();
-							};
-							__gaTracker.getByName = noopnullfn;
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
 							__gaTracker.getAll = function () {
 								return [];
 							};
@@ -204,7 +204,7 @@ img.emoji {
 <link rel='stylesheet' id='tp-fontello-css' href='https://www.webpronews.com/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=3.0.11' media='all' />
 <link rel='stylesheet' id='menu-image-css' href='https://www.webpronews.com/wp-content/plugins/menu-image/includes/css/menu-image.css?ver=3.0.4' media='all' />
 <link rel='stylesheet' id='dashicons-css' href='https://c0.wp.com/c/5.6.2/wp-includes/css/dashicons.min.css' media='all' />
-<link rel='stylesheet' id='exactmetrics-popular-posts-style-css' href='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/css/frontend.min.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='exactmetrics-popular-posts-style-css' href='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/css/frontend.min.css?ver=6.6.2' media='all' />
 <link rel='stylesheet' id='thb-fa-css' href='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/css/font-awesome.min.css?ver=4.7.0' media='all' />
 <link rel='stylesheet' id='thb-app-css' href='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/css/app.css?ver=4.5.0' media='all' />
 <style id='thb-app-inline-css' type='text/css'>
@@ -220,7 +220,7 @@ body {font-family:PT Sans, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucid
 var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,mp3,mpeg,pdf,docx,pptx,xlsx,rar","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/out\\\/\",\"label\":\"Affiliate\"}]","home_url":"https:\/\/www.webpronews.com","hash_tracking":"true","ua":"UA-10133450-43"};
 /* ]]> */
 </script>
-<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.6.1' id='exactmetrics-frontend-script-js'></script>
+<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.6.2' id='exactmetrics-frontend-script-js'></script>
 <link rel="https://api.w.org/" href="https://www.webpronews.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.webpronews.com/wp-json/wp/v2/pages/480559" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.webpronews.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.webpronews.com/wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 5.6.2" />
@@ -796,7 +796,7 @@ oneSignal_options['notifyButton']['colors'] = {};
 </li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509382"><a href="https://www.webpronews.com/subscribe/"><span class="dashicons dashicons-format-aside after-menu-image-icons"></span><span class="menu-image-title-after menu-image-title">Newsletter</span></a></li>
 </ul> <div class="menu-right-content">
-<div class="secondary-holder">
+ <div class="secondary-holder">
 <div class="secondary-toggle">
 <span></span><span></span><span></span>
 </div>
@@ -824,7 +824,7 @@ oneSignal_options['notifyButton']['colors'] = {};
 <p>You may occasionally get cookies from our advertisers. These cookies are sent from third-party computers and are subject to such third parties’ policies. Most browsers are initially set to accept cookies. If you’d prefer, you can set yours to refuse cookies. However, it is likely that most areas of the site will not function properly if you do so.</p>
 <p>&nbsp;</p>
 <h2>Removal from our Database</h2>
-<p>Should you ever wish to be removed from our database, simply contact us and we will be happy to fulfill your request. Additionally, should you wish further clarification of this policy, please do not hesitate to email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="51222421213e23251106343301233e1f3426227f323e3c7f">[email&#160;protected]</a></p>
+<p>Should you ever wish to be removed from our database, simply contact us and we will be happy to fulfill your request. Additionally, should you wish further clarification of this policy, please do not hesitate to email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c2f292c2c332e281c0b393e0c2e3312392b2f723f333172">[email&#160;protected]</a></p>
 <p>&nbsp;</p>
 </div>
 </div>
@@ -1087,7 +1087,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <input type="hidden" name="action" value="thb_reset_password" />
 <button class="btn " type="submit">Get new password</button>
 </div>
-<input type="hidden" id="password-security" name="password-security" value="a6aeb0b705" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" /> </form>
+<input type="hidden" id="password-security" name="password-security" value="b970f5d95b" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" /> </form>
 </div>
 <div class="thb-login">
 <form id="thb_login_form" action="https://www.webpronews.com/" method="post">
@@ -1105,7 +1105,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <input type="hidden" name="action" value="thb_login_member" />
 <button class="btn " type="submit">Login</button>
 </div>
-<input type="hidden" id="login-security" name="login-security" value="a6aeb0b705" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" /> </form>
+<input type="hidden" id="login-security" name="login-security" value="b970f5d95b" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" /> </form>
 </div>
 <div class="thb-register">
 <div class="alert alert-warning">Registration is disabled.</div> </div>
