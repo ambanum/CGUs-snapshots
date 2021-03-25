@@ -149,6 +149,13 @@
                             
                             <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_bulletin--aidrivenmesh" data-vars-event-label="/en/mesh/ai-driven-mesh/" href="/en/mesh/ai-driven-mesh/">AI-Driven Mesh</a>
                           </li>
+                          <li>
+                            <span class="line"></span>
+                          </li>
+                          <li>
+                            
+                            <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_bulletin-isp-tools" data-vars-event-label="/en/solution/isp-tools/" href="/en/solution/isp-tools/">ISP Tools</a>
+                          </li>
                       </ul>
                     </div>
                   </div>
@@ -1112,6 +1119,14 @@
                   <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_bulletin--aidrivenmesh" data-vars-event-label="/en/mesh/ai-driven-mesh/" href="/en/mesh/ai-driven-mesh/">
                     
                     <p>AI-Driven Mesh</p>
+                  </a>
+                </div>
+              </li>
+              <li class="tp-m-soho-menu-item" data-id="bulletin-isp-tools">
+                <div class="tp-container-inner">
+                  <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_bulletin-isp-tools" data-vars-event-label="/en/solution/isp-tools/" href="/en/solution/isp-tools/">
+                    
+                    <p>ISP Tools</p>
                   </a>
                 </div>
               </li>
@@ -2239,7 +2254,7 @@
         <div class="tp-table-row">
                             <div class="tp-table-cell tp-follow-left">
                 <div class="tp-follow-subscribe">
-                  <p class="tp-follow-title">Sign Up for News & Offers<i class="tp-follow-icon"></i><span class="tp-follow-tip">TP-Link takes your privacy seriously. For further details on TP-Link's privacy practices, see <a href="https://www.tp-link.com/privacy" target="_blank">TP-Link's Privacy Policy</a>.</span></p>
+                  <p class="tp-follow-title">Sign Up for News & Offers<i class="tp-follow-icon"></i><span class="tp-follow-tip">TP-Link takes your privacy seriously. For further details on TP-Link's privacy practices, see <a href="https://www.tp-link.com/privacy/" target="_blank">TP-Link's Privacy Policy</a>.</span></p>
                   <form class="tp-follow-subscribe-form" method="post" action="/en/register-mailchimp.html">
                     <button class="ga-click tp-follow-subscribe-btn" data-vars-event-category="Footer-Subscription">Sign Up</button>
                     <div class="tp-follow-subscribe-text">
@@ -2443,21 +2458,20 @@
   var privacyAgreeForNewsletter = 'By completing this form you confirm that you understand and agree to our <a href ="https://www.tp-link.com/privacy" target="_blank">Privacy Policy</a>.';
 </script>
   <script src="/assets/diff/en/widgets/facebook.js"></script>
-  
   <script>
-  tp && tp.fixedView && tp.fixedView.add({
+  typeof tp != 'undefined' && tp.fixedView.add({
     position: 'right-bottom',
     dom: '<script src="/assets/diff/en/widgets/consult/script.js"><\/script>',
     excludeUrls: [
-      /\/business-networking\/consult\/$/
+      /\/business-networking\/consult\/$/,
+      /\/smb\/select-product\//
     ],
     checkShowHandler: function() {
       return $("body").hasClass("b2b")
     }
-  })
+  });
   </script>
-<script>tp && tp.fixedView && tp.fixedView.show()</script>
-<script async type="text/javascript" src="https://static.tp-link.com/res/js/Web_JS_Stats.js"></script>
+<script>typeof tp != 'undefined' && tp.fixedView.show()</script><script async type="text/javascript" src="https://static.tp-link.com/res/js/Web_JS_Stats.js"></script>
   </div>
 </body>
 </html>
