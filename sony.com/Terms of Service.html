@@ -56,27 +56,128 @@
 
 
 <script type="text/javascript">
-  if (typeof window.SonyAnalytics === 'undefined') {
-    window.SonyAnalytics = function() {
-        this.build = function() {
-            var dataLayer = {};
-            dataLayer.analytics = {};
-            dataLayer.analytics.version = '1';
-            dataLayer.analytics.page = {};
-            dataLayer.analytics.page.brand = 'US';
-            dataLayer.analytics.page.country = 'US';
-            dataLayer.analytics.page.language = 'en';
-            dataLayer.analytics.page.name = 'SCA:terms';
-            dataLayer.analytics.page.omniture_rsid = 'sonygwt-na-prod';
-            dataLayer.analytics.page.section = 'usa';
-            dataLayer.analytics.page.template = 'corporate';
-            dataLayer.analytics.page.template_revision = 'corporate';
-            return dataLayer;
-        }; <!--/* dataLayer */-->
-    }; <!--/* function */-->
-  } <!--/* window.SonyAnalytics */-->
+  var digitalData = {};
+            digitalData = {
+            	website_platform: "regional:marketing",
+                configBRBanner: "en",
+	    		page: {
+                    info: {
+                        pageName: "",
+                        pageURL: "",
+                        pageType: "",
+                        brand: "Sony",
+                        country: "US",
+                        language: "en",
+                        previousPageName: "",
+                        previousPageUrl: "",
+                        seoTitle: "",
+                        totalPixelsLoaded: "",
+                        description: "",
+						pageLoadTime: "",
+                        pageViewedPercentage: "",
+                        section: "USA",
+                        name: "",
+                        template: "",
+                        template_revision: "",
+                        title: ""
+                    },
+					tabs: {
+						count: "",
+						names: "",
+						activeTab: ""
+					},
+                    category: {
+                        channel: "",
+                        hierarchy: "",
+                        section: ""
+                        }
+                    },
+                content: {
+					videoName:""
+                },
+                events: {
+                	event: {
+                    	name: ""
+                        }
+                    },
+				analytics: {
+                	version: ""
+                    },
+				visitor: {
+					id: "",
+                    device: ""
+                },
+                meta: {
+                    description: "",
+                    template: "",
+                    viewport: "",
+                    og: {
+                        description: "",
+                        image: "",
+                        title: "Sony Corporation of America – U.S. Headquarters of Sony Corporation",
+                        type: "website",
+                        url: ""
+                        },
+                    twitter: {
+                        card: "summary",
+                        description: "",
+                        image: "",
+                        title: "",
+                        url: ""
+                        }
+                     },
+				download: {
+					download_number: "",
+					download_type: "",
+					url: ""
+					}
+                  }
+
+    		var pageName = window.location.pathname.split("/").pop();
+    		digitalData.analytics.version = '1';
+            digitalData.page.info.pageName = 'usa:' + pageName.substr(0, pageName.lastIndexOf('.'));
+            digitalData.page.info.pageURL = window.location.href;
+            digitalData.page.info.pageType = 'Sony Basic';
+            //digitalData.page.info.previousPageName = _satellite.getVar("prevPageName");
+    		digitalData.page.info.brand = 'US';
+    		digitalData.page.info.country = 'US';
+    		digitalData.page.info.language = 'en';
+    		digitalData.page.info.name = document.title;
+            digitalData.page.info.title = document.title;
+    		digitalData.page.info.section = 'usa';
+    		digitalData.page.info.template = 'Basic Template';
+    		digitalData.page.info.template_revision = 'usa:';
+            //digitalData.page.info.seoTitle = $("meta[property='og:title']").attr("content");
+			var pageURL = window.location.href;
+            var subsections = pageURL.substring(pageURL.lastIndexOf('en_us')+5).split("/");
+            for(let i=1; i<subsections.length-1; i++){
+				switch(i) {
+                    case 1:
+                    digitalData.page.category.subsection1 = subsections[i];
+                    break;
+                  case 2:
+                    digitalData.page.category.subsection2 = subsections[i];
+                    break;
+				  case 3:
+                    digitalData.page.category.subsection3 = subsections[i];
+                    break;
+                  case 4:
+                    digitalData.page.category.subsection4 = subsections[i];
+                    break;
+                }
+            }
+			var channelName = navigator.userAgent;
+            if (/mobi/i.test(channelName)) {
+				digitalData.page.category.channel = "mobile";
+			} else {
+            	digitalData.page.category.channel = "web";
+            }
+
+    	function getDigitalData(){
+        	return digitalData;
+    	}
 </script>
-<script type="text/javascript" src="//tags.tiqcdn.com/utag/sony-marketing/sna/prod/utag.sync.js"></script>
+<script type="text/javascript" src="//assets.adobedtm.com/1df4ff0169f6/0a2705e9fcf6/launch-6f161c8d83cf.min.js"></script>
 <script type="text/javascript"> var utag_data = { website_platform : "regional:marketing" }; </script>
 
 
@@ -107,19 +208,6 @@
 
 </head>
 <body class=" corporate">
-	<script type="text/javascript">
-	(function(a,b,c,d)
-			{ a="https://tags.tiqcdn.com/utag/sony-marketing/sna/prod/utag.js"; 
-			b=document;
-			c='script';
-			d=b.createElement(c);
-			d.src=a;
-			d.type='text/java'+c;
-			d.async=true;
-			a=b.getElementsByTagName(c)[0];
-			a.parentNode.insertBefore(d,a); 
-			})(); 
-	</script>
 	<div class="pre-header-content container-fluid">
 		<div class="row">
 			<div class="col-12">
@@ -133,7 +221,7 @@
     <a class="navbar-brand" data-linkname="terms:header-corporate:navbar-brand" data-analytics-event="link" data-analytics-category="header" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav" data-analytics-url="https://www.sony.com/" role="button" href="https://www.sony.com/">
       <span class="sr-only">Sony</span>
     </a>
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-linkname="terms:header-corporate:navbar-toggler" data-analytics-event="content" data-analytics-category="moreInfo" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav" data-target="#navbarNavDropdown-6b784fe0-af12-4168-8e91-8bf521d474b7" aria-controls="navbarNavDropdown-6b784fe0-af12-4168-8e91-8bf521d474b7" aria-expanded="false" aria-haspopup="true" aria-label="Toggle navigation">
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-linkname="terms:header-corporate:navbar-toggler" data-analytics-event="content" data-analytics-category="moreInfo" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav" data-target="#navbarNavDropdown-29c0e1de-78d4-4333-addf-21462814a069" aria-controls="navbarNavDropdown-29c0e1de-78d4-4333-addf-21462814a069" aria-expanded="false" aria-haspopup="true" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon">
       <span class="expanded-icon"></span>
       <span class="collapsed-icon">
@@ -143,7 +231,7 @@
       </span>
     </span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown-6b784fe0-af12-4168-8e91-8bf521d474b7">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown-29c0e1de-78d4-4333-addf-21462814a069">
       <ul class="navbar-nav">
         
           <li class="nav-item  nav-link-1">
@@ -154,10 +242,10 @@
           </li>
         
           <li class="nav-item dropdown nav-link-2">
-            <button class="nav-link dropdown-toggle corporate-header-nav-2" data-linkname="terms:header-corporate:dropdown-toggle:2" data-analytics-event="content" data-analytics-category="moreInfo" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav Company News button" role="button" id="header-corporate-dropdown-btn-bfff4e67-ed90-4ebf-8f99-789c48ff2024" aria-label="Toggle Company News Links" aria-controls="header-corporate-dropdown-bfff4e67-ed90-4ebf-8f99-789c48ff2024" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">Company News<span class="carat"></span>
+            <button class="nav-link dropdown-toggle corporate-header-nav-2" data-linkname="terms:header-corporate:dropdown-toggle:2" data-analytics-event="content" data-analytics-category="moreInfo" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav Company News button" role="button" id="header-corporate-dropdown-btn-05b0d0c7-0c9f-4f84-a3c6-aa57f9a10400" aria-label="Toggle Company News Links" aria-controls="header-corporate-dropdown-05b0d0c7-0c9f-4f84-a3c6-aa57f9a10400" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">Company News<span class="carat"></span>
             </button>
             
-            <div id="header-corporate-dropdown-bfff4e67-ed90-4ebf-8f99-789c48ff2024" aria-labelledby="header-corporate-dropdown-btn-bfff4e67-ed90-4ebf-8f99-789c48ff2024" class="dropdown-menu corporate-header-nav-dropdown-2-">
+            <div id="header-corporate-dropdown-05b0d0c7-0c9f-4f84-a3c6-aa57f9a10400" aria-labelledby="header-corporate-dropdown-btn-05b0d0c7-0c9f-4f84-a3c6-aa57f9a10400" class="dropdown-menu corporate-header-nav-dropdown-2-">
               
                 <a class="dropdown-item corporate-header-nav-link-2-1" aria-label="Visit Company News Overview" data-linkname="terms:header-corporate:dropdown-item:2:1" data-analytics-event="link" data-analytics-category="header" data-analytics-url="https://www.sony.com/en_us/SCA/company-news/overview.html" data-analytics-name="terms Sony Corporate Header Nav Overview" href="https://www.sony.com/en_us/SCA/company-news/overview.html" target="_self">Overview</a>
               
@@ -176,10 +264,10 @@
           </li>
         
           <li class="nav-item dropdown nav-link-4">
-            <button class="nav-link dropdown-toggle corporate-header-nav-4" data-linkname="terms:header-corporate:dropdown-toggle:4" data-analytics-event="content" data-analytics-category="moreInfo" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav Social Responsibility button" role="button" id="header-corporate-dropdown-btn-c535bf7c-b53b-407f-adfc-4ef879cfb325" aria-label="Toggle Social Responsibility Links" aria-controls="header-corporate-dropdown-c535bf7c-b53b-407f-adfc-4ef879cfb325" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">Social Responsibility<span class="carat"></span>
+            <button class="nav-link dropdown-toggle corporate-header-nav-4" data-linkname="terms:header-corporate:dropdown-toggle:4" data-analytics-event="content" data-analytics-category="moreInfo" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav Social Responsibility button" role="button" id="header-corporate-dropdown-btn-195e89c9-e04b-410d-9abd-4f793ab0746f" aria-label="Toggle Social Responsibility Links" aria-controls="header-corporate-dropdown-195e89c9-e04b-410d-9abd-4f793ab0746f" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">Social Responsibility<span class="carat"></span>
             </button>
             
-            <div id="header-corporate-dropdown-c535bf7c-b53b-407f-adfc-4ef879cfb325" aria-labelledby="header-corporate-dropdown-btn-c535bf7c-b53b-407f-adfc-4ef879cfb325" class="dropdown-menu corporate-header-nav-dropdown-4-">
+            <div id="header-corporate-dropdown-195e89c9-e04b-410d-9abd-4f793ab0746f" aria-labelledby="header-corporate-dropdown-btn-195e89c9-e04b-410d-9abd-4f793ab0746f" class="dropdown-menu corporate-header-nav-dropdown-4-">
               
                 <a class="dropdown-item corporate-header-nav-link-4-1" aria-label="Visit Social Responsibility Overview" data-linkname="terms:header-corporate:dropdown-item:4:1" data-analytics-event="link" data-analytics-category="header" data-analytics-url="https://www.sony.com/en_us/SCA/social-responsibility/overview.html" data-analytics-name="terms Sony Corporate Header Nav Overview" href="https://www.sony.com/en_us/SCA/social-responsibility/overview.html" target="_self">Overview</a>
               
@@ -201,10 +289,10 @@
           </li>
         
           <li class="nav-item dropdown nav-link-5">
-            <button class="nav-link dropdown-toggle corporate-header-nav-5" data-linkname="terms:header-corporate:dropdown-toggle:5" data-analytics-event="content" data-analytics-category="moreInfo" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav Careers button" role="button" id="header-corporate-dropdown-btn-b2d7cd7b-f521-43ee-b530-22dae312d53f" aria-label="Toggle Careers Links" aria-controls="header-corporate-dropdown-b2d7cd7b-f521-43ee-b530-22dae312d53f" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">Careers<span class="carat"></span>
+            <button class="nav-link dropdown-toggle corporate-header-nav-5" data-linkname="terms:header-corporate:dropdown-toggle:5" data-analytics-event="content" data-analytics-category="moreInfo" data-analytics-action="click" data-analytics-name="terms Sony Corporate Header Nav Careers button" role="button" id="header-corporate-dropdown-btn-da8fa16e-e75b-467f-81e4-1e057160481e" aria-label="Toggle Careers Links" aria-controls="header-corporate-dropdown-da8fa16e-e75b-467f-81e4-1e057160481e" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">Careers<span class="carat"></span>
             </button>
             
-            <div id="header-corporate-dropdown-b2d7cd7b-f521-43ee-b530-22dae312d53f" aria-labelledby="header-corporate-dropdown-btn-b2d7cd7b-f521-43ee-b530-22dae312d53f" class="dropdown-menu corporate-header-nav-dropdown-5-">
+            <div id="header-corporate-dropdown-da8fa16e-e75b-467f-81e4-1e057160481e" aria-labelledby="header-corporate-dropdown-btn-da8fa16e-e75b-467f-81e4-1e057160481e" class="dropdown-menu corporate-header-nav-dropdown-5-">
               
                 <a class="dropdown-item corporate-header-nav-link-5-1" aria-label="Visit Careers Overview" data-linkname="terms:header-corporate:dropdown-item:5:1" data-analytics-event="link" data-analytics-category="header" data-analytics-url="https://www.sony.com/en_us/SCA/careers/overview.html" data-analytics-name="terms Sony Corporate Header Nav Overview" href="https://www.sony.com/en_us/SCA/careers/overview.html" target="_self">Overview</a>
               
@@ -905,16 +993,16 @@
         <div class="container-fluid">
             <div class="text-md-right footer-right-group">
                 <div class="footer-social-links pull-md-left">
-                    <a class="footer-social footer-social-facebook" href="https://www.facebook.com/Sony/" aria-label="Visit Sony on Facebook" title="Facebook" target="_blank" data-analytics-link-footer>
+                    <a class="footer-social footer-social-facebook" href="https://www.facebook.com/Sony/" aria-label="Visit Sony on Facebook" data-analytics-event="link" data-analytics-category="link" data-analytics-action="click" title="Facebook" target="_blank" data-analytics-link-footer>
                         <img class="facebook-icon" alt="Facebook logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAA0CAYAAAAnpACSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjBJREFUeNrsmd1twjAQxxPEAHltVanZoGEDMgFhgpYJKBNAJmiYoDBB0wnIBqUTkIeqfWWEnqWLxIOt2Oezkwf/pVNewqGf78NnJ4qCgoKCgoKCtBRzO/z5/UvhMQd7Asskr7Rg32DNw/3deZQwAPECj7UCQCUBdgQ7AFg7OAxAFPB4A0stXZVgFUBdvcMARAKPd7CCMVNEdFYA1HiDARCRSh8M0VBJAB2cwyDICSxx3JyMgWJCal08gJCATGG+DLvVrURh19iWz7ggna+Fwq/4Ta7bwqcGIDsLkEp0K0mnqtF3pPDdNZmZzp9MDNJrTW25ALGxaLkZ7mE8MKBXYp20ALFjqJ0tZ5pRo7Lv6YrdAj32+EnF5gwLU1vB4A5P7V6NImVPhPp77mrMJs0W1NxQdKEtsZHMOWomi3hF9Zdgao4KxkYpRzcbi+iR6Qvr2DRl9FXq7CnwTi5ZtAvHBD4hdCPvtcAC40MQlbnB62dbGNfRMdmQW1uYxjGMbpO59qV9rJEGBR6RKRNALPF30tnNJRI3OCuryOBwd42G1ydXA9gPDNL2TcwmMNXA0SnZWjOeEsuBQBrdS42JQTFXHjqb7EJj42rTXHpOt43JFGIEg+mWewIyvgQ0HmdwpXLHkwHpepY0m90A1cwQYlyZUUCsBk2RcmBLrKOWodBLBCFH3Po8g5tZjRd14vKjMIyE+Nhk9V1GezYjjPQJzl6Z7LCG0Enk4DNgUFBQUNDo9C/AAHBjrklJfh4JAAAAAElFTkSuQmCC"/>
                     </a>
-                    <a class="footer-social footer-social-instagram" href="https://www.instagram.com/sony/" aria-label="Visit Sony on Instagram" title="Instagram" target="_blank" data-analytics-link-footer>
+                    <a class="footer-social footer-social-instagram" href="https://www.instagram.com/sony/" aria-label="Visit Sony on Instagram" title="Instagram" target="_blank" data-analytics-event="link" data-analytics-category="link" data-analytics-action="click" data-analytics-link-footer>
                         <img class="instagram-icon" alt="Instagram logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAA0CAYAAAAnpACSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtlJREFUeNrsmdFt2zAQhuUgA6iPCQrUmaDKBLYmiDJB5QkiT+B4AtsTyJ4gyQR2Jog7QRSgSF69QXtX/AbcRKTII6UYBQ8ghMAOzY9399+RiqJgwYIFCxYsmJH1fE/46/WtT48hje80kpqvVDR+0th8PT/bHiUMQeT0uFEAqIzBVjSWBFZ9OgxBZPSY0eg7TjWlMSeoXecwBBHTo6SReYwU9s6IgDadwRAIh9KdB2+ojIGWrcMAZE0jblmcrIF6gtB67gBEBGQL82SgViy3pkmcNGwMz5OaSvipBchtA8icxsJWYiHpMwXUXmQuvXnGILz+hgMKZm7BwoVzg/nXms0yCreehVcmqvpAP3SLHS4FecEyfA1lfFJJNv3GRdNEJ4Y/eKOKaYAMBSD3CE3+3wnyQrX7fRRnNxhMEmsWpIPV2ZgAxvBMgVBbab7/w4dnrjSfvRwkap3xTl/Sojmcv3DsQ+3YZgQwg2f2yqZTraEPmCSSGSft6CDnMngyxZP/Lg7/oaEvi1GwO4eZQt1KJPUEOfWMRB9Z1KJ/cseHANjaHOqW19SNO3hgKZhX7hmolLXUYrEDjTLxoh5872CTZyShYNK37doIBy2M8FibQGZVO79Fy3PVtWekVtCC90Xxw+ELsLlg3q0rjMQ7ExYAFMULyHGKlqRyOA9VrjAboXdKSHMfx+AKCqc8RsBjkaZ1cvbMo+azbw0JzYtf0yJ/o8aUqloB4KShl3PLGcS+arEZdnPhWpcM+q8HXwKw0MhwgV2VVnW+Mxuj9uSaI0CjZ3wfzmL0XKa3NvecBwaXJP4OZwAqcLzVxfTUpjYBvsARItZ0FGkbFxprg1Z8ZyjnsUETa3Wh8V9dNVl1AGgg07Z6KxcQUTsDl6fCzqA1EOswqwm5Ni7Or6XvbY7llcYOtexzXmnUQOVo6zNLT6xcIbzDvAu/IWR3oOjCX6IWXgMGCxYsWLCjsz8CDABY5CfYm5TsXwAAAABJRU5ErkJggg=="/>
                     </a>
-                    <a class="footer-social footer-social-twitter" href="https://twitter.com/sony/" aria-label="Visit Sony on Twitter" title="twitter" target="_blank" data-analytics-link-footer>
+                    <a class="footer-social footer-social-twitter" href="https://twitter.com/sony/" aria-label="Visit Sony on Twitter" data-analytics-event="link" data-analytics-category="link" data-analytics-action="click" title="twitter" target="_blank" data-analytics-link-footer>
                         <img class="twitter-icon" alt="twitter logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAA0CAYAAAAnpACSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAm9JREFUeNrsmdFRwkAQhgNjAbzq+BArIB2QVABUYKgAqQCoAKxAqECsILECQwXGGUcfTQnuOusME03u9m6T8HD/zE4eCHf5bvd29xLPc3JycnJyctJST3rA949PHy4h2BAs+OeWHOwIll5fXWZnCQMQMVzmFQBVQrA92A7A8s5hAGIClw2YbznUGmwLUEXrMAAxgMsD2EQwUtA7MwBKW4MBEAylRwFvVAmBdo3DEEgCNmg4ObGBegah9doCiBFQnzl40iIIakORIAsDg66YaVdCv0lGLsw6CC+jcNP1zJ0QyE/qBYvIdqXfqrSU9MyXAmamUf2xdYnKRZH2REGFt65mTeG/ByvPUIVXeeVAK50qHuZPdaf+zKd+rU63EmE21rgnwAcFi8hL5ZDJFL1XrjFPKAETcIBxo4LdoCdoT2QURnWKNeYZqNL0hRBMDBMdTzMOxfdBOKv5tDgiRbNKqv2i0lDzvsA4zGC1Q81J5pbnEZFirPKM7tkipsOZ6cnUbxyGeaxdwoNtqFvgKJbaUH3BzYkQa85JkcDnjDkyW5iMAZNwulyq+hxP5rYwKXMjvwBQovkChBNihSrsdWCemSu3pS6gDmTDae1PWibPqmhi8YPJC0U4YLFcqPYLeWNpmL2epLrmlUYbXtDqHUv7DB98RL2VaQrOqUVyh7NyqOGqrzsCSXVfamjXGRhwa9l/mQgXcdFU0ZwyWhwJLThdCAuGwi1qCYj9EpDdztBKRYzOoBUQ7WxWk+GaeHE+Nf1ucy6fNDBs772uPmlUVPcx01Poib0thDhMKfxCajpHFV34m9fAZ0AnJycnp7PTtwADAIPV3y33YVBeAAAAAElFTkSuQmCC"/>
                     </a>
-                    <a class="footer-social footer-social-tiktok" href="https://www.tiktok.com/@sony" aria-label="Visit Sony on TikTok" title="TikTok" target="_blank" data-analytics-link-footer>
+                    <a class="footer-social footer-social-tiktok" href="https://www.tiktok.com/@sony" aria-label="Visit Sony on TikTok" data-analytics-event="link" data-analytics-category="link" data-analytics-action="click" title="TikTok" target="_blank" data-analytics-link-footer>
                         <img class="tiktok-icon" alt="TikTok logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAA0CAYAAAAnpACSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAnBJREFUeNrsmV9OwkAQxoFwAHzU+FBPIJ7AcgLgBMIJgBMgJ6ieAHoC4ATUG+AJrInRR3sEv00GUxvanf1XiNkvmdSYuu5vZ3Z2dtpoeHl5eXl5ebHUtD3gx+dXgEcIu4V1j7ySwl5hyfXV5f4sYQAxwmNSAlAmARbDVgBLTw4DiAEeESwwHGoBewJUVjsMIDp4LGEDi5EivDMGUFIbDEBEKK0teKNMAmjlHIZAdrCO4+SkDNTUCK23GkC0gFqKg5t4pIeJNYXh5w3zbyKKBLswGPRRMe1Wact875Bk7MFQeE1sxQ6FDvdc6dIZZs0zUwf7ZAjjnilzmzAT2zubSpmeKGsYrwd0OJvB0CBOspcAggmgG9hM8vqDDc/0HRSj0wKU2D+yojO0AdN14JQ+gJaUWLjqyNJ02xFMRitdtZoiQ4WYYEz7hvN/gioPtiyvuEi5dwibC9oLnMnN6TCOTBe2LYntUAFEqzi0qRYjXLRAFBfCPQzzWpvkQUTZA/um0KlVbQtjxIWr89zhfPemqVnmncRlpXDkJmoEk0hCMXV8Jv3uX1nYc2BeGDdPDnhWSMmq2hglAFr5jSSr5bPWc9n5c1hV6qvpwGyNYSST/LNPCHyY22ciBBf4/Vi1nC/uFRrbvAfAuPuLfteMMU6ombJZBzLLM9SYW1Rd3jDRiHGVWGuAJNzKQrU7s5MUjylBiwmk5NGQQlGnIsioEbJ3AfN/Wk0Ubj2Fmq02EK0rQO7uvj8nEOUwOxJyLhrnQ93vNufySSOjs+w0nzSOQI2o+TFQ9ERsCmEdphB+IRWd9yVV+HvDwWdALy8vL6+z048AAwC01uOC+wilLQAAAABJRU5ErkJggg=="/>
                     </a>
                 </div>
@@ -928,11 +1016,11 @@
             </div>
             <div class="footer-legal-links">
                 
-                    <a class="link" href="https://www.sony.com/en_us/SCA/terms.html" target="_blank" title="Terms and Conditions" data-analytics-link-footer>Terms and Conditions</a>
+                    <a class="link" href="https://www.sony.com/en_us/SCA/terms.html" data-analytics-event="content" data-analytics-category="link" data-analytics-action="click" target="_blank" title="Terms and Conditions" data-analytics-link-footer>Terms and Conditions</a>
                 
-                    <a class="link" href="https://www.sony.com/en_us/SCA/privacy-policy.html" target="_blank" title="Privacy Policy" data-analytics-link-footer>Privacy Policy</a>
+                    <a class="link" href="https://www.sony.com/en_us/SCA/privacy-policy.html" data-analytics-event="content" data-analytics-category="link" data-analytics-action="click" target="_blank" title="Privacy Policy" data-analytics-link-footer>Privacy Policy</a>
                 
-                    <a class="link" href="https://www.sony.com/en_us/SCA/contacts/overview.html" target="_self" title="Contact Us" data-analytics-link-footer>Contact Us</a>
+                    <a class="link" href="https://www.sony.com/en_us/SCA/contacts/overview.html" data-analytics-event="content" data-analytics-category="link" data-analytics-action="click" target="_self" title="Contact Us" data-analytics-link-footer>Contact Us</a>
                 
             </div>
         </div>
