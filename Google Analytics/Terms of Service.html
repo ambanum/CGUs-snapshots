@@ -49,10 +49,8 @@
   </head>
   <body data-ng-controller="MainController as ctrl" class="">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src=
-    "https://www.googletagmanager.com/ns.html?id=GTM-MPHTW35"
-    height="0" width="0" style=
-    "display:none;visibility:hidden"></iframe></noscript> 
+    <noscript><iframe class="gmp-noscript-iframe" src=
+    "https://www.googletagmanager.com/ns.html?id=GTM-MPHTW35"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="butterbar-top">
       <div class="butterbar-text">
@@ -64,7 +62,7 @@
           take effect on 30 April 2021. Please review accordingly
           if you are based in EMEA.
         </p>
-        <div class="close-btn" ng-click="ctrl.closeBanner_()">
+        <div class="close-btn" ng-click="ctrl.closeBanner()">
           +
         </div>
       </div>
@@ -1377,8 +1375,8 @@
                 "global footer" class="h-c-social__link" href=
                 "https://www.blog.google/products/marketingplatform/"
                 aria-label="Share to Blogger" target="_blank" rel=
-                "nofollow noopener"><svg alt="" role="img"
-                aria-hidden="true" class=
+                "nofollow noreferrer noopener"><svg alt="" role=
+                "img" aria-hidden="true" class=
                 "h-c-icon h-c-icon--20px h-c-icon--social h-c-icon--no-padding">
                 <use xlink:href="#social-blogger"></use></svg></a>
               </li>
@@ -1388,8 +1386,8 @@
                 "global footer" class="h-c-social__link" href=
                 "https://twitter.com/GMktgPlatform" aria-label=
                 "Share to Twitter" target="_blank" rel=
-                "nofollow noopener"><svg alt="" role="img"
-                aria-hidden="true" class=
+                "nofollow noreferrer noopener"><svg alt="" role=
+                "img" aria-hidden="true" class=
                 "h-c-icon h-c-icon--20px h-c-icon--social h-c-icon--no-padding">
                 <use xlink:href="#social-twitter"></use></svg></a>
               </li>
@@ -1399,8 +1397,8 @@
                 "global footer" class="h-c-social__link" href=
                 "https://www.youtube.com/c/googlemarketingplatform"
                 aria-label="Share to YouTube" target="_blank" rel=
-                "nofollow noopener"><svg alt="" role="img"
-                aria-hidden="true" class=
+                "nofollow noreferrer noopener"><svg alt="" role=
+                "img" aria-hidden="true" class=
                 "h-c-icon h-c-icon--20px h-c-icon--social h-c-icon--no-padding">
                 <use xlink:href="#social-youtube"></use></svg></a>
               </li>
@@ -1410,8 +1408,8 @@
                 "global footer" class="h-c-social__link" href=
                 "https://www.linkedin.com/showcase/googlemarketingplatform"
                 aria-label="Share to LinkedIn" target="_blank" rel=
-                "nofollow noopener"><svg alt="" role="img"
-                aria-hidden="true" class=
+                "nofollow noreferrer noopener"><svg alt="" role=
+                "img" aria-hidden="true" class=
                 "h-c-icon h-c-icon--20px h-c-icon--social h-c-icon--no-padding">
                 <use xlink:href="#social-linkedin"></use></svg></a>
               </li>
@@ -1494,7 +1492,8 @@
                     "https://analytics.google.com/analytics/academy/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Analytics Academy" class=
                     "h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Analytics Academy</a>
+                    "nofollow noreferrer noopener">Analytics
+                    Academy</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1502,7 +1501,8 @@
                     "global footer" href=
                     "https://skillshop.withgoogle.com/" title=
                     "Skillshop" class="h-c-footer__link" target=
-                    "_blank" rel="nofollow noopener">Skillshop</a>
+                    "_blank" rel=
+                    "nofollow noreferrer noopener">Skillshop</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1510,7 +1510,8 @@
                     data-g-label="global footer" href=
                     "https://www.yourprimer.com/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Google Primer" class="h-c-footer__link"
-                    target="_blank" rel="nofollow noopener">Google
+                    target="_blank" rel=
+                    "nofollow noreferrer noopener">Google
                     Primer</a>
                   </li>
                 </ul>
@@ -1544,8 +1545,8 @@
                     "https://measurementpartners.google.com/"
                     title="Google Measurement Partners" class=
                     "h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Google Measurement
-                    Partners</a>
+                    "nofollow noreferrer noopener">Google
+                    Measurement Partners</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1554,7 +1555,7 @@
                     "https://developers.google.com/analytics/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Analytics for developers" class=
                     "h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Analytics for
+                    "nofollow noreferrer noopener">Analytics for
                     developers</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
@@ -1564,7 +1565,7 @@
                     "https://developers.google.com/tag-manager/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Tag Manager for developers" class=
                     "h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Tag Manager for
+                    "nofollow noreferrer noopener">Tag Manager for
                     developers</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
@@ -1574,7 +1575,8 @@
                     "https://developers.google.com/surveys/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Surveys for developers" class=
                     "h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Surveys for developers</a>
+                    "nofollow noreferrer noopener">Surveys for
+                    developers</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1583,8 +1585,8 @@
                     "https://developers.google.com/doubleclick-advertisers/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Campaign Manager 360 for developers"
                     class="h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Campaign Manager 360 for
-                    developers</a>
+                    "nofollow noreferrer noopener">Campaign Manager
+                    360 for developers</a>
                   </li>
                 </ul>
               </div>
@@ -1607,8 +1609,8 @@
                     "global footer" href=
                     "https://ads.google.com/home/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Google Ads" class="h-c-footer__link"
-                    target="_blank" rel="nofollow noopener">Google
-                    Ads</a>
+                    target="_blank" rel=
+                    "nofollow noreferrer noopener">Google Ads</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1616,7 +1618,8 @@
                     data-g-label="global footer" href=
                     "https://www.google.com/adsense/start/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Google AdSense" class="h-c-footer__link"
-                    target="_blank" rel="nofollow noopener">Google
+                    target="_blank" rel=
+                    "nofollow noreferrer noopener">Google
                     AdSense</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
@@ -1625,8 +1628,9 @@
                     data-g-label="global footer" href=
                     "https://admanager.google.com/home/" title=
                     "Google Ad Manager" class="h-c-footer__link"
-                    target="_blank" rel="nofollow noopener">Google
-                    Ad Manager</a>
+                    target="_blank" rel=
+                    "nofollow noreferrer noopener">Google Ad
+                    Manager</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1634,8 +1638,8 @@
                     "global footer" href=
                     "https://cloud.google.com/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Google Cloud" class="h-c-footer__link"
-                    target="_blank" rel="nofollow noopener">Google
-                    Cloud</a>
+                    target="_blank" rel=
+                    "nofollow noreferrer noopener">Google Cloud</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1644,7 +1648,7 @@
                     "https://firebase.google.com/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Firebase" class="h-c-footer__link"
                     target="_blank" rel=
-                    "nofollow noopener">Firebase</a>
+                    "nofollow noreferrer noopener">Firebase</a>
                   </li>
                 </ul>
               </div>
@@ -1668,7 +1672,8 @@
                     "https://www.thinkwithgoogle.com/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Think with Google" class=
                     "h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Think with Google</a>
+                    "nofollow noreferrer noopener">Think with
+                    Google</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1677,7 +1682,8 @@
                     "https://www.google.com/services/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Business Solutions" class=
                     "h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Business Solutions</a>
+                    "nofollow noreferrer noopener">Business
+                    Solutions</a>
                   </li>
                   <li class="h-c-footer__site-links-list-item">
                     <a data-g-event="terms: gb" data-g-action=
@@ -1686,7 +1692,8 @@
                     "https://workspace.google.com/?utm_source=marketingplatform.google.com&amp;utm_medium=et&amp;utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2Fterms%2Fgb%2F"
                     title="Google Workspace" class=
                     "h-c-footer__link" target="_blank" rel=
-                    "nofollow noopener">Google Workspace</a>
+                    "nofollow noreferrer noopener">Google
+                    Workspace</a>
                   </li>
                 </ul>
               </div>
@@ -1699,8 +1706,8 @@
           <a href="https://www.google.com" aria-label="Google"
           data-g-event="terms: gb" data-g-action="logo"
           data-g-label="global footer" target="_blank" rel=
-          "nofollow noopener"><svg alt="" role="img" aria-hidden=
-          "true" class="h-c-footer__logo-img">
+          "nofollow noreferrer noopener"><svg alt="" role="img"
+          aria-hidden="true" class="h-c-footer__logo-img">
           <use xlink:href="#google-logo"></use></svg></a>
         </div>
         <ul class="h-c-footer__global-links h-no-bullet">
@@ -1709,28 +1716,29 @@
             data-g-label="global footer" href=
             "https://www.google.com/intl/en/policies/privacy/"
             title="Privacy" class="h-c-footer__link" target=
-            "_blank" rel="nofollow noopener">Privacy</a>
+            "_blank" rel="nofollow noreferrer noopener">Privacy</a>
           </li>
           <li class="h-c-footer__global-links-list-item">
             <a data-g-event="terms: gb" data-g-action="terms"
             data-g-label="global footer" href=
             "https://www.google.com/intl/en/policies/terms/" title=
             "Terms" class="h-c-footer__link" target="_blank" rel=
-            "nofollow noopener">Terms</a>
+            "nofollow noreferrer noopener">Terms</a>
           </li>
           <li class="h-c-footer__global-links-list-item">
             <a data-g-event="terms: gb" data-g-action=
             "about google" data-g-label="global footer" href=
             "https://about.google/" title="About Google" class=
             "h-c-footer__link" target="_blank" rel=
-            "nofollow noopener">About Google</a>
+            "nofollow noreferrer noopener">About Google</a>
           </li>
           <li class="h-c-footer__global-links-list-item">
             <a data-g-event="terms: gb" data-g-action=
             "google products" data-g-label="global footer" href=
             "https://about.google/products/" title=
             "Google Products" class="h-c-footer__link" target=
-            "_blank" rel="nofollow noopener">Google Products</a>
+            "_blank" rel="nofollow noreferrer noopener">Google
+            Products</a>
           </li>
         </ul>
         <ul class=
