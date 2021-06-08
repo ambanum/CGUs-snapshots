@@ -15040,6 +15040,8 @@ $(document).ready(function(){
 		console.log("PREFERENCES LINK CLICKED");
 		jQuery("#ensNotifyBanner").hide();
 		jQuery(".ensModal .ensTitle").html("<h2>Privacy Preference Center</h2>");
+		jQuery("div.ensToggleRow:nth-child(1)").css("opacity","unset");
+		jQuery("div.ensToggleRow:nth-child(1) .card").css("opacity","0.5");
   	}
 	function closePreferences() {
 		jQuery("#ensCancel > div:nth-child(1)").click();
