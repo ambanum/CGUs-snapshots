@@ -42,7 +42,7 @@
 <!-- category dns-prefetch start -->	
 <!-- category dns-prefetch end -->
 
-<link rel='stylesheet' type='text/css' href='/wro/70c2a1159270a219ebccf9b48b5c7d7/HEAD-CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/wro/4154e74168da6c614f14cf7c917d2261/SITE_CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/text/inc/css/global.css?v=rl07-1'><script src='/wro/768c3c370b31cfb8673abe954f828f59/HEAD.js?minimize=true'></script><link href="https://plus.google.com/u/0/b/116195269616123281160" rel="publisher"/>
+<link rel='stylesheet' type='text/css' href='/wro/70c2a1159270a219ebccf9b48b5c7d7/HEAD-CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/wro/7fb4a9ba5de66ee22d2dc629f54d6966/SITE_CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/text/inc/css/global.css?v=rl07-1'><script src='/wro/768c3c370b31cfb8673abe954f828f59/HEAD.js?minimize=true'></script><link href="https://plus.google.com/u/0/b/116195269616123281160" rel="publisher"/>
 <script>
    var limitSkuQtyExceeded= "Limit {0} per customer. Please adjust your quantity.";
    var limitSkuQtyMap = {};
@@ -695,7 +695,7 @@ jQuery(document).ready(function(){
 	<div class="ml-kickers-row">
 	
 		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1">
-<!-- wk14-hdr-carousel-210601.html | OPEN -->
+<!-- wk14-hdr-carousel-210601-ada.html | OPEN -->
 <style>
 	#globalHeaderIncludeSm #promoslot-gps {
 		visibility: hidden;
@@ -879,18 +879,18 @@ jQuery(document).ready(function() {
 	<div class="banner">
 		<p class="nonwme" style="margin-top:5px;">
 			Members Save 10% On Curbside Pick-Up Orders <br>
-			<button onclick="MarketLive.Base.showCreateAccount();">Join Now</button>
-			<button class="curb10details">Details</button>
+			<button id="hdrnonjoin" onclick="MarketLive.Base.showCreateAccount();MarketLive.Base.setPopTarget('#hdrnonjoin');">Join Now</button>
+			<button id="hdrnoncurb10details" class="curb10details" onclick="cpwmSetSelfFocus('#hdrnoncurb10details');">Details</button>
 		</p>
 		<p class="wme" style="margin-top:5px;">
 			Members Save 10% On Curbside Pick-Up Orders <br>
-			<button onclick="MarketLive.Base.openSignInPopUp('stayOnCurrentPage');">Sign In</button>
-			<button class="curb10details">Details</button>
+			<button id="hdrnonsign" onclick="MarketLive.Base.openSignInPopUp('stayOnCurrentPage');MarketLive.Base.setPopTarget('#hdrnonsign');">Sign In</button>
+			<button id="hdrwmecurb10details" class="curb10details" onclick="cpwmSetSelfFocus('#hdrwmecurb10details');">Details</button>
 		</p>
 		<p class="logged" style="margin-top:5px;">
 			Members Save 10% On Curbside Pick-Up Orders <br>
 			<a href="?code=CURBSIDE10&ab=promo_carousel:14:1:curbside10-apply" rel="nofollow" class="cpwm-one">Apply Code</a>
-			<button class="curb10details">Details</button>
+			<button  id="hdrlogcurb10details"class="curb10details" onclick="cpwmSetSelfFocus('#hdrlogcurb10details');">Details</button>
 		</p>
 	</div>
 	<div class="banner">
@@ -1119,7 +1119,7 @@ function getStateFromDomHeader() {
 		#ml-wm-custom-topnav {display:block !important;}
 	}
 </style>
-<!-- wk14-hdr-carousel-210601.html | CLOSE -->
+<!-- wk14-hdr-carousel-210601-ada.html | CLOSE -->
 </div>
 	  
 	</div>
@@ -1232,7 +1232,7 @@ function getStateFromDomHeader() {
 
 
 
-        <div id ="esl_kicker_01-1" class="ml-slot-item ml-slot-1 esl_kicker_01-1"><!-- wk15-secondary-nav-210610.html | nocar support | loc | host | cj | sheer popup | wine7 | modal upd -->
+        <div id ="esl_kicker_01-1" class="ml-slot-item ml-slot-1 esl_kicker_01-1"><!-- wk15-secondary-nav-210610-ada-tab.html | nocar support | loc | host | cj | sheer popup | wine7 | modal upd -->
 <script src="/text/inc/js/global.js?rev=cjpix" type="text/javascript"></script>
 <style>
 	.ml-recommendation-carousel-view-item .cpwmPth, .ml-recentlyviewed-carousel-view-items .cpwmPth, .ml-gtw-pg-container .cpwmPth {display: none !important;}
@@ -1362,6 +1362,8 @@ function getStateFromDomHeader() {
 		}
 	}
 	.inspiration-hub .toolbar .mov {z-index: unset !important;}
+	#pdptnoncurbside10:focus, #pdptwmecurbside10:focus, #pdpbfrsdetails:focus {outline: 1px dotted #363636;}
+	
 </style>
 <ul class="ml-wm-cmsnav" style="display:none;">
 	<li id="cpwm-inspirations"><a href="/content/inspirations.do">Inspiration</a>
@@ -1676,7 +1678,7 @@ jQuery(document).ready(function() {
 <!-- *********************************************************************************** -->
 <!-- Disclaimer also used by dir and promo bar -->
 	<div class="cpwm-promo-modal disclaimer">
-		<div class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
+		<div id="cpwm-disclaimer" class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
 			<button class="close" aria-label="close window">&times;</button>
 			<div class="modal-copy">
 				<div role="heading" aria-level="2" class="heading2">
@@ -1695,7 +1697,7 @@ jQuery(document).ready(function() {
 <!-- *********************************************************************************** -->
 <!-- Alternate Disclaimer for 40offrugs -->
 <!--	<div class="cpwm-promo-modal alternatedisclaimer">
-		<div class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
+		<div id="cpwm-alternatedisclaimer" class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
 			<button class="close" aria-label="close window">&times;</button>
 			<div class="modal-copy">
 				<div role="heading" aria-level="2" class="heading2">
@@ -1712,7 +1714,7 @@ jQuery(document).ready(function() {
 <!-- *********************************************************************************** -->
 <!-- Alternate Disclaimer for twentypercentdisclaimer -->
 <!--	<div class="cpwm-promo-modal twentypercentdisclaimer">
-		<div class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
+		<div id="cpwm-twentypercentdisclaimer" class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
 			<button class="close" aria-label="close window">&times;</button>
 			<div class="modal-copy">
 				<div role="heading" aria-level="2" class="heading2">
@@ -1729,7 +1731,7 @@ jQuery(document).ready(function() {
 <!-- *********************************************************************************** -->
 <!-- Alternate Disclaimer for curb10disclaimer -->
 	<div class="cpwm-promo-modal curb10disclaimer">
-		<div class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
+		<div id="cpwm-curb10disclaimer" class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
 			<button class="close" aria-label="close window">&times;</button>
 			<div class="modal-copy">
 				<div role="heading" aria-level="2" class="heading2">
@@ -1746,7 +1748,7 @@ jQuery(document).ready(function() {
 <!-- *********************************************************************************** -->
 <!-- Alternate Disclaimer 2 for future2use -->
 <!--	<div class="cpwm-promo-modal additionaldisclaimer2">
-		<div class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
+		<div id="cpwm-additionaldisclaimer2" class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
 			<button class="close" aria-label="close window">&times;</button>
 			<div class="modal-copy">
 				<div role="heading" aria-level="2" class="heading2">
@@ -1762,7 +1764,7 @@ jQuery(document).ready(function() {
 <!-- *********************************************************************************** -->
 <!-- Alternate Disclaimer for FRS -->
 	<div class="cpwm-promo-modal frsdisclaimer">
-		<div class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
+		<div id="cpwm-frsdisclaimer" class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
 			<button class="close" aria-label="close window">&times;</button>
 			<div class="modal-copy">
 				<div role="heading" aria-level="2" class="heading2">
@@ -1784,7 +1786,7 @@ jQuery(document).ready(function() {
 <!-- *********************************************************************************** -->
 <!-- Alternate Disclaimer for FRS promos -->
 	<div class="cpwm-promo-modal frspromodisclaimer">
-		<div class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
+		<div id="cpwm-frspromodisclaimer" class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
 			<button class="close" aria-label="close window">&times;</button>
 			<div class="modal-copy">
 				<div role="heading" aria-level="2" class="heading2">
@@ -1800,7 +1802,7 @@ jQuery(document).ready(function() {
 <!-- *********************************************************************************** -->
 <!-- Alternate Disclaimer for sheerid -->
 	<div class="cpwm-promo-modal sheeriddisclaimer">
-		<div class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
+		<div id="cpwm-sheeriddisclaimer" class="cpwm-modal-content" role="dialog" aria-modal="true" aria-label="Promotions">
 			<button class="close" aria-label="close window">&times;</button>
 			<div class="modal-copy">
 				<div role="heading" aria-level="2" class="heading2">
@@ -1845,6 +1847,38 @@ function cpwmModalComp(){
 jQuery(".disclaimer .close").focusin(function() {
 	console.log("FOCUS ACHIEVED");
 });
+var cpwmSelfFocusTarget = "";
+function cpwmSetSelfFocus(cpwmReFocus){
+	cpwmSelfFocusTarget = cpwmReFocus;
+	console.log("RE-FOCUS: " + cpwmSelfFocusTarget);
+}
+
+function cpwmTrap(openDisclaimer) {
+	testsel = document.querySelector(openDisclaimer);
+	focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+	firstFocusableElement = testsel.querySelectorAll(focusableElements)[0];
+	focusableContent = testsel.querySelectorAll(focusableElements);
+	lastFocusableElement = focusableContent[focusableContent.length - 1];
+	
+	document.addEventListener('keydown', function(e) {
+		let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+		if (!isTabPressed) {
+			return;
+		}
+		if (e.shiftKey) {
+			if (document.activeElement === firstFocusableElement) {
+				lastFocusableElement.focus();
+				e.preventDefault();
+			}
+		} else {
+			if (document.activeElement === lastFocusableElement) {
+				firstFocusableElement.focus();
+				e.preventDefault();
+			}
+		}
+	});
+	firstFocusableElement.focus();
+}
 
 function cpwmDisclaimersAction(){
     var detailsCTA = jQuery(".promo-directory .promoslot .promodetails, .promo-header .promoslot .promodetails, .directorydisclaimer, .shareddisclaimer, .discountdetails, #see-details, #globalHeaderIncludeSm .shareddisclaimer");
@@ -1876,64 +1910,78 @@ function cpwmDisclaimersAction(){
 	detailsCTA.click(function(){
 		modalDisclaimer.show();
 		jQuery(".disclaimer .close").focus();
+		cpwmTrap("#cpwm-disclaimer")
 		cpwmModalComp();
 	});
 	alternatedetailsCTA.click(function(){
 		alternatemodalDisclaimer.show();
 		jQuery(".alternatedisclaimer .close").focus();
+		cpwmTrap("#cpwm-alternatedisclaimer")
 		cpwmModalComp();
 	});
 	additionaldetailsCTA.click(function(){
 		additionalmodalDisclaimer.show();
 		jQuery(".additionaldisclaimer .close").focus();
+		cpwmTrap("#cpwm-additionaldisclaimer")
 		cpwmModalComp();
 	});
 	additionaldetailsTwoCTA.click(function(){
 		additionalmodalDisclaimerTwo.show();
 		jQuery(".additionaldisclaimer2 .close").focus();
+		cpwmTrap("#cpwm-additionaldisclaimer2")
 		cpwmModalComp();
 	});
 	frsdetailsCTA.click(function(){
 		frsmodalDisclaimer.show();
 		jQuery(".frsdisclaimer .close").focus();
+		cpwmTrap("#cpwm-frsdisclaimer")
 		cpwmModalComp();
 	});
 	frspromodetailsCTA.click(function(){
 		frspromomodalDisclaimer.show();
 		jQuery(".frspromodisclaimer .close").focus();
+		cpwmTrap("#cpwm-frspromodisclaimer")
 		cpwmModalComp();
 	});
 	curb10detailsCTA.click(function(){
 		curb10modalDisclaimer.show();
 		jQuery(".curb10disclaimer .close").focus();
+		cpwmTrap("#cpwm-curb10disclaimer")
 		cpwmModalComp();
 	});
 	sheeridCTA.click(function(){
 		sheeridmodalDisclaimer.show();
 		jQuery(".sheeriddisclaimer .close").focus();
+//		cpwmTrap("#cpwm-sheeriddisclaimer")
 		cpwmModalComp();
 	});
 	sheeridHealthcareCTA.click(function(){
 		sheeridmodalHealthcare.show();
 		jQuery(".sheeridhealthcare .close").focus();
+//		cpwmTrap("#cpwm-sheeridhealthcare")
 		cpwmModalComp();
 	});
 	sheeridResponderCTA.click(function(){
 		sheeridmodalResponder.show();
 		jQuery(".sheeridresponder .close").focus();
+//		cpwmTrap("#cpwm-sheeridresponder")
 		cpwmModalComp();
 	});
 	sheeridTeacherCTA.click(function(){
 		sheeridmodalTeacher.show();
 		jQuery(".sheeridteacher .close").focus();
+//		cpwmTrap("#cpwm-sheeridteacher")
 		cpwmModalComp();
 	});
 	pledgelingDonateCTA.click(function(){
 		pledgelingmodalDonate.show();
 		jQuery(".pledgelingdonate .close").focus();
+//		cpwmTrap("#cpwm-pledgelingdonate")
 		cpwmModalComp();
 	});
     closeBtn.click(function(){
+		console.log("TARGETING: " + cpwmSelfFocusTarget);
+		jQuery(cpwmSelfFocusTarget).focus();
         modalDisclaimer.hide();
 		alternatemodalDisclaimer.hide();
 		additionalmodalDisclaimer.hide();
@@ -2258,7 +2306,7 @@ var sbrKids = ["/inspirations/shop-by-room/kids/adventure-landing.do",
 		outline-width: 1px;
 	}
 </style>
-<!-- wk15-secondary-nav-210610.html -->
+<!-- wk15-secondary-nav-210610-ada-tab.html -->
 </div>
     </div>
 						
@@ -7475,15 +7523,6 @@ $(document).ready(function(){
 			  </button>
 		                                <span class="ml-category-nav-arrow"></span>
 		<ul>
-        
-        
-        <li class="ml-category-nav-item ml-category-nav-id-117328" >
-        <a href="/category/holiday/fathers-day.do" class="ml-category-nav-name" data-category-type="1">Father's Day</a>
-		            </li>
-
-        
-        
-
         
         
         <li class="ml-category-nav-item ml-category-nav-id-117402" >
@@ -12839,15 +12878,6 @@ $(document).ready(function(){
 		<ul>
         
         
-        <li class="ml-category-nav-item ml-category-nav-id-117328" >
-        <a href="/category/holiday/fathers-day.do" class="ml-category-nav-name" data-category-type="1">Father's Day</a>
-		            </li>
-
-        
-        
-
-        
-        
         <li class="ml-category-nav-item ml-category-nav-id-117402" >
         <a href="/category/holiday/fourth-of-july.do" class="ml-category-nav-name" data-category-type="1">Fourth of July</a>
 		            </li>
@@ -13338,7 +13368,7 @@ $(document).ready(function(){
 <div class="ml-common-kickers-wrapper">
 	<div class="ml-kickers-row">
 	
-		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- wk16_navigation_210612.html | override K 2019.11.06, 2019.11.20, 2020.01.06 | CPKC-3987 21.05.12 -->
+		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- wk17_navigation_210619.html | override K 2019.11.06, 2019.11.20, 2020.01.06 | CPKC-3987 21.05.12 -->
 <style>
 	@media (min-width: 993px) {
 		.nav.navbar-nav.ml-navbar-nav.ml-navbar-menu li.ml-sibling-group-root:not(ul) > a.ml-category-nav-name {padding: 5px 0 6px 0;}
@@ -14711,9 +14741,6 @@ $(document).ready(function(){
                             <li class="ml-sibling-group">
                               <ul class="ml-sibling-group-items">
                                  <li class="ml-category-nav-header-snippet"><span>2</span></li>
-                                 <li class="ml-category-nav-item ml-category-nav-id-117328">
-                                    <a href="/category/holiday/fathers-day.do" class="ml-category-nav-name cpwmfly-l2">Father's Day</a>
-                                 </li>
                                  <li class="ml-category-nav-item ml-category-nav-id-117402">
                                     <a href="/category/holiday/fourth-of-july.do" class="ml-category-nav-name cpwmfly-l2">Fourth of July</a>
                                  </li>
@@ -14847,7 +14874,7 @@ $(document).ready(function(){
       </div>
    </nav>
 </div>
-<!-- wk16_navigation_210612.html -->
+<!-- wk17_navigation_210619.html -->
 </div>
 	  
 	</div>
@@ -14898,23 +14925,23 @@ $(document).ready(function(){
 <div class="ml-common-kickers-wrapper">
 	<div class="ml-kickers-row">
 	
-		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- wk14-gps-promo-210601.html | 210311 L51 | 210406 L86 -->
+		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- wk14-gps-promo-210601-ada-tab.html | 210311 L51 | 210406 L86 -->
 <div class="cpwm-gps">
 	<div class="cpwm-offer cpwm-left">
 		<p class="nonwme">
 			Members Save 10% On Curbside Pick-Up Orders <br>
-			<button onclick="MarketLive.Base.showCreateAccount();">Join Now</button>
-			<button class="curb10details">Details</button>
+			<button id="gpsnonjoin" onclick="MarketLive.Base.showCreateAccount();MarketLive.Base.setPopTarget('#gpsnonjoin');">Join Now</button>
+			<button id="gpsnoncurb10details" class="curb10details" onclick="cpwmSetSelfFocus('#gpsnoncurb10details');">Details</button>
 		</p>
 		<p class="wme">
 			Members Save 10% On Curbside Pick-Up Orders <br>
-			<button onclick="MarketLive.Base.openSignInPopUp('stayOnCurrentPage');">Sign In</button>
-			<button class="curb10details">Details</button>
+			<button id="gpsnonsign" onclick="MarketLive.Base.openSignInPopUp('stayOnCurrentPage');MarketLive.Base.setPopTarget('#gpsnonsign');">Sign In</button>
+			<button id="gpswmecurb10details" class="curb10details" onclick="cpwmSetSelfFocus('#gpswmecurb10details');">Details</button>
 		</p>
 		<p class="logged">
 			Members Save 10% On Curbside Pick-Up Orders <br>
 			<a href="?code=CURBSIDE10&ab=promo_carousel:14:1:curbside10-apply" rel="nofollow">Apply Code</a>
-			<button class="curb10details">Details</button>
+			<button id="gpslogcurb10details" class="curb10details" onclick="cpwmSetSelfFocus('#gpslogcurb10details');">Details</button>
 		</p>
 	</div>
 	<div class="cpwm-split-offer"></div>
@@ -14973,22 +15000,51 @@ $(document).ready(function(){
 	.cpwm-popup-compensate {z-index:1000 !important;overflow:hidden !important;}
 	.pr-snippet-read-and-write {margin-top: 5px !important;}
 	a.pr-snippet-review-count { top: 0 !important;}
-	#ensModalWrapper .ensModal {padding-top: 100px;background: url("/images/worldmarket/en_us/global/globalnav/logo01.png") no-repeat center top;}
-	.ensModal .ensTitle {top:65px;}
+/*	#ensModalWrapper .ensModal {padding-top: 100px;background: url("/images/worldmarket/en_us/global/globalnav/logo01.png") no-repeat center top;}*/
+/*	.ensModal .ensTitle {top:65px;}*/
 	section#ensModalWrapper .close {position: absolute; top: -16px; right: 2px; font-size: 64px;font-family: "Sentinel-Light",serif;color: #196d79;cursor:pointer;opacity:1;}
 	section#ensModalWrapper .close:hover {color: #0f4149;}
+	#cpwm-ccpa-manage:focus {outline: 1px dotted #363636;}
 </style>
 <script>
 	function closeUp(){
 //Clicking 'Manage Preferences'; Closes 'notify' modal
 		console.log("PREFERENCES LINK CLICKED");
 		jQuery("#ensNotifyBanner").hide();
-		jQuery(".ensModal .ensTitle").html("<h2>Privacy Preference Center</h2>");
+//		jQuery(".ensModal .ensTitle").html("<h2>Privacy Preference Center</h2>");
+		jQuery(".ensModal .ensTitle").html('<img src="/images/worldmarket/en_us/global/globalnav/logo01.png" alt="Cost Plus World Market" width="220" height="61"><h2>Privacy Preference Center</h2>');
 		jQuery("div.ensToggleRow:nth-child(1)").css("opacity","unset");
 		jQuery("div.ensToggleRow:nth-child(1) .card").css("opacity","0.5");
+//
+		cpwmCcpaSel = document.querySelector("#ensModalWrapper");
+		focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+		firstFocusableElement = cpwmCcpaSel.querySelectorAll(focusableElements)[0];
+		focusableContent = cpwmCcpaSel.querySelectorAll(focusableElements);
+		lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+		document.addEventListener('keydown', function(e) {
+			let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+			if (!isTabPressed) {
+				return;
+			}
+			if (e.shiftKey) {
+				if (document.activeElement === firstFocusableElement) {
+					lastFocusableElement.focus();
+					e.preventDefault();
+				}
+			} else {
+				if (document.activeElement === lastFocusableElement) {
+					firstFocusableElement.focus();
+					e.preventDefault();
+				}
+			}
+		});
+		firstFocusableElement.focus();
+//
   	}
 	function closePreferences() {
 		jQuery("#ensCancel > div:nth-child(1)").click();
+		jQuery("#cpwm-ccpa-manage").focus();
 	}
 	jQuery(document).keyup(function(e) {
 		if (e.key === "Escape") { 
@@ -15009,6 +15065,7 @@ $(document).ready(function(){
 		var isitthereChk = setInterval(function () {
 			if(jQuery(isitthere).length > 0){
 				jQuery("#ensBannerDescription > p:nth-child(3) > a:nth-child(1)").attr("onclick","closeUp()");
+				jQuery("#ensBannerDescription > p:nth-child(3) > a:nth-child(1)").attr("id","cpwm-ccpa-manage");
 				jQuery("section#ensModalWrapper").prepend(cpwmCloseEcks);
 //Clicking 'Cancel'; Closes 'preferences' modal
 				jQuery("#ensCancel > div:nth-child(1)").click(function() {
@@ -15029,7 +15086,7 @@ $(document).ready(function(){
 	});
 
 </script>
-<!-- wk14-gps-promo-210601.html -->
+<!-- wk14-gps-promo-210601-ada-tab.html -->
 </div>
 	  
 	</div>
@@ -20266,15 +20323,6 @@ When you register for World Market Rewards we collect your name, birthday, email
 		<ul>
         
         
-        <li class="ml-category-nav-item ml-category-nav-id-117328" >
-        <a href="/category/holiday/fathers-day.do" class="ml-category-nav-name" data-category-type="1">Father's Day</a>
-		            </li>
-
-        
-        
-
-        
-        
         <li class="ml-category-nav-item ml-category-nav-id-117402" >
         <a href="/category/holiday/fourth-of-july.do" class="ml-category-nav-name" data-category-type="1">Fourth of July</a>
 		            </li>
@@ -21558,7 +21606,7 @@ $(document).ready(function() {
 <div class="ml-common-kickers-wrapper">
 	<div class="ml-kickers-row">
 	
-		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- wk15-promo-bar-210609.html | upd -->
+		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- wk15-promo-bar-210609-ada.html | upd -->
 <!-- Assumes the following have been preloaded: global.js; global.css -->
 <script>var cpwmNobar = false; var cpwmNoCaro = false; var isHomepageforpromo;</script>
 <script src="/text/inc/js/promosuppressions-sh.js" type="text/javascript"></script>
@@ -21604,13 +21652,13 @@ $(document).ready(function() {
         <div class="promobox first">
             <div class="nonwme"><div class="imagebox"><img lazy-src="/images/promos/footer/2021/wk14/wk14_curbside10.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Member Exclusive | Extra 10% Off Every Curbside Pick-Up Order | Exclusions apply."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><button class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.showCreateAccount();">Join Now</button></div></div>
+            <div class="buttonbox"><button id="pbnoncurb10join" class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.showCreateAccount();MarketLive.Base.setPopTarget('#pbnoncurb10join');">Join Now</button></div></div>
             <div class="wme"><div class="imagebox"><img lazy-src="/images/promos/footer/2021/wk14/wk14_curbside10.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Member Exclusive | Extra 10% Off Every Curbside Pick-Up Order | Exclusions apply."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><button class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.openSignInPopUp('rewards');">Sign In</button></div></div>
+            <div class="buttonbox"><button id="pbwmecurb10sign" class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.openSignInPopUp('rewards');MarketLive.Base.setPopTarget('#pbwmecurb10sign');">Sign In</button></div></div>
             <div class="logged"><div class="imagebox"><img lazy-src="/images/promos/footer/2021/wk14/wk14_curbside10.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Member Exclusive | Extra 10% Off Every Curbside Pick-Up Order | Exclusions apply."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><a href="?code=CURBSIDE10&ab=promo:14:1:curbside10-apply" class="btn-overlay btn-overlay-first" rel="nofollow">Apply Code</a><button class="btn-overlay btn-overlay-second curb10details">Details</button></div></div>
+            <div class="buttonbox"><a href="?code=CURBSIDE10&ab=promo:14:1:curbside10-apply" class="btn-overlay btn-overlay-first" rel="nofollow">Apply Code</a><button id="pblogcurb10details" class="btn-overlay btn-overlay-second curb10details" onclick="cpwmSetSelfFocus('#pblogcurb10details');">Details</button></div></div>
         </div>
         <div class="promobox">
             <div class="imagebox"><img lazy-src="/images/promos/footer/2021/wk12/wk12_25offoutdoor.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Save up to 25% Select Outdoor"></div>
@@ -21625,15 +21673,15 @@ $(document).ready(function() {
         <div class="promobox">
             <div class="imagebox"><img lazy-src="/images/promos/footer/2020/evergreen/evergreen_wmfs49_no_curb.jpg" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Free Shipping on EVERY Order $49+ |  Exclusions apply. Shipping surcharges still apply."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><a href="?code=WMFS49&ab=promo:14:4:wmfs49" class="btn-overlay btn-overlay-first" rel="nofollow">Apply Code</a><button class="btn-overlay btn-overlay-second shareddisclaimer">Details</button></div>
+            <div class="buttonbox"><a href="?code=WMFS49&ab=promo:14:4:wmfs49" class="btn-overlay btn-overlay-first" rel="nofollow">Apply Code</a><button id="pbshareddisclaimer" class="btn-overlay btn-overlay-second shareddisclaimer" onclick="cpwmSetSelfFocus('#pbshareddisclaimer');">Details</button></div>
         </div>
         <div class="promobox">
             <div class="nonwme"><div class="imagebox"><img lazy-src="/images/promos/footer/2018/evergreen/wmr_promo_bar_v1a.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="World Market Rewards&trade; Welcome Reward | Get 15% Off Your Next Purchase"></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><button class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.showCreateAccount();">Join Now</button></div></div>
+            <div class="buttonbox"><button id="pbnonwelcomejoin" class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.showCreateAccount();MarketLive.Base.setPopTarget('#pbnonwelcomejoin');">Join Now</button></div></div>
             <div class="wme"><div class="imagebox"><img lazy-src="/images/promos/footer/2018/evergreen/wmr_promo_bar_v2.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="World Market Rewards&trade; | Welcome Back! View your latest Rewards, coupons &amp; perks."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><button class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.openSignInPopUp('rewards');">Sign In</button></div></div>
+            <div class="buttonbox"><button id="pbwmewelcomejoin" class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.openSignInPopUp('rewards');MarketLive.Base.setPopTarget('#pbwmewelcomejoin');">Sign In</button></div></div>
             <div class="logged"><div class="imagebox"><img lazy-src="/images/promos/footer/2018/evergreen/wmr_promo_bar_v3.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="World Market Rewards&trade; | Welcome Back! View your current Rewards."></div>
             <div class="clearall"></div>
             <div class="buttonbox"><a href="/account/gateway.do?tab=rewards&ab=promo:14:5:wme-see-rewards" class="btn-overlay btn-overlay-only">See Rewards</a></div></div>
@@ -21641,7 +21689,7 @@ $(document).ready(function() {
         <div class="promobox last">
             <div class="imagebox last"><img lazy-src="/images/promos/footer/2020/wk04/wk04_flat_rate.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Free Shipping on EVERY Order $49+ |  Exclusions apply. Shipping surcharges still apply."></div>
             <div class="clearall"></div>
-            <div class="buttonbox last"><button class="btn-overlay btn-overlay-only frspromodetails">Learn More</button></div>
+            <div class="buttonbox last"><button id="pbfrspromodetails" class="btn-overlay btn-overlay-only frspromodetails" onclick="cpwmSetSelfFocus('#pbfrspromodetails');">Learn More</button></div>
         </div>
     </div>
 </div>
@@ -21664,7 +21712,7 @@ $(document).ready(function() {
         isLogged();
     });
 </script>
-<!-- wk15-promo-bar-210609.html -->
+<!-- wk15-promo-bar-210609-ada.html -->
 </div>
 	  
 	</div>
@@ -22439,7 +22487,7 @@ console.log('**** DataLayer - Ensighten Reporting - End ****');
     MarketLive.Reporting = MarketLive.Reporting || {};
     MarketLive.Reporting.templateType = 'GATEWAY';
 </script>
-<script type='text/javascript' src='/wro/65f52b470b45da4ce59bcf39f3ccd431/FOOTER.js?minimize=true'></script><script type='text/javascript' src='/wro/17169ebd1bfd3b11e7bb119ccd36f07a/FOOTER-LIVECHAT-PRD.js?minimize=true'></script><script type='text/javascript' src='/wro/1fde65f3e242512e45d078a85e6a926/P2P.js?minimize=true'></script><script src="https://portal.afterpay.com/afterpay.js" async></script>
+<script type='text/javascript' src='/wro/65f52b470b45da4ce59bcf39f3ccd431/FOOTER.js?minimize=true'></script><script type='text/javascript' src='/wro/17169ebd1bfd3b11e7bb119ccd36f07a/FOOTER-LIVECHAT-PRD.js?minimize=true'></script><script type='text/javascript' src='/wro/c55e3ebeef8c7ef778ce37e967862784/P2P.js?minimize=true'></script><script src="https://portal.afterpay.com/afterpay.js" async></script>
 <script src="https://static-us.afterpay.com/javascript/present-afterpay.js"></script>
 <script type='text/javascript'>
     window.MarketLive = window.MarketLive || {};
