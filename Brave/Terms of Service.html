@@ -43,7 +43,7 @@
     <link rel="icon" href="https://brave.com/static-assets/images/brave-favicon.png">
 
     
-    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-500-da43ff0e70.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-400-9c42b24bfd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-700-c75b393caa.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-600-44c5581a9e.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/font_awesome_5_free-900-419e86bc16.woff2"><script>try{new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-500-da43ff0e70.woff2') format('woff2'),url('/static-assets/fonts/poppins-500-3097daa15f.woff') format('woff')",{'font-weight':500}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-400-9c42b24bfd.woff2') format('woff2'),url('/static-assets/fonts/poppins-400-d409278841.woff') format('woff')",{}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-700-c75b393caa.woff2') format('woff2'),url('/static-assets/fonts/poppins-700-531be336ce.woff') format('woff')",{'font-weight':700}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-600-44c5581a9e.woff2') format('woff2'),url('/static-assets/fonts/poppins-600-4f6efffbe1.woff') format('woff')",{'font-weight':600}).load(),new FontFace('font awesome 5 free__subset',"url('/static-assets/fonts/font_awesome_5_free-900-419e86bc16.woff2') format('woff2'),url('/static-assets/fonts/font_awesome_5_free-900-0a14647d89.woff') format('woff')",{'font-weight':900}).load()}catch(e){}</script><link rel="stylesheet" href="/static-assets/fonts/fonts-8d6a188ebc.css"><link href="/static-assets/css/main.min.css" rel="stylesheet">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-500-da43ff0e70.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-400-9c42b24bfd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-700-c75b393caa.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-600-c1c5ebcb2a.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/font_awesome_5_free-900-419e86bc16.woff2"><script>try{new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-500-da43ff0e70.woff2') format('woff2'),url('/static-assets/fonts/poppins-500-3097daa15f.woff') format('woff')",{'font-weight':500}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-400-9c42b24bfd.woff2') format('woff2'),url('/static-assets/fonts/poppins-400-d409278841.woff') format('woff')",{}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-700-c75b393caa.woff2') format('woff2'),url('/static-assets/fonts/poppins-700-531be336ce.woff') format('woff')",{'font-weight':700}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-600-c1c5ebcb2a.woff2') format('woff2'),url('/static-assets/fonts/poppins-600-ba57f0cc84.woff') format('woff')",{'font-weight':600}).load(),new FontFace('font awesome 5 free__subset',"url('/static-assets/fonts/font_awesome_5_free-900-419e86bc16.woff2') format('woff2'),url('/static-assets/fonts/font_awesome_5_free-900-0a14647d89.woff') format('woff')",{'font-weight':900}).load()}catch(e){}</script><link rel="stylesheet" href="/static-assets/fonts/fonts-0399d1f490.css"><link href="/static-assets/css/main.min.css" rel="stylesheet">
     <noscript>
         <link href="/static-assets/css/noscript.min.css" rel="stylesheet" />
     </noscript>
@@ -442,11 +442,11 @@ July 14, 2020</p>
     }
     .announcement-banner__link {
         text-decoration: none;
-        color: #000000;
+        color: #FFFFFF;
     }
     .announcement-banner__link:hover {
         text-decoration: none;
-        color: #000000;
+        color: #FFFFFF;
     }
     .announcement-banner {
         min-height: 70px;
@@ -456,8 +456,8 @@ July 14, 2020</p>
         bottom: 0;
         left: 0;
         z-index: 9999999;
-        background: #ffffff;
-        color: #000000;
+        background: #4C54D2;
+        color: #FFFFFF;
         box-shadow: 0px -2px 16px rgba(58, 66, 74, 0.12);
     }
     .announcement-banner__inner {
@@ -524,12 +524,15 @@ July 14, 2020</p>
         }
     }
     @media screen and (min-width: 968px) {
+        .announcement-banner__content {
+            text-align: left;
+        }
         .announcement-banner__inner {
             width: 100%;
             background-size: auto 120%;
         }
         .announcement-banner__text--lg {
-            display: inline;
+            display: block;
         }
     }
     @media screen and (min-width: 1024px) {
@@ -539,21 +542,23 @@ July 14, 2020</p>
     }
 </style>
 <div class="announcement-banner announcement-banner__box">
-    <a href="/search/" class="announcement-banner__link announcement-banner__inner announcement-banner__box">
+    <a href="https://search.brave.com" target="_blank" class="announcement-banner__link announcement-banner__inner announcement-banner__box">
         <p class="announcement-banner__content">
-            <strong>Coming soon: Brave Search.</strong> <span class="announcement-banner__text--lg">A new search engine that respects your privacy.</span>
+            <strong>Brave Search beta is live!</strong> <span class="announcement-banner__text--lg">Private, independent, and user-first. The real alternative to Google.</span>
         </p>
     </a>
     <button class="announcement-banner__close">
         <svg width="22" height="22" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.14905 0.64978C2.51445 0.0151776 1.48555 0.0151776 0.850951 0.64978C0.216349 1.28438 0.21635 2.31327 0.850952 2.94788L9.27881 11.3757L0.850952 19.8036C0.21635 20.4382 0.216349 21.4671 0.850951 22.1017C1.48555 22.7363 2.51445 22.7363 3.14905 22.1017L11.5769 13.6738L19.7661 21.863C20.4007 22.4976 21.4296 22.4976 22.0642 21.863C22.6988 21.2284 22.6988 20.1995 22.0642 19.5649L13.875 11.3757L22.0642 3.18658C22.6988 2.55197 22.6988 1.52308 22.0642 0.888479C21.4296 0.253877 20.4007 0.253877 19.7661 0.888479L11.5769 9.07763L3.14905 0.64978Z" fill="#495057"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.14905 0.64978C2.51445 0.0151776 1.48555 0.0151776 0.850951 0.64978C0.216349 1.28438 0.21635 2.31327 0.850952 2.94788L9.27881 11.3757L0.850952 19.8036C0.21635 20.4382 0.216349 21.4671 0.850951 22.1017C1.48555 22.7363 2.51445 22.7363 3.14905 22.1017L11.5769 13.6738L19.7661 21.863C20.4007 22.4976 21.4296 22.4976 22.0642 21.863C22.6988 21.2284 22.6988 20.1995 22.0642 19.5649L13.875 11.3757L22.0642 3.18658C22.6988 2.55197 22.6988 1.52308 22.0642 0.888479C21.4296 0.253877 20.4007 0.253877 19.7661 0.888479L11.5769 9.07763L3.14905 0.64978Z" fill="#FFFFFF"></path>
         </svg>
     </button>
 </div>
 <script>
     (function () {
         var banner = document.querySelector(".announcement-banner");
-        var bannerHidden = localStorage.getItem("bannerHidden");
+        localStorage.removeItem("bannerHidden");
+        var flagName = "searchBannerHidden";
+        var bannerHidden = localStorage.getItem(flagName);
         if (bannerHidden === "true") {
             banner.style.display = "none";
         }
@@ -568,7 +573,7 @@ July 14, 2020</p>
 
         function hideBanner () {
             banner.style.display = "none";
-            localStorage.setItem("bannerHidden", true);
+            localStorage.setItem(flagName, true);
         }
     })()
 </script>
