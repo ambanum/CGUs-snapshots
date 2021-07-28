@@ -6,8 +6,8 @@
   </head>
 
   <head>
-  <link rel="stylesheet" href="/css/footer.css?t=1626992887087">
-  <link rel="stylesheet" href="/css/header.css?t=1626992887087">
+  <link rel="stylesheet" href="/css/footer.css?t=1627453683956">
+  <link rel="stylesheet" href="/css/header_redesign.css?t=1627453683956">
   <link href='/images/favicon.ico' rel='icon'>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,9 +42,9 @@
   <link rel="dns-prefetch" href="https://bid.g.doubleclick.net">
   <link rel="dns-prefetch" href="https://bat.bing.com">
   <link rel="dns-prefetch" href="https://collect-us-east-1.tealiumiq.com">
-  <link rel="stylesheet" href="/css/hp.min.css?t=1626992887087">
-  <link href="/css/privacy.css?t=1626992887087" rel="stylesheet">
-  <link href="/css/search.css?t=1626992887087" rel="stylesheet">
+  <link rel="stylesheet" href="/css/hp.min.css?t=1627453683956">
+  <link href="/css/privacy.css?t=1627453683956" rel="stylesheet">
+  <link href="/css/search.css?t=1627453683956" rel="stylesheet">
   <script async src='//tags.tiqcdn.com/utag/flanker/main/prod/utag.sync.js'></script>
 </head>
 
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </div>
-		<script type="text/javascript" async src="/js/esim-notice-bar.js?t=1626992887087">
+		<script type="text/javascript" async src="/js/esim-notice-bar.js?t=1627453683956">
 			var currentPage =  sessionStorage.getItem('pageName')
 		</script>
     </div>
@@ -122,9 +122,9 @@
     </div>
     <nav alt="navigational menu" class="navbar navbar-default navbar-fixed-top top-nav-collapse" id=main-menu style=padding:0>
         <a href="#main-content" class="skip-link">Skip to main content</a>
-        <div class=container-fullwidth>
+        <div id="headerWrapper" class='container-fullwidth'>
             <div class=navbar-header>
-                <div class=col-xs-2 id='hamburger'>
+                <div class=col-xs-2>
                     <button class="navbar-toggle header-toggle" data-target=.navbar-collapse data-toggle=collapse type=button>
                         <span class=sr-only>Toggle navigation</span>
 													<svg id="menuClosed" height=26 viewBox="0 0 33 26" width=33 xmlns=http://www.w3.org/2000/svg>
@@ -142,10 +142,8 @@
                         data-tracking-name="tealium_event,visible_logo,link_location,top_navigation" href=/
                         id=visible_logo>
                         <div class=visible-logo-fixed>
-                            <img alt="visiblelogo" src="/images/svgs/visible-logo.svg">
-                        </div>
-                        <div class=visible-logo-fixed-hover style=display:none>
-                            <img height=84 src=/images/visible-logo-hover.gif alt="Visible logo" width=127>
+							<!-- <img alt="visiblelogo" src="/images/svgs/visible-logo.svg"> -->
+							<div class="visiblelogo"></div>
                         </div>
                         <div class="visible-logo-mobile" style="display: none">
                             <img height=32 src=/images/visible-logo-mobile.svg alt="Visible logo" width=88>
@@ -153,7 +151,11 @@
                     </a>
                     <a id="cart-id-div" data-tracking-name="tealium_event,cart,link_location,top_navigation,link_type,icon"
                         href="/shop/cart" class="mobile-shop-cart">
-                        <img id="cart-img" class="cartIcon cartIconMobile" src="images/cart.svg" alt="cart-icon">
+						<img id="cart-img" class="cartIcon cartIconMobile" src="images/cart.svg" alt="cart-icon">
+						<div id="cart-circle" class="bagiconcircle" >
+							<span id="cart-circle-text" class="bagicontext"></span>
+						</div>
+						
                     </a>
                 </div>
             </div>
@@ -218,7 +220,6 @@
 													Protect your phone 
 												</a>
 										</li>
-										
 											</ul>
 										</li>
 										<li class="scroll menu-link navLink" id="planLink">
@@ -237,7 +238,7 @@
 															</svg>
 													</div>
 											<ul class="submenu navItem" id="planSubMenu">
-												<li class="submenu-item" id="checkPlanLink">
+												<li class="submenu-item">
 													<a class="subMenuItems" data-link=/plan/ data-tracking-name=tealium_event,check_out_our_plan,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan/>
 															Check out our plan 
 													</a>
@@ -247,7 +248,7 @@
 															See our coverage
 													</a>
 												</li>
-												<li class="submenu-item" id="savePartyPayLink">
+												<li class="submenu-item">
 														<a class="subMenuItems" data-link=/plan/party-pay data-tracking-name=tealium_event,save_with_party_pay,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan/party-pay>
 																Save with Party Pay 
 														</a>
@@ -256,7 +257,7 @@
 													<a class="subMenuItems" data-link=/plan/bring-a-friend data-tracking-name=tealium_event,save_when_you_bring_a_friend,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan/bring-a-friend>
 														Save when you Bring a Friend
 													</a>
-												</li>	
+												</li>		
 											</ul>
 										</li>
                     <li class="scroll menu-link navLink" id="dealsLink">
@@ -279,7 +280,7 @@
 													<a class="subMenuItems" data-link=/deals/ data-tracking-name=tealium_event,see_deals,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/deals/>
 															See our deals 
 													</a>
-												</li>	
+												</li>
 												<li class="submenu-item">
 													<a class="subMenuItems" data-link=/deals/upgrade-program data-tracking-name=tealium_event,upgrade_program,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/deals/upgrade-program>
 														Upgrade Program
@@ -292,15 +293,15 @@
 												</li>
 											</ul>
 										</li>
-										<li class="scroll menu-link navLink" id="aboutUsLink">
-											<a class=desktop-menu-link id="aboutUsDeskLink" data-link=/about-us href=/about-us>
+						<li class="scroll menu-link navLink" id="aboutUsLink">
+											<a class=desktop-menu-link id="aboutUsDeskLink" data-link=/about-us>
 												About Us
 												<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
 												</svg>
 													</a>
 													<div class=mobile-menu-link id="aboutUsMobLink">
-															<a class=mobile-submenu-anchor data-link=/about-us href=/about-us>
+															<a class=mobile-submenu-anchor data-link=/about-us>
 															About Us
 															</a>
 															<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -347,14 +348,13 @@
 													</a>
 											</li>
 										</li>
-										<li class="submenu-item">
-												<a class="subMenuItems" data-link=http://community.visible.com data-tracking-name=tealium_event,community,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=http://community.visible.com>
-													<div class="community-link">
-														Community <div>beta</div>
-													</div>
-												</a>
-											</li>
-
+											<li class="submenu-item">
+													<a class="subMenuItems" data-link=http://community.visible.com data-tracking-name=tealium_event,community,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=http://community.visible.com>
+														<div class="community-link">
+															Community <div>beta</div>
+														</div>
+													</a>
+												</li>
 												<li class="submenu-item">
 													<a class="subMenuItems" data-link=/help/category?name=About_Visible data-tracking-name=tealium_event,about_visible,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/help/category?name=About_Visible>
 														About Visible 
@@ -397,99 +397,99 @@
 										</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right register_links">
-                    
-                    <li>
-                        <form class="navbar-form" role="search" id="desktopSearch">
-                            <div class="search-icon input-control">
-                                <input type="text" class="form-control search-box" id="searchText" required
-                                    name="search" autocomplete="off" maxlenght="30" onfocus="handleSearchInputFocus()">
-                                <label for="search">Search</label>
-                            </div>
-                            <div class="serach-logo-wrapper">
-                                <span class="search-logo-pad">
-                                    <div class="search-logo"><img alt="Search-icon" src="/images/svgs/search_icon.svg">
-                                    </div>
-                                </span>
-							</div>
-						<div id="searchContents" style="display:none;">
-								<div class="row">
-									<button id="gnavCloseSearch" aria-label="close search results" class="" onclick="">
-									   <svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 18">
-										  <path fill="#000" fill-rule="nonzero"
-											 d="M17.272 1.522l-.794-.794L9 8.205 1.522.728l-.794.794L8.205 9 .728 16.478l.794.794L9 9.795l7.478 7.477.794-.794L9.795 9z">
-										  </path>
-									   </svg>
-									</button>
-									<div class="col-md-12 register_links1" id="searchDetails" >
-										<div class="ProductListTitlesContent">
-											<ul class="ProductListTitles">
+									<li>
+										<form id="searchBar" class="navbar-form" role="search" id="desktopSearch">
+											<div id="searchLogo" class="serach-logo-wrapper">
+												<div id="search-logo" class="search-logo">
+													<!-- <img alt="Search-icon" src="/images/svgs/search_icon.svg"> -->
+												</div>
+											</div>
+											<div id="searchInput" class="search-icon input-control">
+													<input type="text" class="form-control search-box" id="searchText" required
+															name="search" autocomplete="off" maxlenght="30" onfocus="handleSearchInputFocus()">
+													<label for="search">Search</label>
+											</div>
+											<div id="searchContents" style="display:none;">
+												<div class="row">
+													<button id="gnavCloseSearch" aria-label="close search results" class="" onclick="">
+														<svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 18">
+															<path fill="#000" fill-rule="nonzero"
+															d="M17.272 1.522l-.794-.794L9 8.205 1.522.728l-.794.794L8.205 9 .728 16.478l.794.794L9 9.795l7.478 7.477.794-.794L9.795 9z">
+															</path>
+														</svg>
+													</button>
+													<div class="col-md-12 register_links1" id="searchDetails" >
+														<div class="ProductListTitlesContent">
+															<ul class="ProductListTitles">
+															</ul>
+														</div>
+													</div>
+													<div class="col-md-6 noPad register_links1" id="searchDetails">
+														<ul class="gnav-submenu-productlist">
+														</ul>
+													</div>
+													<div class="col-md-6 register_links1">
+														<div class="gnav-right-menu floatLeft">
+															<div class="gnav-right-menu-item">
+															<span class="listHeading">Articles:</span>
+															<ul class="articleUL">
+															</ul>
+															</div>
+														</div>
+													
+														<div class="gnav-right-menu floatLeft">
+															<div class="gnav-right-menu-item">
+															<span class="listHeadingFaq">Help:</span>
+															<ul class="faqUL">
+															</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</li>
+									<li>
+										<ul class="login-menu" id="loggedInMenu" style="padding:0px;">
+													<li class="dropdown" id="UserNameWrapper" style="margin:8px 32px 0px 6px;">
+															<a class="btn btn-secondary dropdown-toggle" id="currentUserName" type="button"
+																	id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+																	aria-expanded="false" tabindex="0" style="margin:0px;"></a>
+															<ul class="dropdown-menu" id="loggenInSubMenu"  aria-labelledby="dropdownMenuButton">
+																	<li class="scroll"><a id="loggedInMenuItems"
+																					data-tracking-name="tealium_event,account_clicked,link_type,text_link"
+																					href="/account">Account</a></li>
+																	<li><a class="dropdown-item" id="loggedInMenuItems" href="#" onclick="userSignOut()">Sign Out</a>
+																	</li>
+															</ul>
+													</li>
+													<li>
+															<a data-link="/shop/cart" id="cart-id-div"
+																	data-tracking-name="tealium_event,cart,link_location,top_navigation,link_type,icon"
+																	href="/shop/cart">
+																	<img src="images/cart.svg" id="cart-img" alt="cart-icon"
+																			class="cartIcon img-responsive">
+																	<div id="cart-circle" class="bagiconcircle" >
+																		<span id="cart-circle-text" class="bagicontext"></span>
+																	</div>
+															</a>
+													</li>
 											</ul>
-										</div>
-									 </div>
-									<div class="col-md-6 noPad register_links1" id="searchDetails">
-									   <ul class="gnav-submenu-productlist">
-									   </ul>
-									</div>
-									<div class="col-md-6 register_links1">
-									   <div class="gnav-right-menu floatLeft">
-										  <div class="gnav-right-menu-item">
-											 <span class="listHeading">Articles:</span>
-											 <ul class="articleUL">
-											 </ul>
-										  </div>
-									   </div>
-								  
-									   <div class="gnav-right-menu floatLeft">
-										  <div class="gnav-right-menu-item">
-											 <span class="listHeading">Help:</span>
-											 <ul class="faqUL">
-											 </ul>
-										  </div>
-									   </div>
-									</div>
-								 </div>
-							</div>
-                        </form>
-					</li>
-					
-                    
-                    <li>
-                        <ul class="login-menu" id="loggedInMenu">
-                            <li class="dropdown" id="UserNameWrapper" style="margin-top:10px;">
-                                <a class="btn btn-secondary dropdown-toggle" id="currentUserName" type="button"
-                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false" tabindex="0"></a>
-                                <ul class="dropdown-menu" id="loggenInSubMenu"  aria-labelledby="dropdownMenuButton">
-                                    <li class="scroll"><a id="loggedInMenuItems"
-                                            data-tracking-name="tealium_event,account_clicked,link_type,text_link"
-                                            href="/account">Account</a></li>
-                                    <li><a class="dropdown-item" id="loggedInMenuItems" href="#" onclick="userSignOut()">Sign Out</a>
-                                    </li>
-                                </ul>
-														</li>
-														<span class=footer_divider>|</span>
-                            <li>
-                                <a data-link="/shop/cart" id="cart-id-div"
-                                    data-tracking-name="tealium_event,cart,link_location,top_navigation,link_type,icon"
-                                    href="/shop/cart">
-                                    <img src="images/cart.svg" id="cart-img" alt="cart-icon"
-                                        class="cartIcon img-responsive"></a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class=scroll id="loggedOutMenu" style="display:none">
-												<a id=signIn data-link=/sign-in data-tracking-name=tealium_event,sign_in,link_location,top_navigation href=/sign-in>
-													Sign in
-												</a>
-												<svg id=loginIcon width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M11.0008 4.38724C8.75161 4.38724 6.91386 6.21804 6.91386 8.46721C6.91386 10.7231 8.75161 12.554 11.0008 12.554C13.2499 12.554 15.0808 10.7231 15.0808 8.46721C15.0808 6.21804 13.2499 4.38724 11.0008 4.38724ZM11.0008 10.6546C9.79391 10.6546 8.82017 9.67407 8.82017 8.46721C8.82017 7.26721 9.79391 6.28651 11.0008 6.28651C12.2008 6.28651 13.1814 7.26721 13.1814 8.46721C13.1814 9.67407 12.2008 10.6546 11.0008 10.6546ZM11.0008 0.725464C5.33677 0.725464 0.721924 5.33344 0.721924 10.9974C0.721924 16.6683 5.33677 21.2763 11.0008 21.2763C16.6648 21.2763 21.2728 16.6683 21.2728 10.9974C21.2728 5.33344 16.6648 0.725464 11.0008 0.725464ZM11.0008 19.3769C8.6556 19.3769 6.5299 18.4101 5.0145 16.8466C5.87843 16.2362 7.78473 15.2283 11.0145 15.2283C14.2373 15.2283 16.1299 16.2294 16.987 16.8466C15.4716 18.4101 13.346 19.3769 11.0008 19.3769ZM18.1528 15.3516C17.0487 14.5425 14.7516 13.322 11.0145 13.322C7.27732 13.322 4.96654 14.5494 3.85561 15.3587C3.07397 14.09 2.62815 12.5951 2.62815 10.9974C2.62815 6.38261 6.38594 2.62491 11.0008 2.62491C15.6156 2.62491 19.3733 6.38261 19.3733 10.9974C19.3733 12.5951 18.9276 14.0832 18.1528 15.3516Z" fill="#0F15D4"/>
-												</svg>
-												<span class=footer_divider>|</span>
-                        <a data-link="/shop/cart" id="cart-id-div" data-tracking-name=tealium_event,cart,link_location,top_navigation,link_type,icon href="/shop/cart">
-													<img src="images/cart.svg" id="cart-img" alt="cart-icon" class="cartIcon img-responsive">
-												</a>
-                    </li>
+									</li>
+										<!-- search, login, cart for web view -->
+									<li class=scroll id="loggedOutMenu" style="display:none">
+									
+										<a id=signIn data-link=/sign-in data-tracking-name=tealium_event,sign_in,link_location,top_navigation href=/sign-in>
+											<!-- <img src="/images/svgs/login-icon.svg" id="login-img" alt="login-icon"> -->
+											<div class="login-img"></div>
+										</a>
+										<a data-link="/shop/cart" id="cart-id-div" data-tracking-name=tealium_event,cart,link_location,top_navigation,link_type,icon href="/shop/cart">
+											<img src="images/cart.svg" id="cart-img" alt="cart-icon" class="cartIcon img-responsive">
+											<div id="cart-circle" class="bagiconcircle" >
+												<span id="cart-circle-text" class="bagicontext"></span>
+											</div>
+										</a>
+									</li>
                 </ul>
             </div>
         </div>
@@ -540,7 +540,7 @@
               <div class="terms-of-use" id="main_content">
                 <div class="rte terms-use">
 
-                     <link rel="stylesheet" href="/css/legal.css?t=1626992887087">
+                     <link rel="stylesheet" href="/css/legal.css?t=1627453683956">
    <h1>Visible Service Terms &amp; Conditions</h1>
    <div class="content">
       <p>Welcome to Visible! Thanks for choosing us. Your Service terms and conditions are part of this Customer Agreement (“Agreement”) and are provided by Visible Service LLC (“Visible”) or one of its affiliates. Your voice, text, and data services are for use within the Visible coverage area. Together, your Plan and any features you use are your Service. The current version of this Agreement and the terms and conditions for your Service are available online at <a href="/?remember=true" target="_top">visible.com</a>.</p>
@@ -644,7 +644,7 @@
                     data-tracking-name="tealium_event,visible_logo,link_location,footer,page_name,shop,link_type,text_link">
                 </a>
                 <p class="emailCTA">
-                  <span class="footerTextSpan">8350 E Crescent Parkway, Suite 200, Greenwood Village, CO 80111</span> |
+                  <span class="footerTextSpan">10000 Park Meadows Drive Suite 200, Lone Tree, CO 80124</span> |
                   <span class="footerTextSpan">© 2021 Visible. All rights reserved.</span>
                 </p>
                 <div class="termsOfUse">
@@ -1050,7 +1050,7 @@
                       <img src="/images/visible-logo-hover.gif" height="65" alt="Visible logo">
                   </div>
                   <div class="text-align-center copyrightWrapper">
-                    <span class="footerTextSpan">8350 E Crescent Parkway, Suite 200, Greenwood Village, CO 80111</span>
+                    <span class="footerTextSpan">10000 Park Meadows Drive Suite 200, Lone Tree, CO 80124</span>
                     <span class="footerTextSpan">© 2021 Visible. All rights reserved.</span>
                     <div class="termsOfUse">
                         <p class="terms">
@@ -1100,12 +1100,12 @@
     display: block
   }
 </style>
-<script src="/js/firebase-app.js?t=1626992887087"></script>
-<script src="/js/firebase-auth.js?t=1626992887087"></script>
-<script src="/js/device-details.js?t=1626992887087"></script>
-<script src="/js/hp.min.js?t=1626992887087"></script>
-<script src="/js/intersection-observer.js?t=1626992887087"></script>
-<script src="/js/common.js?t=1626992887087"></script>
+<script src="/js/firebase-app.js?t=1627453683956"></script>
+<script src="/js/firebase-auth.js?t=1627453683956"></script>
+<script src="/js/device-details.js?t=1627453683956"></script>
+<script src="/js/hp.min.js?t=1627453683956"></script>
+<script src="/js/intersection-observer.js?t=1627453683956"></script>
+<script src="/js/common.js?t=1627453683956"></script>
 
     <!-- Use in page footer for search -->
 <script>
@@ -1127,7 +1127,7 @@
   }
 </style>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-<script type="text/javascript" src="/js/liveChat.js?t=1626992887087"></script>
+<script type="text/javascript" src="/js/liveChat.js?t=1627453683956"></script>
 
 
 
