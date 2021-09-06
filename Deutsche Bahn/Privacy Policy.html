@@ -10,8 +10,8 @@
 <link rel="canonical" href="https://www.bahn.com/en/privacy/privacy-customer">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" type="text/css" href="/.resources/bahn-classic/webresources/css/article.ec0695d18ad70290968b.css"/>
-<link rel="stylesheet" type="text/css" href="/.resources/bahn-classic/webresources/css/main.59563c3791988108c973.css"/>
-<link rel="stylesheet" type="text/css" href="/.resources/bahn-classic/webresources/css/forms.1ff14936ca8ecc9b916c.css"/>
+<link rel="stylesheet" type="text/css" href="/.resources/bahn-classic/webresources/css/main.ca0a39387d830fb41b50.css"/>
+<link rel="stylesheet" type="text/css" href="/.resources/bahn-classic/webresources/css/forms.1d4771efa28dc251c8b3.css"/>
       <link rel="stylesheet" type="text/css" href="/.resources/bahn-classic/webresources/css/accordion.33ca0c654cf5bdbcbc5f.css"/>
       <link rel="stylesheet" type="text/css" href="/.resources/bahn-classic/webresources/css/text-image.08d81e6b0ea396b2b2ca.css"/>
       <link rel="stylesheet" type="text/css" href="/.resources/bahn-classic/webresources/css/highlight-icon.b6fc4712ba148d61ab9d.css"/>
@@ -35,8 +35,8 @@
 
 <header class="flex-m flex-l flex-100">
   <div class="head flex flex-100">
-    <div class="flex flex-75 flex-25-l">
-      <button class="head__nav-back js-nav-back hidden"><span>Back</span></button>
+    <div class="head__logo-wrapper flex flex-75 flex-25-l">
+        <div id="js-navigation-mobile__back-button" data-label="Back"></div>
       <a href="/en" class="head__logo js-nav-logo">
 
 
@@ -111,17 +111,13 @@
       </nav>
     </div>
     <div class="flex flex-25 hidden-l flex-right">
-      <button class="head__nav-menu js-nav-toggle" aria-expanded="false"><span>Menu</span></button>
+      <button id="js-navigation-mobile__toggle-button" class="head__nav-menu" data-label="Menu">
+        <span>Menu</span>
+      </button>
     </div>
   </div>
     <h2 id="mainnavlabel" class="sr-only">Main navigation</h2>
-  <nav class="nav js-nav flex-100 flex-reset-m flex-100-l" aria-labelledby="mainnavlabel">
-      <ol class="nav__indicator-list js-nav-indicator-list flex flex-100">
-        <li class="nav__indicator-item"><a class="nav__indicator-home-icon" href="/en"><span class="sr-only">Home</span></a></li>
-
-        <li class="nav__indicator-item"><a href="/en/privacy">Privacy</a></li>
-
-      </ol>
+  <nav class="nav js-nav hidden visible-l flex-100 flex-reset-m flex-100-l" aria-labelledby="mainnavlabel">
         <ul class="nav__main flex-l flex-100 flex-reset-l nav__list nav__list--open" data-level="1">
 
           <li class="nav__item flex-100 flex-reset-l">
@@ -177,11 +173,31 @@
 
           <li class="nav__item nav__item--right flex-100 flex-reset-l display-on-log-in js-profile-navigation profile-navigation">
 
-              <a class="nav__link" href="https://fahrkarten.bahn.de/privatkunde/meinebahn/meine_bahn_portal.go?lang=en&amp;country=GBR">My Bahn              <span class="soft-login-name js-login-name"></span>
+              <a class="nav__link" href="https://fahrkarten.bahn.de/privatkunde/meinebahn/meine_bahn_portal.go?lang=en&amp;country=GBR">My Bahn              <span class="softlogin-name js-login-name"></span>
 </a>
           </li>
       </ul>
   </nav>
+    <div
+      id="js-navigation-mobile__menu"
+      class="hidden"
+      data-home-screenreader-label="Home"
+      data-submenu-parent-prefix="Overview:"
+      data-current-language="en"
+      data-site-root="15463a68-f5fd-429c-b5dd-3cdb292015f5">
+
+
+  <form action="/en/suche" autocomplete="off" method="get" accept-charset="UTF-8" class="search__form-compact">
+    <label for="q-mobile" class="sr-only">Search term</label>
+    <input type="hidden" name="s" value="bahn-com"/>
+    <input type="hidden" name="l" value="en"/>
+    <input type="search" id="q-mobile" name="q" class="search__form-input-compact" autocomplete="off" value="" placeholder="Search">
+    <button type="submit" class="search-form__search-icon">
+        <span class="sr-only">Search</span>
+    </button>
+  </form>
+
+    </div>
 </header>
   <div class="wrapper flex">
       <nav class="sidebar hidden visible-block-l flex-25-l" aria-labelledby="sidebarlabel">
@@ -694,9 +710,9 @@ or send an e-mail to <a href="mailto:ecommerce-datenschutz@bahn.de">ecommerce-da
   </ul>
 </script>
 
-<script async src="/.resources/bahn-classic/webresources/js/scripts.c14c5d253459049c4de6.js"></script>
-<script async src="/.resources/bahn-classic/webresources/js/vendors~dirtyfinder~scripts~skyframe.43aefc771699b5a3c446.js"></script>
-<script async src="/.resources/bahn-classic/webresources/js/vendors~scripts.edc97490e5c245e498c7.js"></script>
+<script async src="/.resources/bahn-classic/webresources/js/scripts.73458381a12278b8da54.js"></script>
+<script async src="/.resources/bahn-classic/webresources/js/vendors~dirtyfinder~scripts.99cd9cc4423b4f7170e7.js"></script>
+<script async src="/.resources/bahn-classic/webresources/js/vendors~dirtyfinder~scripts~skyframe.873f2154e4d1096b06f7.js"></script>
 
         <script type="text/javascript">var utag_data = {}</script>
 <script type="text/javascript">
