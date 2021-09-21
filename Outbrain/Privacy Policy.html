@@ -3672,7 +3672,7 @@ window.onhashchange = locationHashChanged;
 
 function locationHashChanged() {
     var selectLanguage = document.getElementById('select-language-main');
-    if (location.hash === ' #privacy-policy') {
+    if (location.hash === '#privacy-policy') {
         selectLanguage.setAttribute('style', 'display: block !important');
     } else if (location.hash === '#cookies') {
         selectLanguage.setAttribute('style', 'display: none !important');
