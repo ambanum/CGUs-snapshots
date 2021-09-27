@@ -87,63 +87,8 @@
             <link rel="stylesheet" href="https://prd-www-cdn.ubnt.com/static/styles/css/main.min.css?v=3" type="text/css">
         
         <link rel="stylesheet" href="//dl.ui.com/media/css-assets/ubnt-icon/v1.131.5/style.css?v=3" type="text/css">
-        
-<style>
-.unifyElite ul {
-  list-style-type: none;
-  counter-reset: item;
-  margin: 0;
-  padding: 0;
-}
-
-.unifyElite ul > li {
-  display: table;
-  counter-increment: item;
-  margin-bottom: 0.6em;
-  margin-top: 10px !important;
-}
-
-.unifyElite ul > li:before {
-  content: counters(item, ".") ". ";
-  display: table-cell;
-  padding-right: 0.6em;    
-}
-
-.unifyElite li ul > li {
-  margin: 0;
-}
-
-.unifyElite li ul > li:before {
-  content: counters(item, ".") " ";
-}
-
-.unifyElite .listAlpha{
-	list-style-type: lower-alpha;
-}
-.unifyElite .listAlpha li{
-	margin-left:20px;
-    display: list-item;
-        padding-left: 5px;
-}
-.unifyElite .listAlpha > li:before{
-	    float: left;
-	content:""; 
-}
-
-.unifyElite table{
-	text-align: center;
-table-layout: fixed;
-    
-}
-.unifyElite table td, .unifyElite table th{
-	    padding: 10px;
-        border-bottom:1px solid #acacac;
-}
-.comWrapper--basic, .comWrapper--basic footer
-{background-color: #fafafa;}
-</style>
-
-
+        <style>.unifyElite ul{list-style-type:none;counter-reset:item;margin:0;padding:0}.unifyElite ul>li{display:table;counter-increment:item;margin-bottom:.6em;margin-top:10px !important}.unifyElite ul>li:before{content:counters(item,".") ". ";display:table-cell;padding-right:.6em}.unifyElite li ul>li{margin:0}.unifyElite li ul>li:before{content:counters(item,".") " "}.unifyElite .listAlpha{list-style-type:lower-alpha}.unifyElite .listAlpha li{margin-left:20px;display:list-item;padding-left:5px}.unifyElite .listAlpha>li:before{float:left;content:""}.unifyElite table{text-align:center;table-layout:fixed}.unifyElite table td,.unifyElite table th{padding:10px;border-bottom:1px solid #acacac}.comWrapper--basic,.comWrapper--basic footer{background-color:#fafafa}
+.collapsible{cursor:pointer;padding:18px;width:100%;border:0;text-align:left;outline:0}.collapsible div{color:#00a0df}.collapsible div:hover,.active div{color:#17191d}.active div:hover{color:#00a0df}.content{padding:0;list-style:none;display:none;overflow:hidden;list-style:none;margin:0 0 10px 10px}.collapsible .arrow{width:0;height:0;border-style:solid;border-width:3.5px 0 3.5px 6.1px;border-color:transparent transparent transparent #00a0df;display:inline-block;margin:0 5px 2px 0}.active .arrow{border-width:6.1px 3.5px 0 3.5px;border-color:#17191d transparent transparent transparent}</style>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       
       	<!-- OneTrust Cookies Consent Notice start -->
@@ -581,12 +526,15 @@ table-layout: fixed;
   <li><a  href="/support/warranty/">Limited Warranty</a></li>
   <li><a style="color:#17191d;" href="/legal/services-terms/">Ubiquiti Services General Terms and Conditions</a></li>
   <li><a  href="/legal/unifi-elite/termsandconditions/">UniFi Elite Terms and Conditions</a></li>
+  <li class="collapsible"><div><span class="arrow"></span>Store T&C</div></li>
+   <ul class="content">
   <li><a  href="/legal/ui-store/termsandconditions/">UI US and AmpliFi Store Terms and Conditions</a></li>
 	<li><a  href="/legal/ui-store/itmarketplace/">UI US IT Marketplace Store Terms and Conditions</a></li>
   <li><a  href="/legal/ui-eu-store/termsandconditions/">UI Europe Store Terms and Conditions</a></li>
   <li><a  href="/legal/ui-ca-store/termsandconditions/">UI Canada Store Terms and Conditions</a></li>
   <li><a  href="/legal/ui-mx-store/termsandconditions/">UI Mexico Store Terms and Conditions</a></li>
   <li><a  href="/legal/ui-br-store/termsandconditions/">UI Brazil Store Terms and Conditions</a></li>
+  </ul>
   <li><a  href="/legal/unifi-ios-app-licenses/">UniFi IOS App License</a></li>
   <li><a  href="/compliance/">Compliance Information</a></li>
 </ul>
@@ -1980,7 +1928,7 @@ table-layout: fixed;
 
 <div class="comNewsletterSignup">
     <form class="comNewsletterSignup__form js-form-newsletter-global" action="/newsletters/" >
-        <input type='hidden' name='csrfmiddlewaretoken' value='pedRn9KEjb79pgUCQqu4h7pHbtMVXhlydyVwcyahlI4e1OM7S6WAJIObVfvp08DH' />
+        <input type='hidden' name='csrfmiddlewaretoken' value='qLPqOBDzr4WvLoTcKO0eSPtf1OVUZL0CoP9rCX9cFZrTTyUwS1QAxDMhY0A66ynW' />
         <h4 class="comGlobalFooter__title">Stay In Touch</h4>
       	<div class="comGlobalFooter__input">
         	<input type="email" placeholder="Email Address" required="required" name="email" class="comNewsletterSignup__input"/>
@@ -2068,7 +2016,38 @@ table-layout: fixed;
         
             <script src="https://prd-www-cdn.ubnt.com/static/scripts/min/main.min.js"></script>
         
-        
+        <script>
+var coll = document.getElementsByClassName("collapsible"),
+ 	content = document.getElementsByClassName("content"),
+ 	winLoc = window.location.href,
+    urlArr = ['ui-store', 'ui-eu-store', 'ui-ca-store', 'ui-mx-store', 'ui-br-store'];
+
+coll[0].addEventListener("click", function() {
+	active();
+});
+
+if(isSelected()){
+	active();
+}
+
+function active(){
+	coll[0].classList.toggle("active");
+    if (content[0].style.display === "block") {
+      content[0].style.display = "none";
+    } else {
+      content[0].style.display = "block";
+    }
+}
+
+function isSelected(){
+	for (var i = 0; i < urlArr.length; i++) {
+		if(winLoc.includes(urlArr[i])){
+        	return true;
+        }
+	}
+    return false;
+}
+</script>
               
   </body>
 </html>
