@@ -43,7 +43,7 @@
     <link rel="icon" href="https://brave.com/static-assets/images/brave-favicon.png">
 
     
-    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-500-d52c42101e.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-400-0a51bc0a28.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-700-991aaaa7ee.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-600-fa753c8595.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/font_awesome_5_free-900-154d85a067.woff2"><script>try{new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-500-d52c42101e.woff2') format('woff2'),url('/static-assets/fonts/poppins-500-7224391fc4.woff') format('woff')",{'font-weight':500}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-400-0a51bc0a28.woff2') format('woff2'),url('/static-assets/fonts/poppins-400-2c40d71cc3.woff') format('woff')",{}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-700-991aaaa7ee.woff2') format('woff2'),url('/static-assets/fonts/poppins-700-dde2d7d0b2.woff') format('woff')",{'font-weight':700}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-600-fa753c8595.woff2') format('woff2'),url('/static-assets/fonts/poppins-600-c48da344c5.woff') format('woff')",{'font-weight':600}).load(),new FontFace('font awesome 5 free__subset',"url('/static-assets/fonts/font_awesome_5_free-900-154d85a067.woff2') format('woff2'),url('/static-assets/fonts/font_awesome_5_free-900-b5271546ed.woff') format('woff')",{'font-weight':900}).load()}catch(e){}</script><link rel="stylesheet" href="/static-assets/fonts/fonts-faa42d4cc1.css"><link href="/static-assets/css/main.min.css" rel="stylesheet">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-500-d52c42101e.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-400-0a51bc0a28.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-700-991aaaa7ee.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-600-beabd08370.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/font_awesome_5_free-900-154d85a067.woff2"><script>try{new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-500-d52c42101e.woff2') format('woff2'),url('/static-assets/fonts/poppins-500-7224391fc4.woff') format('woff')",{'font-weight':500}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-400-0a51bc0a28.woff2') format('woff2'),url('/static-assets/fonts/poppins-400-2c40d71cc3.woff') format('woff')",{}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-700-991aaaa7ee.woff2') format('woff2'),url('/static-assets/fonts/poppins-700-dde2d7d0b2.woff') format('woff')",{'font-weight':700}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-600-beabd08370.woff2') format('woff2'),url('/static-assets/fonts/poppins-600-04e43f9cfb.woff') format('woff')",{'font-weight':600}).load(),new FontFace('font awesome 5 free__subset',"url('/static-assets/fonts/font_awesome_5_free-900-154d85a067.woff2') format('woff2'),url('/static-assets/fonts/font_awesome_5_free-900-b5271546ed.woff') format('woff')",{'font-weight':900}).load()}catch(e){}</script><link rel="stylesheet" href="/static-assets/fonts/fonts-60978fd086.css"><link href="/static-assets/css/main.min.css" rel="stylesheet">
     <noscript>
         <link href="/static-assets/css/noscript.min.css" rel="stylesheet" />
     </noscript>
@@ -596,15 +596,8 @@ July 14, 2020</p>
         align-content: center;
         justify-content: center;
     }
-    .announcement-banner__link {
-        text-decoration: none;
-        color: #FFFFFF;
-    }
-    .announcement-banner__link:hover {
-        text-decoration: none;
-        color: #FFFFFF;
-    }
     .announcement-banner {
+        --text-color: #212529;
         min-height: 70px;
         height: 11%;
         width: 100%;
@@ -612,15 +605,15 @@ July 14, 2020</p>
         bottom: 0;
         left: 0;
         z-index: 9999999;
-        background: #4C54D2;
-        color: #FFFFFF;
+        background: #DADCE8;
+        color: var(--text-color);
         box-shadow: 0px -2px 16px rgba(58, 66, 74, 0.12);
     }
     .announcement-banner__inner {
         max-width: 1080px;
         width: 100%;
         height: 100%;
-        background: url("/static-assets/images/graphic-cube.svg") no-repeat;
+        background: url("/static-assets/images/graphic-talk.svg") no-repeat;
         background-size: auto 100%;
         background-position: -10px center;
         padding-right: 8px !important;
@@ -634,6 +627,14 @@ July 14, 2020</p>
         font-size: 14px;
         text-align: right;
         line-height: 1.5;
+    }
+    .announcement-banner__link {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    .announcement-banner__link:hover {
+        text-decoration: none;
+        color: var(--text-color);
     }
     .announcement-banner__content strong {
         font-weight: 600;
@@ -698,22 +699,22 @@ July 14, 2020</p>
     }
 </style>
 <div class="announcement-banner announcement-banner__box">
-    <a href="https://search.brave.com" target="_blank" class="announcement-banner__link announcement-banner__inner announcement-banner__box">
+    <a href="https://talk.brave.com" target="_blank" class="announcement-banner__link announcement-banner__inner announcement-banner__box">
         <p class="announcement-banner__content">
-            <strong>Brave Search beta is live!</strong> <span class="announcement-banner__text--lg">Private, independent, and user-first. The real alternative to Google.</span>
+            <strong>Brave Talk is live!</strong> <span class="announcement-banner__text--lg">Unlimited, private video calls, right in your browser. No apps. No login.</span>
         </p>
     </a>
     <button class="announcement-banner__close" aria-label="Brave Search">
         <svg width="22" height="22" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.14905 0.64978C2.51445 0.0151776 1.48555 0.0151776 0.850951 0.64978C0.216349 1.28438 0.21635 2.31327 0.850952 2.94788L9.27881 11.3757L0.850952 19.8036C0.21635 20.4382 0.216349 21.4671 0.850951 22.1017C1.48555 22.7363 2.51445 22.7363 3.14905 22.1017L11.5769 13.6738L19.7661 21.863C20.4007 22.4976 21.4296 22.4976 22.0642 21.863C22.6988 21.2284 22.6988 20.1995 22.0642 19.5649L13.875 11.3757L22.0642 3.18658C22.6988 2.55197 22.6988 1.52308 22.0642 0.888479C21.4296 0.253877 20.4007 0.253877 19.7661 0.888479L11.5769 9.07763L3.14905 0.64978Z" fill="#FFFFFF"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.14905 0.64978C2.51445 0.0151776 1.48555 0.0151776 0.850951 0.64978C0.216349 1.28438 0.21635 2.31327 0.850952 2.94788L9.27881 11.3757L0.850952 19.8036C0.21635 20.4382 0.216349 21.4671 0.850951 22.1017C1.48555 22.7363 2.51445 22.7363 3.14905 22.1017L11.5769 13.6738L19.7661 21.863C20.4007 22.4976 21.4296 22.4976 22.0642 21.863C22.6988 21.2284 22.6988 20.1995 22.0642 19.5649L13.875 11.3757L22.0642 3.18658C22.6988 2.55197 22.6988 1.52308 22.0642 0.888479C21.4296 0.253877 20.4007 0.253877 19.7661 0.888479L11.5769 9.07763L3.14905 0.64978Z" fill="currentColor"></path>
         </svg>
     </button>
 </div>
 <script>
     (function () {
         var banner = document.querySelector(".announcement-banner");
-        localStorage.removeItem("bannerHidden");
-        var flagName = "searchBannerHidden";
+        localStorage.removeItem("searchBannerHidden");
+        var flagName = "talkBannerHidden";
         var bannerHidden = localStorage.getItem(flagName);
         if (bannerHidden === "true") {
             banner.style.display = "none";
