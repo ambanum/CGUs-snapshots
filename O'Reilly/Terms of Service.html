@@ -6,7 +6,7 @@
 
   	<title>Terms of Service - O'Reilly Media</title>
 	<meta name="description" content=" " />
-	<meta name="date" content="2021-09-30" />
+	<meta name="date" content="2021-10-04" />
 	<meta name="search_date" content="2019-01-09" />
 	<meta name="search-title" content="Terms of Service - O'Reilly Media" />
 	<meta name="pagename" content="Terms of Service - O'Reilly Media" />
@@ -120,7 +120,7 @@ window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tole
           <li class="menuList-itemsP1">
             <ul>
               <li class="menuList-item menuList-signIn"><a href="https://learning.oreilly.com/accounts/login-check/">Sign In</a></li>
-              <li class="menuList-item menuList-tryNow"><a class="menuList-cta" href="https://www.oreilly.com/online-learning/try-now.html">Try Now</a></li>
+              <li class="menuList-item menuList-tryNow"><a id="nav-tryNow" class="menuList-cta" href="https://www.oreilly.com/online-learning/try-now.html">Try Now</a></li>
             </ul>
           </li>
           <li class="menuList-itemsP2">
@@ -541,6 +541,18 @@ document.write('</a>' + ending);
     }
     const searchCloseButton = document.getElementById('js-searchCloseButton');
     searchCloseButton.addEventListener('click', hideNavSearch);
+
+    //"Try Now" nav button tracking
+    $('#nav-tryNow').on('click', function() {
+      dataLayer.push({
+        'event': 'eventTracker',
+        'eventCat':'marketing',
+        'eventAct':'nav',
+        'eventLbl':'try now',
+        'eventVal':0, 
+        'nonInteraction': 0,
+      });
+    });
   });
 
   (function(document, history, location) {
