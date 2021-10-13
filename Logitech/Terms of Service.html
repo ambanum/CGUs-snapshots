@@ -196,14 +196,14 @@
    <meta property="og:image" content="https://resource.logitech.com/w_1200,h_630,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/common/og-generic/og-image-electrico.png?v=1"/>
    <meta property="Search_image" content="https://resource.logitech.com/w_1800,h_1800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/common/og-generic/og-image-electrico.png?v=1"/>
    
-   <meta property="Search_category" content="Video Collaboration"/>
+   
    <meta name="template" content="content-page"/>
    
 
    
 
     
-<link rel="stylesheet" href="/etc.clientlibs/logitech/clientlibs/replatform.min.d3d553542fdc5c620e44f4f0b2ce574b.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/logitech/clientlibs/replatform.min.527ca2cc05dcf576cf3078a99027fce6.css" type="text/css">
 
 
 
@@ -576,7 +576,7 @@
 	
 		<!--googleoff: all-->
 		<!-- stopindex -->
-		<div class="primary-nav-container theme-dark">
+		<div class="primary-nav-container" data-theme-desktop="theme-dark" data-theme-tablet="theme-dark" data-theme-mobile="theme-dark">
 		 <!-- mobile slide push menu, dynamically assembled based on desktop menu -->
 	            <nav class="mp-menu mp-cover" id="mp-menu" aria-label="Primary - Mobile">
 	                <div class="mp-level">
@@ -888,11 +888,11 @@
 	                                            <div class="mp-level">
 	                                                <a tabindex="-1" href="javascript:;" class="mp-back"><span class="aem-logi-icon-chevron-left" aria-hidden="true"></span>Headsets</a>
 	                                                <ul class="sub-menu third-level">
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/headsets/wired-headsets" target="_self">Wired Headsets</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/headsets/wired-headsets.html" target="_self">Wired Headsets</a></li>
 	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/headsets/wireless-headsets" target="_self">Wireless Headsets</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/headsets/wireless-headsets.html" target="_self">Wireless Headsets</a></li>
 	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/headsets/headset-kits" target="_self">Headset Webcam Kits</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/headsets/headset-kits.html" target="_self">Headset Webcam Kits</a></li>
 	                                                </ul>
 	                                            </div>
 	                                        </li>
@@ -920,7 +920,7 @@
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/products/video-conferencing/room-solutions.html" target="_self">Conference Room Solutions</a></li>
 	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/personal-video-conferencing-solutions.html" target="_self">Desk Solutions</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/products/personal-workspaces.html" target="_self">Desk Solutions</a></li>
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/video-conferencing/accessories.html" target="_self">Accessories</a></li>
 	                                                
@@ -1096,6 +1096,8 @@
 	                                                    <li><a tabindex="-1" title="" href="https://support.logi.com/hc/articles/360024844213--downloads-spotlight-presentation-remote" target="_self">Spotlight Presentation Remote</a></li>
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/cameras/alert-web-mobile-commander.html" target="_self">Alert Web and Mobile Commander</a></li>
+	                                                
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/software/logi-tune-software.html" target="_self">Logi Tune</a></li>
 	                                                </ul>
 	                                            </div>
 	                                        </li>
@@ -1891,7 +1893,7 @@
             
                 
     <li>
-        <a class="" href="/en-gb/headsets/wired-headsets">
+        <a class="" href="/en-gb/products/headsets/wired-headsets.html">
             Wired Headsets
         </a>
     </li>
@@ -1899,7 +1901,7 @@
             
                 
     <li>
-        <a class="" href="/en-gb/headsets/wireless-headsets">
+        <a class="" href="/en-gb/products/headsets/wireless-headsets.html">
             Wireless Headsets
         </a>
     </li>
@@ -1907,7 +1909,7 @@
             
                 
     <li>
-        <a class="" href="/en-gb/headsets/headset-kits">
+        <a class="" href="/en-gb/products/headsets/headset-kits.html">
             Headset Webcam Kits
         </a>
     </li>
@@ -2029,7 +2031,7 @@
             
                 
     <li>
-        <a class="" href="/en-gb/video-collaboration/personal-video-conferencing-solutions.html">
+        <a class="" href="/products/personal-workspaces.html">
             Desk Solutions
         </a>
     </li>
@@ -2804,6 +2806,14 @@
     </li>
 
             
+                
+    <li>
+        <a class="" href="/en-gb/video-collaboration/software/logi-tune-software.html">
+            Logi Tune
+        </a>
+    </li>
+
+            
         </ul>
     
 
@@ -3548,6 +3558,7 @@ https://jira.logitech.com/browse/LOGIWEB-2654
     color: white;
 }
 .secondary-nav-container .fixed-nav .pangea-cmp.ctas-ctn .cta:hover {
+    background-color: transparent;
     color: black;
 }
 .secondary-nav-container .fixed-nav .pangea-cmp.ctas-ctn .cta:hover:before {
@@ -4504,7 +4515,7 @@ This site is owned and operated by Logitech.</h5>
 <script src="/etc.clientlibs/clientlibs/granite/jquery/granite.min.543d214c88dfa6f4a3233b630c82d875.js"></script>
 <script src="/etc.clientlibs/foundation/clientlibs/jquery.min.dd9b395c741ce2784096e26619e14910.js"></script>
 <script src="/etc.clientlibs/foundation/clientlibs/shared.min.9f3716b2c473fd53ab31b1caa53131a8.js"></script>
-<script src="/etc.clientlibs/logitech/clientlibs/replatform.min.9383954bf87d0c7e490dc5c746575770.js"></script>
+<script src="/etc.clientlibs/logitech/clientlibs/replatform.min.cab810ddcb3c70becadb67d3e4eb7828.js"></script>
 
 
 
