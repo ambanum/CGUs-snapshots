@@ -15,9 +15,20 @@
 
       <link rel="stylesheet" href="https://static.cdn.onlyfans.com/static-styles/main.css?rev=3.3">
       <script>
-          if (document.cookie.match('(^|;)?dark_mode=([^;]*)(;|$)')) {
-              document.documentElement.classList.add('m-mode-dark');
-          }
+          ;(() => {
+              const getItem = (key, defaultValue = null) => {
+                  try {
+                      const value = localStorage.getItem(key);
+                      return (value === null || typeof value == 'undefined') ? defaultValue : value;
+                  } catch (e) {
+                      return defaultValue;
+                  }
+              };
+
+              if (getItem('dark_mode') || document.cookie.match('(^|;)?dark_mode=([^;]*)(;|$)')) {
+                  document.documentElement.classList.add('m-mode-dark');
+              }
+          })();
       </script>
   </head>
 </html>
@@ -462,17 +473,79 @@
                     <strong>Subscriptions and purchases by Fans:</strong> This section describes the terms which apply to transactions and interactions between Fans and Creators:
                 </p>
                 <ol class="list-letters" type="a">
-                    <li>All transactions and interactions facilitated by OnlyFans are contracts between Fans and Creators on the terms of the <a href="/contract">Standard Contract between Fan and Creator</a>.  Although we facilitate transactions and interactions between Fans and Creators by providing the OnlyFans platform, storing Content, and acting as a payment intermediary, we are not a party to the <a href="/contract">Standard Contract between Fan and Creator</a> or any other contract which may exist between a Fan and Creator, and are not responsible for any transactions or interactions between Fans and Creators.</li>
-                    <li>Creators are solely responsible for determining (within the parameters for pricing on OnlyFans) the pricing applicable to transactions and interactions and the Content to which you may be given access.  All prices appear in USD only.</li>
-                    <li>Fan Payments are exclusive of VAT, which shall be added at the current rate as applicable to Fan Payments.</li>
-                    <li>To view a Creator's Content and/or utilise the fan interaction function on OnlyFans, you must first add a payment card to your account and then click the 'Subscribe' button on the relevant Creator's profile.</li>
-                    <li>You authorize us to supply your payment card details to a third-party payment provider for the purpose of processing your Fan Payment.  All Fan Payments will be charged in USD.  Your payment card provider may charge you currency conversion fees. We do not have control over currency exchange rates or charges imposed by your payment card provider or bank and we are not responsible for paying any charges or fees imposed by your payment card provider or bank.</li>
-                    <li>If you choose to provide details of two or more payment cards, then if you try to make a Fan Payment from the first card and the card is rejected for any reason, then the other payment card will be used to collect the full Fan Payment.</li>
-                    <li>The payment provider will take (i) monthly payments from your payment card for Fan Payments which are Subscriptions; and (ii) immediate payments from your payment card for ad hoc Fan Payments such as use of the fan interaction function on a Creator's account or paying a tip to the Creator.   You authorize and consent to each of these payments being debited using your supplied payment card details.</li>
-                    <li>Apart from free-trial Subscriptions, all Subscriptions to a Creator's profile will automatically renew at the end of the monthly subscription period, except if your payment card was declined, the subscription price has increased, or you have turned off the "Auto-Renew" switch located on the relevant Creator's profile.  This means that if you want to stop subscribing to a Creator's profile and paying continuing monthly subscription charges, you will need to turn off the "Auto-Renew" switch located on the relevant Creator's profile.</li>
-                    <li>If you cancel a Subscription you will continue to be permitted to view the relevant Creator's Content until the end of the subscription period in which you cancelled, after which no further payments will be taken from your payment card in respect of subscriptions to that Creator's profile, and you will no longer be able to view the relevant Creator's Content.</li>
-                    <li>You agree that you will not make unjustified requests for a refund from any Creator which you follow, or unjustified chargeback requests of your payment card provider in relation to any transaction between you and a Creator.   If we consider that any request for a refund or chargeback request was made by you in bad faith, we have the right to suspend or delete your User account. </li>
-                    <li>Wallet credits: You can prepay an amount to us (known as "Wallet Credits") which you can later use to make Fan Payments.  Purchases on OnlyFans cannot be divided - if you attempt a purchase that costs more than the total amount of your remaining Wallet Credits, your payment card will be charged the full amount for that purchase.  Wallet Credits are subject to a maximum amount as determined by us from time to time.  Interest will not accrue on Wallet Credits.  You are entitled upon request (whether before or after the termination of your agreement with us) to a refund of unused Wallet Credits, unless we reasonably determine that your request for a refund is not made in good faith.</li>
+                    <li>
+                        All transactions and interactions facilitated by OnlyFans are contracts between Fans and
+                        Creators on the terms of the <a href="/contract">Standard Contract between Fan and Creator</a>.
+                        Although we facilitate transactions and interactions between Fans and Creators by providing the
+                        OnlyFans platform, storing Content, and acting as a payment intermediary, we are not a party to
+                        the <a href="/contract">Standard Contract between Fan and Creator</a> or any other contract
+                        which may exist between a Fan and Creator, and are not responsible for any transactions or
+                        interactions between Fans and Creators.
+                    </li>
+                    <li>
+                        Creators are solely responsible for determining (within the parameters for pricing on OnlyFans)
+                        the pricing applicable to transactions and interactions and the Content to which you may be
+                        given access.  All prices appear in USD only.
+                    </li>
+                    <li>
+                        Fan Payments are exclusive of VAT, which shall be added at the current rate as applicable to Fan
+                        Payments.
+                    </li>
+                    <li>
+                        To view a Creator's Content and/or utilise the fan interaction function on OnlyFans, you must
+                        first add a payment card to your account and then click the 'Subscribe' button on the relevant
+                        Creator's profile.
+                    </li>
+                    <li>
+                        You authorize us to supply your payment card details to a third-party payment provider for the
+                        purpose of processing your Fan Payment.  All Fan Payments will be charged in USD.  Your payment
+                        card provider may charge you currency conversion fees. We do not have control over currency
+                        exchange rates or charges imposed by your payment card provider or bank and we are not
+                        responsible for paying any charges or fees imposed by your payment card provider or bank.
+                    </li>
+                    <li>
+                        If you choose to provide details of two or more payment cards, then if you try to make a Fan
+                        Payment from the first card and the card is rejected for any reason, then the other payment card
+                        will be used to collect the full Fan Payment.
+                    </li>
+                    <li>
+                        The payment provider will take (i) monthly payments from your payment card for Fan Payments
+                        which are Subscriptions; and (ii) immediate payments from your payment card for ad hoc Fan
+                        Payments such as use of the fan interaction function on a Creator's account or paying a tip to
+                        the Creator.   You authorize and consent to each of these payments being debited using your
+                        supplied payment card details.
+                    </li>
+                    <li>
+                        Apart from free-trial Subscriptions, all Subscriptions to a Creator's profile will automatically
+                        renew at the end of the monthly subscription period, except if your payment card was declined,
+                        the subscription price has increased, or you have turned off the "Auto-Renew" switch located on
+                        the relevant Creator's profile.  This means that if you want to stop subscribing to a Creator's
+                        profile and paying continuing monthly subscription charges, you will need to turn off the
+                        "Auto-Renew" switch located on the relevant Creator's profile.
+                    </li>
+                    <li>
+                        If you cancel a Subscription you will continue to be permitted to view the relevant Creator's
+                        Content until the end of the subscription period in which you cancelled, after which no further
+                        payments will be taken from your payment card in respect of subscriptions to that Creator's
+                        profile, and you will no longer be able to view the relevant Creator's Content
+                        .</li>
+                    <li id="terms-of-use-for-fans-8-j">
+                        You agree that you will not make unjustified requests for a refund from any Creator which you
+                        follow, or unjustified chargeback requests of your payment card provider in relation to any
+                        transaction between you and a Creator.   If we consider that any request for a refund or
+                        chargeback request was made by you in bad faith, we have the right to suspend or delete your
+                        User account.
+                    </li>
+                    <li>
+                        Wallet credits: You can prepay an amount to us (known as "Wallet Credits") which you can later
+                        use to make Fan Payments.  Purchases on OnlyFans cannot be divided - if you attempt a purchase
+                        that costs more than the total amount of your remaining Wallet Credits, your payment card will
+                        be charged the full amount for that purchase.  Wallet Credits are subject to a maximum amount as
+                        determined by us from time to time.  Interest will not accrue on Wallet Credits.  You are
+                        entitled upon request (whether before or after the termination of your agreement with us) to a
+                        refund of unused Wallet Credits, unless we reasonably determine that your request for a refund
+                        is not made in good faith.
+                    </li>
                 </ol>
             </li>
             <li>
