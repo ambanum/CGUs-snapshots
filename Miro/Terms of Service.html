@@ -2,7 +2,7 @@
 
 
 <!doctype html>
-<!-- CDN: https://static-website.miro.com VERSION: develop.452.production -->
+<!-- CDN: https://static-website.miro.com VERSION: develop.454.production -->
 <html lang="en">
 <head>
 		<script src="https://browser.sentry-cdn.com/5.5.0/bundle.min.js" crossorigin="anonymous"></script>
@@ -10,40 +10,12 @@
 	<script>Sentry.init({dsn: "https://b46aa7ff2c794eba81492d9275b26543@s.realtimeboard.com/36"});</script>
 
 	
-						<link rel="stylesheet" href="https://static-website.miro.com/static/css/layout/one-trust-cookie-banner.css?version=develop.452.production" type="text/css" media="screen">
+						<link rel="stylesheet" href="https://static-website.miro.com/static/css/layout/one-trust-cookie-banner.css?version=develop.454.production" type="text/css" media="screen">
 
 	<script src="https://cdn.cookielaw.org/consent/4133a0ef-6999-461d-909d-24f2b05bbc15/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8"
 			data-domain-script="4133a0ef-6999-461d-909d-24f2b05bbc15"></script>
 	<script type="text/javascript">
-		var GA_DISABLE_VAR = 'ga-disable-UA-32835154-1';
-
-		var cookieConsent = getOptanonCookie();
-		var initialPerfCookiesGranted = cookieConsent.indexOf('C0002:1') !== -1
-
-		window[GA_DISABLE_VAR] = !initialPerfCookiesGranted;
-
-		function getOptanonCookie() {
-			var matches = document.cookie.match(new RegExp("(?:^|; )OptanonConsent=([^;]*)"));
-			return matches ? decodeURIComponent(matches[1]) : ''
-		}
-
-		function updateGoogleAnalyticsState() {
-			if (typeof OnetrustActiveGroups === 'undefined') {
-				return;
-			}
-
-			var perfCookiesGranted = OnetrustActiveGroups.indexOf('C0002') !== -1;
-
-			window[GA_DISABLE_VAR] = !perfCookiesGranted;
-
-			if (perfCookiesGranted && !initialPerfCookiesGranted && typeof ga !== 'undefined') {
-				ga('send', 'pageview');
-			}
-		}
-
 		function OptanonWrapper() {
-			updateGoogleAnalyticsState();
-
 			var body = document.querySelector('body');
 			var bodyHeight = body.getBoundingClientRect().height;
 			var banner = document.querySelector('#onetrust-banner-sdk');
@@ -211,7 +183,7 @@
 <meta name="twitter:url" content="https://miro.com/">
 <meta name="twitter:title" content="Terms of Service, Online Whiteboard | Miro">
 <meta name="twitter:description" content="Miro Terms of Service">
-<meta name="twitter:image" content="https://static-website.miro.com/static/images/page/legal/legal_share_image.png?version=develop.452.production&00001">
+<meta name="twitter:image" content="https://static-website.miro.com/static/images/page/legal/legal_share_image.png?version=develop.454.production&00001">
 			
 							<meta property="og:site_name" content="https://miro.com/"/>
 <meta property="og:type" content="website"/>
@@ -220,14 +192,14 @@
 
 <meta property="og:title" content="Terms of Service, Online Whiteboard | Miro"/>
 <meta property="og:description" content="Miro Terms of Service"/>
-<meta property="og:image" content="https://static-website.miro.com/static/images/page/legal/legal_share_image.png?version=develop.452.production&00001"/>
+<meta property="og:image" content="https://static-website.miro.com/static/images/page/legal/legal_share_image.png?version=develop.454.production&00001"/>
 
 
 					
 		
 	
-					<link rel="preload" href="https://static-website.miro.com/static/font/spoof/spoof-bold.woff2?version=develop.452.production" as="font" type="font/woff2" crossorigin>
-			<link rel="preload" href="https://static-website.miro.com/static/font/formular/formular-regular.woff2?version=develop.452.production" as="font" type="font/woff2" crossorigin>
+					<link rel="preload" href="https://static-website.miro.com/static/font/spoof/spoof-bold.woff2?version=develop.454.production" as="font" type="font/woff2" crossorigin>
+			<link rel="preload" href="https://static-website.miro.com/static/font/formular/formular-regular.woff2?version=develop.454.production" as="font" type="font/woff2" crossorigin>
 		
 					<meta name="norton-safeweb-site-verification"
 				  content="w9ld7s6-k1sgt064fgtd0onubirhhz5agmkbckiwizt-7qgsjt8za6wrfsby5kucji2vigd377lzy1i3q-3m5307wjol1jorjgttyu1qcuu5ddja7b37urwxv5koavm2"/>
@@ -260,36 +232,6 @@
 			h.timeout = c;
 		})(window, document.documentElement, 'async-hide', 'dataLayer', 3000,
 			{'GTM-NKM55R8': true});
-
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-		ga('create', 'UA-32835154-1', 'auto', {'useAmpClientId': true});
-		//Enable Google Optimize if user agent is not a bot
-					ga('require', 'GTM-NKM55R8');
-		
-		
-		ga(function (tracker) {
-			var clientId = tracker.get('clientId');
-
-			tracker.set('dimension6', clientId);
-		});
-
-		
-		//ajsAnonymousId - global variable from Application.php str 196
-		ga('set', 'anonymous_id', '');
-
-		ga('set', 'site_language', 'en');
-		ga('send', 'pageview');
 	</script>
 		
 						<script>
@@ -305,7 +247,6 @@
 					'professional_yearly': 'Premium'
 				},
 				init: function () {
-					ga('require', 'ecommerce');
 					this.status = true;
 				},
 				addTransaction: function (transaction) {
@@ -323,13 +264,15 @@
 							data.id = this.plans[data.id];
 						}
 
-						ga('ecommerce:addTransaction', data);
+						dataLayer.push(Objec.assign({
+							event: 'ga-event', gaEvent: 'ecommerce:addTransaction',
+						}, data);
 					}
 					this.transactions = [];
 				},
 				send: function () {
 					this.preparationData();
-					ga('ecommerce:send');
+					dataLayer.push({ event: 'ga-event', gaEvent: 'ecommerce:send'});
 				}
 			}
 		})();
@@ -347,22 +290,22 @@
 		s.parentNode.insertBefore(p, s);
 	})();
 </script>		
-					<link rel="stylesheet" href="https://static-website.miro.com/static/css/common/common.css?version=develop.452.production" type="text/css" media="screen">
+					<link rel="stylesheet" href="https://static-website.miro.com/static/css/common/common.css?version=develop.454.production" type="text/css" media="screen">
 					
-				<link rel="stylesheet" href="https://static-website.miro.com/static/css/page/legal/main.css?version=develop.452.production" type="text/css" media="all"/>
+				<link rel="stylesheet" href="https://static-website.miro.com/static/css/page/legal/main.css?version=develop.454.production" type="text/css" media="all"/>
 
 	
-					<link rel="apple-touch-icon" sizes="180x180" href="https://static-website.miro.com/static/favicons/apple-touch-icon.png?version=develop.452.production">
-			<link rel="icon" type="image/png" sizes="32x32" href="https://static-website.miro.com/static/favicons/favicon-32x32.png?version=develop.452.production">
-			<link rel="icon" type="image/png" sizes="192x192" href="https://static-website.miro.com/static/favicons/android-chrome-192x192.png?version=develop.452.production">
-			<link rel="icon" type="image/png" sizes="16x16" href="https://static-website.miro.com/static/favicons/favicon-16x16.png?version=develop.452.production">
-			<link rel="manifest" href="https://static-website.miro.com/static/favicons/site.webmanifest?version=develop.452.production">
-			<link rel="shortcut icon" href="https://static-website.miro.com/static/favicons/favicon.ico?version=develop.452.production">
+					<link rel="apple-touch-icon" sizes="180x180" href="https://static-website.miro.com/static/favicons/apple-touch-icon.png?version=develop.454.production">
+			<link rel="icon" type="image/png" sizes="32x32" href="https://static-website.miro.com/static/favicons/favicon-32x32.png?version=develop.454.production">
+			<link rel="icon" type="image/png" sizes="192x192" href="https://static-website.miro.com/static/favicons/android-chrome-192x192.png?version=develop.454.production">
+			<link rel="icon" type="image/png" sizes="16x16" href="https://static-website.miro.com/static/favicons/favicon-16x16.png?version=develop.454.production">
+			<link rel="manifest" href="https://static-website.miro.com/static/favicons/site.webmanifest?version=develop.454.production">
+			<link rel="shortcut icon" href="https://static-website.miro.com/static/favicons/favicon.ico?version=develop.454.production">
 			<meta name="apple-mobile-web-app-title" content="Miro">
 			<meta name="application-name" content="Miro">
 			<meta name="msapplication-TileColor" content="#ffd02f">
-			<meta name="msapplication-TileImage" content="https://static-website.miro.com/static/favicons/mstile-144x144.png?version=develop.452.production">
-			<meta name="msapplication-config" content="https://static-website.miro.com/static/favicons/browserconfig.xml?version=develop.452.production">
+			<meta name="msapplication-TileImage" content="https://static-website.miro.com/static/favicons/mstile-144x144.png?version=develop.454.production">
+			<meta name="msapplication-config" content="https://static-website.miro.com/static/favicons/browserconfig.xml?version=develop.454.production">
 		
 					<meta name="msvalidate.01" content="5A56B40715B8638E55FB9FCCEFC4CEFE"/>
 		
@@ -1433,7 +1376,7 @@ Permitted Use</h4><p>During the Subscription Term, Customer may access and use t
 										<rect x="0.5" y="0.5" width="141" height="47" rx="7.5" stroke="white"/>
 										</svg>
 									</span>
-									<img class="footer-1__social-button-mobile lazyload" data-src="https://static-website.miro.com/static/images/components/sections/footer/app_store_btn_mobile.svg?version=develop.452.production">
+									<img class="footer-1__social-button-mobile lazyload" data-src="https://static-website.miro.com/static/images/components/sections/footer/app_store_btn_mobile.svg?version=develop.454.production">
 								</span>
 							</a>
 						</li>
@@ -1565,12 +1508,12 @@ Permitted Use</h4><p>During the Subscription Term, Customer may access and use t
 											</defs>
 										</svg>
 									</span>
-									<img class="footer-1__social-button-mobile lazyload" data-src="https://static-website.miro.com/static/images/components/sections/footer/google_play_btn_mobile.svg?version=develop.452.production">
+									<img class="footer-1__social-button-mobile lazyload" data-src="https://static-website.miro.com/static/images/components/sections/footer/google_play_btn_mobile.svg?version=develop.454.production">
 								</span>
 							</a>
 						</li>
 						<li class="footer-1__social-buttons-item">
-							<img class="footer-1__footer-logo lazyload" data-src="https://static-website.miro.com/static/images/components/sections/footer/miro_logo.svg?version=develop.452.production">
+							<img class="footer-1__footer-logo lazyload" data-src="https://static-website.miro.com/static/images/components/sections/footer/miro_logo.svg?version=develop.454.production">
 						</li>
 					</ul>
 				</div>
@@ -1595,7 +1538,7 @@ Permitted Use</h4><p>During the Subscription Term, Customer may access and use t
 	
 			<input type="hidden" name="nightwatch" value="/legal/terms-of-service/">
 	
-		<script src="https://static-website.miro.com/static/js/global.js?version=develop.452.production"></script>
+		<script src="https://static-website.miro.com/static/js/global.js?version=develop.454.production"></script>
 	
 		<!-- Split.io -->
 	<script src="//cdn.split.io/sdk/split-10.15.8.min.js"></script>
@@ -1671,7 +1614,7 @@ Permitted Use</h4><p>During the Subscription Term, Customer may access and use t
 </script>
 
 
-		<script src="https://static-website.miro.com/static/js/page/legal/legal.js?version=develop.452.production"></script>
+		<script src="https://static-website.miro.com/static/js/page/legal/legal.js?version=develop.454.production"></script>
 	
 
 
