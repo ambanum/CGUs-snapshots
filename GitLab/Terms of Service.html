@@ -57,7 +57,7 @@ GitLab
     function OptanonWrapper() { }
   //]]>
 </script>
-<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=6e5c2ed7'></script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=748d0460'></script>
 
 <script>
 window.dataLayer = window.dataLayer || []
@@ -92,8 +92,8 @@ _st('install','DTF81Pizm7yGQpgXcrMP','2.0.0');
 <link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
 <link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
 
-<link href="/stylesheets/highlight-tooltip.css?cacheBust=6e5c2ed7" rel=stylesheet />
-<link href="/stylesheets/slippers.css?cacheBust=6e5c2ed7" rel=stylesheet />
+<link href="/stylesheets/highlight-tooltip.css?cacheBust=748d0460" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=748d0460" rel=stylesheet />
 <link href="/stylesheets/handbook.css" rel=stylesheet />
 <link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
 </head>
@@ -106,7 +106,7 @@ _st('install','DTF81Pizm7yGQpgXcrMP','2.0.0');
 <header
 class="slp-flex slp-justify-between slp-items-center slp-overflow-hidden slp-fill-current"
 >
-<a href="/">
+<a href="/" data-nav="logo"
 <img src="/images/icons/logos/slp-icon.svg" class="slp-pl-16 slp-p-8 slp-inline-block" style="height: 6.0rem; width: 6.5rem">
 </a>
 <button
@@ -133,11 +133,11 @@ class="slp-w-full slp-border-2 slp-border-solid slp-border-black slp-text-graysc
 </div>
 </div>
 <div class=slp-overflow-hidden style="z-index: 1000000;">
-<button class=navigation-mobile__button data-inbound-analytics=navheader>
+<button class=navigation-mobile__button data-nav=header>
 <div
 class="slp-flex slp-flex-row slp-justify-between slp-py-16 slp-items-center slp-cursor-pointer"
 >
-<p class="slp-text-base slp-mb-0 slp-text-black" data-inbound-analytics=navheadertext>Product</p>
+<p class="slp-text-base slp-mb-0 slp-text-black">Product</p>
 <img src="/images/icons/slp-caret-down.svg">
 </div>
 </button>
@@ -146,6 +146,7 @@ class="slp-flex slp-flex-row slp-justify-between slp-py-16 slp-items-center slp-
 <a
 href="/stages-devops-lifecycle/"
 class="slp-text-sm slp-text-ui-secondary-dark slp-py-8"
+data-nav="GitLab: the DevOps platform"
 >
 GitLab: the DevOps platform
 </a>
@@ -154,6 +155,7 @@ GitLab: the DevOps platform
 <a
 href="https://gitlab.com/explore"
 class="slp-text-sm slp-text-ui-secondary-dark slp-py-8"
+data-nav="Explore GitLab"
 >
 Explore GitLab
 </a>
@@ -162,6 +164,7 @@ Explore GitLab
 <a
 href="/install/"
 class="slp-text-sm slp-text-ui-secondary-dark slp-py-8"
+data-nav="Install GitLab"
 >
 Install GitLab
 </a>
@@ -170,6 +173,7 @@ Install GitLab
 <a
 href="/is-it-any-good/"
 class="slp-text-sm slp-text-ui-secondary-dark slp-py-8"
+data-nav="How GitLab compares"
 >
 How GitLab compares
 </a>
@@ -180,11 +184,11 @@ class="slp-border-t slp-border-grayscale-c3 slp-my-0 slp-border-solid"
 />
 </div>
 <div class=slp-overflow-hidden style="z-index: 1000000;">
-<button class=navigation-mobile__button data-inbound-analytics=navheader>
+<button class=navigation-mobile__button data-nav=header>
 <div
 class="slp-flex slp-flex-row slp-justify-between slp-py-16 slp-items-center slp-cursor-pointer"
 >
-<p class="slp-text-base slp-mb-0 slp-text-black" data-inbound-analytics=navheadertext>Solutions</p>
+<p class="slp-text-base slp-mb-0 slp-text-black">Solutions</p>
 <img src="/images/icons/slp-caret-down.svg">
 </div>
 </button>
@@ -201,6 +205,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/enterprise/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav=Enterprise
 >Enterprise</a
 >
 </li>
@@ -210,6 +215,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/small-business/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Small business"
 >Small business</a
 >
 </li>
@@ -219,6 +225,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/solutions/public-sector/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Public sector"
 >Public sector</a
 >
 </li>
@@ -234,6 +241,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/stages-devops-lifecycle/continuous-integration/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Continuous integration (CI/CD)"
 >Continuous integration (CI/CD)</a
 >
 </li>
@@ -243,6 +251,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/stages-devops-lifecycle/source-code-management/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Source code management"
 >Source code management</a
 >
 </li>
@@ -252,6 +261,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/stages-devops-lifecycle/auto-devops/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Out-of-the-box pipelines"
 >Out-of-the-box pipelines</a
 >
 </li>
@@ -261,6 +271,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/solutions/dev-sec-ops/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Security (DevSecOps)"
 >Security (DevSecOps)</a
 >
 </li>
@@ -270,6 +281,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/solutions/agile-delivery/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Agile development"
 >Agile development</a
 >
 </li>
@@ -279,6 +291,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/solutions/value-stream-management/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Value stream management"
 >Value stream management</a
 >
 </li>
@@ -288,6 +301,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/solutions/gitops/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav=GitOps
 >GitOps</a
 >
 </li>
@@ -297,6 +311,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="https://about.gitlab.com/solutions/devops-platform/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="The DevOps Platform"
 >The DevOps Platform</a
 >
 </li>
@@ -306,11 +321,11 @@ class="slp-border-t slp-border-grayscale-c3 slp-my-0 slp-border-solid"
 />
 </div>
 <div class=slp-overflow-hidden style="z-index: 1000000;">
-<button class=navigation-mobile__button data-inbound-analytics=navheader>
+<button class=navigation-mobile__button data-nav=header>
 <div
 class="slp-flex slp-flex-row slp-justify-between slp-py-16 slp-items-center slp-cursor-pointer"
 >
-<p class="slp-text-base slp-mb-0 slp-text-black" data-inbound-analytics=navheadertext>Resources</p>
+<p class="slp-text-base slp-mb-0 slp-text-black">Resources</p>
 <img src="/images/icons/slp-caret-down.svg">
 </div>
 </button>
@@ -327,6 +342,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/get-started/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Getting started"
 >Getting started</a
 >
 </li>
@@ -336,6 +352,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/topics/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Industry topics and trends"
 >Industry topics and trends</a
 >
 </li>
@@ -345,6 +362,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="https://docs.gitlab.com/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="GitLab docs"
 >GitLab docs</a
 >
 </li>
@@ -354,6 +372,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/learn/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="GitLab Learn"
 >GitLab Learn</a
 >
 </li>
@@ -363,6 +382,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/blog/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav=Blog
 >Blog</a
 >
 </li>
@@ -372,6 +392,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/services/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav=Services
 >Services</a
 >
 </li>
@@ -381,6 +402,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/customers/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Customer case studies"
 >Customer case studies</a
 >
 </li>
@@ -390,6 +412,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/resources/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Additional resources"
 >Additional resources</a
 >
 </li>
@@ -405,6 +428,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/company/culture/all-remote/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Working remotely"
 >Working remotely</a
 >
 </li>
@@ -414,6 +438,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/community/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Community programs"
 >Community programs</a
 >
 </li>
@@ -423,6 +448,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/events/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Upcoming events"
 >Upcoming events</a
 >
 </li>
@@ -432,6 +458,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/developer-survey/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="2021 Developer survey results"
 >2021 Developer survey results</a
 >
 </li>
@@ -441,11 +468,11 @@ class="slp-border-t slp-border-grayscale-c3 slp-my-0 slp-border-solid"
 />
 </div>
 <div class=slp-overflow-hidden style="z-index: 1000000;">
-<button class=navigation-mobile__button data-inbound-analytics=navheader>
+<button class=navigation-mobile__button data-nav=header>
 <div
 class="slp-flex slp-flex-row slp-justify-between slp-py-16 slp-items-center slp-cursor-pointer"
 >
-<p class="slp-text-base slp-mb-0 slp-text-black" data-inbound-analytics=navheadertext>Partners</p>
+<p class="slp-text-base slp-mb-0 slp-text-black">Partners</p>
 <img src="/images/icons/slp-caret-down.svg">
 </div>
 </button>
@@ -462,6 +489,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/partners/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="GitLab partners"
 >GitLab partners</a
 >
 </li>
@@ -477,6 +505,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="/partners/technology-partners/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Find a technology partner"
 >Find a technology partner</a
 >
 </li>
@@ -486,6 +515,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="https://partners.gitlab.com/English/register_email.aspx"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Become a technology partner"
 >Become a technology partner</a
 >
 </li>
@@ -501,6 +531,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="https://partners.gitlab.com/English/directory/"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Find a channel partner"
 >Find a channel partner</a
 >
 </li>
@@ -510,6 +541,7 @@ class="slp-mt-0 slp-pb-16 slp-pl-16 slp-list-none"
 <a
 href="https://partners.gitlab.com/English/#scroll-to-benefits"
 class="slp-text-sm slp-text-ui-secondary-dark"
+data-nav="Become a channel partner"
 >Become a channel partner</a
 >
 </li>
@@ -522,6 +554,7 @@ class="slp-border-t slp-border-grayscale-c3 slp-my-0 slp-border-solid"
 <a
 href="/pricing/"
 class="slp-py-16 slp-text-base slp-text-black slp-block"
+data-nav=Pricing
 >
 Pricing
 </a>
@@ -530,11 +563,11 @@ class="slp-border-t slp-border-grayscale-c3 slp-my-0 slp-border-solid"
 />
 </div>
 <div class=slp-overflow-hidden style="z-index: 1000000;">
-<button class=navigation-mobile__button data-inbound-analytics=navheader>
+<button class=navigation-mobile__button data-nav=header>
 <div
 class="slp-flex slp-flex-row slp-justify-between slp-py-16 slp-items-center slp-cursor-pointer"
 >
-<p class="slp-text-base slp-mb-0 slp-text-black" data-inbound-analytics=navheadertext>Support</p>
+<p class="slp-text-base slp-mb-0 slp-text-black">Support</p>
 <img src="/images/icons/slp-caret-down.svg">
 </div>
 </button>
@@ -543,6 +576,7 @@ class="slp-flex slp-flex-row slp-justify-between slp-py-16 slp-items-center slp-
 <a
 href="/support/"
 class="slp-text-sm slp-text-ui-secondary-dark slp-py-8"
+data-nav="Contact Support"
 >
 Contact Support
 </a>
@@ -551,6 +585,7 @@ Contact Support
 <a
 href="/get-help/"
 class="slp-text-sm slp-text-ui-secondary-dark slp-py-8"
+data-nav="Support resources"
 >
 Support resources
 </a>
@@ -563,6 +598,7 @@ class="slp-border-t slp-border-grayscale-c3 slp-my-0 slp-border-solid"
 <a
 href="https://gitlab.com/users/sign_in"
 class="slp-py-16 slp-text-base slp-text-black slp-block"
+data-nav=login
 >
 Login
 </a>
@@ -570,10 +606,20 @@ Login
 <div
 class="slp-fixed slp-z-10 slp-bg-white slp-bottom-0 slp-left-0 slp-right-0 slp-px-16 slp-shadow-soft navigation-mobile__cta"
 >
-<a href="https://about.gitlab.com/sales/" class="slp-w-full slp-btn slp-btn--outline slp-outline-button" style="margin-bottom: 0rem !important; border: 1px solid #333 !important;">
+<a
+href="https://about.gitlab.com/sales/"
+class="slp-w-full slp-btn slp-btn--outline slp-outline-button"
+style="margin-bottom: 0rem !important; border: 1px solid #333 !important;"
+data-nav=sales
+>
 Talk to an expert
 </a>
-<a href="https://about.gitlab.com/pricing/" class="slp-w-full slp-btn" style="margin-top: 0.8rem !important;">
+<a
+href="https://about.gitlab.com/pricing/"
+class="slp-w-full slp-btn"
+style="margin-top: 0.8rem !important;"
+data-nav=pricing
+>
 Get Free Trial
 </a>
 </div>
@@ -586,18 +632,17 @@ Get Free Trial
 }
 </style>
 <div id=navigation-desktop class="slp-hidden nav:slp-flex lg:slp-px-16 slp-pr-16 slp-bg-white">
-<a href="/" title=GitLab class="nav:slp-mr-24" data-inbound-analytics=navctalogo>
+<a href="/" title=GitLab class="nav:slp-mr-24" data-nav=logo>
 <img src="/images/icons/logos/slp-logo.svg" class="nav:slp-hidden lg:slp-inline-block slp-relative" style="top: 0.8rem;">
 <img src="/images/icons/logos/slp-icon.svg" class="slp-pl-16 slp-p-8 slp-relative nav:slp-inline-block lg:slp-hidden" style="top: 0.5rem; height: 6.0rem; width: 6.5rem;">
 </a>
 <div
 class="slp-group slp-inline slp-relative slp-text-base slp-p-16 slp-py-24 slp-align-middle slp-text-grayscale-333 hover:slp-text-ui-secondary-dark slp-transition slp-duration-300 slp-ease-in-out"
-data-inbound-analytics=navheader
+data-nav=header
 style="height: 7rem; cursor: default;"
 >
 <p
 aria-haspopup=true
-data-inbound-analytics=navheadertext
 class="slp-text-black slp-inline slp-pb-2 slp-border-ui-secondary-dark slp-p-4 slp-navigation-desktop__drop-down slp-mb-0 group-hover:slp-text-ui-secondary-dark"
 >
 Product
@@ -620,6 +665,7 @@ style="grid-template-rows: repeat(4, auto);"
 href="/stages-devops-lifecycle/"
 class="slp-block slp-py-12 slp-px-8 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="width: 26.2rem"
+data-nav="GitLab: the DevOps platform"
 >
 GitLab: the DevOps platform
 <span
@@ -639,6 +685,7 @@ Discover all-in-one software delivery.
 href="https://gitlab.com/explore"
 class="slp-block slp-py-12 slp-px-8 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="width: 26.2rem"
+data-nav="Explore GitLab"
 >
 Explore GitLab
 <span
@@ -658,6 +705,7 @@ See repositories in action with GitLab projects.
 href="/install/"
 class="slp-block slp-py-12 slp-px-8 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="width: 26.2rem"
+data-nav="Install GitLab"
 >
 Install GitLab
 <span
@@ -677,6 +725,7 @@ Install one package, run a complete solution.
 href="/is-it-any-good/"
 class="slp-block slp-py-12 slp-px-8 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="width: 26.2rem"
+data-nav="How GitLab compares"
 >
 How GitLab compares
 <span
@@ -697,12 +746,11 @@ See why we're the best in DevOps
 </div>
 <div
 class="slp-group slp-inline slp-relative slp-text-base slp-p-16 slp-py-24 slp-align-middle slp-text-grayscale-333 hover:slp-text-ui-secondary-dark slp-transition slp-duration-300 slp-ease-in-out"
-data-inbound-analytics=navheader
+data-nav=header
 style="height: 7rem; cursor: default;"
 >
 <p
 aria-haspopup=true
-data-inbound-analytics=navheadertext
 class="slp-text-black slp-inline slp-pb-2 slp-border-ui-secondary-dark slp-p-4 slp-navigation-desktop__drop-down slp-mb-0 group-hover:slp-text-ui-secondary-dark"
 >
 Solutions
@@ -730,6 +778,7 @@ style="grid-template-rows: repeat(4, auto);"
 >
 <a
 href="/enterprise/"
+data-nav=Enterprise
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -747,6 +796,7 @@ Adopt one platform for endless possibilities.
 </a>
 <a
 href="/small-business/"
+data-nav="Small business"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -764,6 +814,7 @@ Get a DevOps platform that grows with you.
 </a>
 <a
 href="/solutions/public-sector/"
+data-nav="Public sector"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -794,6 +845,7 @@ style="grid-template-rows: repeat(4, auto);"
 >
 <a
 href="/stages-devops-lifecycle/continuous-integration/"
+data-nav="Continuous integration (CI/CD)"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -811,6 +863,7 @@ Automate everything, accelerate deployment.
 </a>
 <a
 href="/stages-devops-lifecycle/source-code-management/"
+data-nav="Source code management"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -828,6 +881,7 @@ Build the future with a shared history.
 </a>
 <a
 href="/stages-devops-lifecycle/auto-devops/"
+data-nav="Out-of-the-box pipelines"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -845,6 +899,7 @@ Adopt DevOps with a single commit.
 </a>
 <a
 href="/solutions/dev-sec-ops/"
+data-nav="Security (DevSecOps)"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -862,6 +917,7 @@ Integrate security, deliver faster continuously.
 </a>
 <a
 href="/solutions/agile-delivery/"
+data-nav="Agile development"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -879,6 +935,7 @@ Keep your methodology, gain functionality.
 </a>
 <a
 href="/solutions/value-stream-management/"
+data-nav="Value stream management"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -896,6 +953,7 @@ Visualize what works and optimize the rest.
 </a>
 <a
 href="/solutions/gitops/"
+data-nav=GitOps
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -913,6 +971,7 @@ Simplify IT with DevOps-style automation.
 </a>
 <a
 href="https://about.gitlab.com/solutions/devops-platform/"
+data-nav="The DevOps Platform"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -936,12 +995,11 @@ Develop secure software faster in a single platform.
 </div>
 <div
 class="slp-group slp-inline slp-relative slp-text-base slp-p-16 slp-py-24 slp-align-middle slp-text-grayscale-333 hover:slp-text-ui-secondary-dark slp-transition slp-duration-300 slp-ease-in-out"
-data-inbound-analytics=navheader
+data-nav=header
 style="height: 7rem; cursor: default;"
 >
 <p
 aria-haspopup=true
-data-inbound-analytics=navheadertext
 class="slp-text-black slp-inline slp-pb-2 slp-border-ui-secondary-dark slp-p-4 slp-navigation-desktop__drop-down slp-mb-0 group-hover:slp-text-ui-secondary-dark"
 >
 Resources
@@ -969,6 +1027,7 @@ style="grid-template-rows: repeat(4, auto);"
 >
 <a
 href="/get-started/"
+data-nav="Getting started"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -986,6 +1045,7 @@ Explore our quick-start checklist.
 </a>
 <a
 href="/topics/"
+data-nav="Industry topics and trends"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1003,6 +1063,7 @@ Get cross-functional software delivery insights.
 </a>
 <a
 href="https://docs.gitlab.com/"
+data-nav="GitLab docs"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1020,6 +1081,7 @@ Access step-by-step tutorials and guides.
 </a>
 <a
 href="/learn/"
+data-nav="GitLab Learn"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1037,6 +1099,7 @@ Watch videos and self-driven demos.
 </a>
 <a
 href="/blog/"
+data-nav=Blog
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1054,6 +1117,7 @@ Read up on releases, contributions, and more.
 </a>
 <a
 href="/services/"
+data-nav=Services
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1071,6 +1135,7 @@ Adopt DevOps faster with our support services.
 </a>
 <a
 href="/customers/"
+data-nav="Customer case studies"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1088,6 +1153,7 @@ Learn why top companies trust GitLab for DevOps.
 </a>
 <a
 href="/resources/"
+data-nav="Additional resources"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1118,6 +1184,7 @@ style="grid-template-rows: repeat(4, auto);"
 >
 <a
 href="/company/culture/all-remote/"
+data-nav="Working remotely"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1135,6 +1202,7 @@ Discover how we work better together – wherever.
 </a>
 <a
 href="/community/"
+data-nav="Community programs"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1152,6 +1220,7 @@ Access contributor resources and startup grants.
 </a>
 <a
 href="/events/"
+data-nav="Upcoming events"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1169,6 +1238,7 @@ Find meetups, webinars, conferences, and more.
 </a>
 <a
 href="/developer-survey/"
+data-nav="2021 Developer survey results"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1192,12 +1262,11 @@ See DevSecOps through the eyes of practitioners
 </div>
 <div
 class="slp-group slp-inline slp-relative slp-text-base slp-p-16 slp-py-24 slp-align-middle slp-text-grayscale-333 hover:slp-text-ui-secondary-dark slp-transition slp-duration-300 slp-ease-in-out"
-data-inbound-analytics=navheader
+data-nav=header
 style="height: 7rem; cursor: default;"
 >
 <p
 aria-haspopup=true
-data-inbound-analytics=navheadertext
 class="slp-text-black slp-inline slp-pb-2 slp-border-ui-secondary-dark slp-p-4 slp-navigation-desktop__drop-down slp-mb-0 group-hover:slp-text-ui-secondary-dark"
 >
 Partners
@@ -1225,6 +1294,7 @@ style="grid-template-rows: repeat(4, auto);"
 >
 <a
 href="/partners/"
+data-nav="GitLab partners"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1255,6 +1325,7 @@ style="grid-template-rows: repeat(4, auto);"
 >
 <a
 href="/partners/technology-partners/"
+data-nav="Find a technology partner"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1272,6 +1343,7 @@ See our cloud partners and other integrators.
 </a>
 <a
 href="https://partners.gitlab.com/English/register_email.aspx"
+data-nav="Become a technology partner"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1302,6 +1374,7 @@ style="grid-template-rows: repeat(4, auto);"
 >
 <a
 href="https://partners.gitlab.com/English/directory/"
+data-nav="Find a channel partner"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1319,6 +1392,7 @@ Find resellers, solution providers, and more.
 </a>
 <a
 href="https://partners.gitlab.com/English/#scroll-to-benefits"
+data-nav="Become a channel partner"
 class="slp-block slp-p-10 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="min-width: 27.4rem"
 >
@@ -1340,15 +1414,14 @@ Grow your business alongside our DevOps experts.
 </div>
 </div>
 </div>
-<a href="/pricing/" class="slp-flex slp-no-underline">
+<a href="/pricing/" class="slp-flex slp-no-underline" data-nav=Pricing>
 <div
 class="slp-group slp-inline slp-relative slp-text-base slp-p-16 slp-py-24 slp-cursor-pointer slp-align-middle slp-text-grayscale-333 hover:slp-text-ui-secondary-dark slp-transition slp-duration-300 slp-ease-in-out"
-data-inbound-analytics=navheader
+data-nav=header
 style="height: 7rem;"
 >
 <p
 aria-haspopup=true
-data-inbound-analytics=navheadertext
 class="slp-text-black slp-inline slp-pb-2 slp-border-ui-secondary-dark slp-p-4 slp-mb-0 group-hover:slp-text-ui-secondary-dark"
 >
 Pricing
@@ -1357,12 +1430,11 @@ Pricing
 </a>
 <div
 class="slp-group slp-inline slp-relative slp-text-base slp-p-16 slp-py-24 slp-align-middle slp-text-grayscale-333 hover:slp-text-ui-secondary-dark slp-transition slp-duration-300 slp-ease-in-out"
-data-inbound-analytics=navheader
+data-nav=header
 style="height: 7rem; cursor: default;"
 >
 <p
 aria-haspopup=true
-data-inbound-analytics=navheadertext
 class="slp-text-black slp-inline slp-pb-2 slp-border-ui-secondary-dark slp-p-4 slp-navigation-desktop__drop-down slp-mb-0 group-hover:slp-text-ui-secondary-dark"
 >
 Support
@@ -1385,6 +1457,7 @@ style="grid-template-rows: repeat(4, auto);"
 href="/support/"
 class="slp-block slp-py-12 slp-px-8 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="width: 26.2rem"
+data-nav="Contact Support"
 >
 Contact Support
 <span
@@ -1404,6 +1477,7 @@ Find out how, where, and when we offer support.
 href="/get-help/"
 class="slp-block slp-py-12 slp-px-8 slp-text-ui-secondary-dark slp-group slp-no-underline"
 style="width: 26.2rem"
+data-nav="Support resources"
 >
 Support resources
 <span
@@ -1435,7 +1509,7 @@ class="slp-p-16 slp-mr-16 slp-border-none js-search-toggle"
 href="/sales/"
 class="slp-btn--outline slp-btn"
 style="margin: 0.8rem 0.8rem 0.4rem 0px !important; border: 1px solid #333 !important; line-height: 1 !important;"
-data-inbound-analytics=navctasales
+data-nav=sales
 >
 Talk to an expert
 </a>
@@ -1443,14 +1517,14 @@ Talk to an expert
 href="/free-trial/"
 class=slp-btn
 style="margin: 0.8rem 0px 0.4rem !important; border: 1px solid #F96424 !important; line-height: 1 !important;"
-data-inbound-analytics=navctafreetrial
+data-nav=freetrial
 >
 Get free trial
 </a>
 <a
 href="https://gitlab.com/users/sign_in"
 class="slp-text-base slp-p-16 slp-ml-16 slp-text-black hover:slp-text-ui-secondary-dark"
-data-inbound-analytics=navctalogin
+data-nav=login
 >
 Login
 </a>
@@ -1632,19 +1706,19 @@ Robin Schulman
 <div class='animated container'>
 <ul class='text-center footer-social'>
 <li>
-<a href="https://twitter.com/gitlab" data-ga-name=twitter data-ga-location=footer><i class='fab fa-twitter'></i>
+<a href="https://twitter.com/gitlab"><i class='fab fa-twitter'></i>
 <span class=sr-only>Twitter</span>
 </a></li>
 <li>
-<a href="https://www.facebook.com/gitlab" data-ga-name=facebook data-ga-location=footer><i class='fab fa-facebook'></i>
+<a href="https://www.facebook.com/gitlab"><i class='fab fa-facebook'></i>
 <span class=sr-only>Facebook</span>
 </a></li>
 <li>
-<a href="https://www.youtube.com/channel/UCnMGQ8QHMAnVIsI3xJrihhg" data-ga-name=youtube data-ga-location=footer><i class='fab fa-youtube'></i>
+<a href="https://www.youtube.com/channel/UCnMGQ8QHMAnVIsI3xJrihhg"><i class='fab fa-youtube'></i>
 <span class=sr-only>YouTube</span>
 </a></li>
 <li>
-<a href="https://www.linkedin.com/company/gitlab-com" data-ga-name=linkedin data-ga-location=footer><i class='fab fa-linkedin'></i>
+<a href="https://www.linkedin.com/company/gitlab-com"><i class='fab fa-linkedin'></i>
 <span class=sr-only>LinkedIn</span>
 </a></li>
 </ul>
@@ -1752,13 +1826,13 @@ View
 </span>
 GitLab B.V.
 </div>
-<script src="/javascripts/libs/jquery.min.js?cacheBust=6e5c2ed7"></script>
-<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=6e5c2ed7"></script>
-<script src="/javascripts/libs/bootstrap.min.js?cacheBust=6e5c2ed7"></script>
-<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=6e5c2ed7"></script>
-<script src="/javascripts/scripts.js?cacheBust=6e5c2ed7"></script>
-<script src="/javascripts/libs/popperjs.js?cacheBust=6e5c2ed7"></script>
-<script src="/javascripts/highlight-tooltip.js?cacheBust=6e5c2ed7"></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=748d0460"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=748d0460"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=748d0460"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=748d0460"></script>
+<script src="/javascripts/scripts.js?cacheBust=748d0460"></script>
+<script src="/javascripts/libs/popperjs.js?cacheBust=748d0460"></script>
+<script src="/javascripts/highlight-tooltip.js?cacheBust=748d0460"></script>
 <script>
   //<![CDATA[
     $.ajax({
