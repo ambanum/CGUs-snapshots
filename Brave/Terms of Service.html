@@ -43,7 +43,7 @@
     <link rel="icon" href="https://brave.com/static-assets/images/brave-favicon.png">
 
     
-    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-500-d52c42101e.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-400-d9a8adde56.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-700-991aaaa7ee.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-600-28c288f4d9.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/font_awesome_5_free-900-154d85a067.woff2"><script>try{new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-500-d52c42101e.woff2') format('woff2'),url('/static-assets/fonts/poppins-500-7224391fc4.woff') format('woff')",{'font-weight':500}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-400-d9a8adde56.woff2') format('woff2'),url('/static-assets/fonts/poppins-400-9c1b457525.woff') format('woff')",{}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-700-991aaaa7ee.woff2') format('woff2'),url('/static-assets/fonts/poppins-700-dde2d7d0b2.woff') format('woff')",{'font-weight':700}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-600-28c288f4d9.woff2') format('woff2'),url('/static-assets/fonts/poppins-600-3fb0958723.woff') format('woff')",{'font-weight':600}).load(),new FontFace('font awesome 5 free__subset',"url('/static-assets/fonts/font_awesome_5_free-900-154d85a067.woff2') format('woff2'),url('/static-assets/fonts/font_awesome_5_free-900-b5271546ed.woff') format('woff')",{'font-weight':900}).load()}catch(e){}</script><link rel="stylesheet" href="/static-assets/fonts/fonts-afc079da43.css"><link href="/static-assets/css/main.min.css" rel="stylesheet">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-500-d52c42101e.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-400-d9a8adde56.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-700-991aaaa7ee.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/poppins-600-9760542db2.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static-assets/fonts/font_awesome_5_free-900-154d85a067.woff2"><script>try{new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-500-d52c42101e.woff2') format('woff2'),url('/static-assets/fonts/poppins-500-7224391fc4.woff') format('woff')",{'font-weight':500}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-400-d9a8adde56.woff2') format('woff2'),url('/static-assets/fonts/poppins-400-9c1b457525.woff') format('woff')",{}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-700-991aaaa7ee.woff2') format('woff2'),url('/static-assets/fonts/poppins-700-dde2d7d0b2.woff') format('woff')",{'font-weight':700}).load(),new FontFace('poppins__subset',"url('/static-assets/fonts/poppins-600-9760542db2.woff2') format('woff2'),url('/static-assets/fonts/poppins-600-e95bd32cee.woff') format('woff')",{'font-weight':600}).load(),new FontFace('font awesome 5 free__subset',"url('/static-assets/fonts/font_awesome_5_free-900-154d85a067.woff2') format('woff2'),url('/static-assets/fonts/font_awesome_5_free-900-b5271546ed.woff') format('woff')",{'font-weight':900}).load()}catch(e){}</script><link rel="stylesheet" href="/static-assets/fonts/fonts-8030370ecd.css"><link href="/static-assets/css/main.min.css" rel="stylesheet">
     <noscript>
         <link href="/static-assets/css/noscript.min.css" rel="stylesheet" />
     </noscript>
@@ -720,7 +720,7 @@ July 14, 2020</p>
 <div class="announcement-banner announcement-banner__box">
     <a href="/wallet/" target="_blank" class="announcement-banner__link announcement-banner__inner announcement-banner__box">
         <span class="announcement-banner__content">
-            <strong>Brave Wallet for Android!</strong> <span class="announcement-banner__text--lg">The secure crypto wallet. Browser-native. Now on mobile!</span>
+            <strong>Brave Wallet for mobile!</strong> <span class="announcement-banner__text--lg">The secure crypto wallet. Browser-native. Now on Android &amp; iOS!</span>
         </span>
     </a>
     <button class="announcement-banner__close" aria-label="Brave Wallet">
@@ -732,8 +732,8 @@ July 14, 2020</p>
 <script>
     (function () {
         var banner = document.querySelector(".announcement-banner");
-        localStorage.removeItem("walletBannerHidden");
-        var flagName = "walletMobileBannerHidden";
+        localStorage.removeItem("walletMobileBannerHidden");
+        var flagName = "walletForIosBannerHidden";
         var bannerHidden = localStorage.getItem(flagName);
         if (bannerHidden === "true") {
             banner.style.display = "none";
