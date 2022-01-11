@@ -145,13 +145,13 @@
     <!-- navid Web Module: 0.2.0-91.8ce78a3 -->
     
     
-    <!-- searchbox Web Module: 3.0.0-385.f15db01 -->
+    <!-- searchbox Web Module: 3.0.0-390.f8c11e5 -->
     
     
-    <!-- navpromo Web Module: 3.0.0-284.cd977d1 -->
+    <!-- navpromo Web Module: 3.0.0-286.75fae8d -->
     
     
-    <!-- cookies Web Module: 0.0.3-699.ab769c6 -->
+    <!-- cookies Web Module: 0.0.3-700.c8b7bd5 -->
     
     
     <!-- useractivityhelper Web Module: 1.0.0-223.3871bc2 -->
@@ -165,7 +165,7 @@
 
     
     
-<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/4b622489aaf2a2e40cf9e52036ac45e8/css/box.css">
+<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/108ee1408a2b7d19ee45763ff751448b/css/box.css">
 
     
     
@@ -1193,15 +1193,15 @@ Version 1.6" />
                 const isOrbUx = !!document.querySelector('.orb-nav-pri-container');
                 if (isOrbUx) {
                     const script = document.createElement('script');
-                    script.src = 'https://nav.files.bbci.co.uk/searchbox/4b622489aaf2a2e40cf9e52036ac45e8//js/old-search-suggest.js';
+                    script.src = 'https://nav.files.bbci.co.uk/searchbox/108ee1408a2b7d19ee45763ff751448b//js/old-search-suggest.js';
                     script.async = true;
-                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/4b622489aaf2a2e40cf9e52036ac45e8/');
+                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/108ee1408a2b7d19ee45763ff751448b/');
                     script.setAttribute('data-variant', 'default');
                     document.head.appendChild(script);
                 } else {
-                    import('https://nav.files.bbci.co.uk/searchbox/4b622489aaf2a2e40cf9e52036ac45e8//js/search-suggest.js').then(drawer => {
+                    import('https://nav.files.bbci.co.uk/searchbox/108ee1408a2b7d19ee45763ff751448b//js/search-suggest.js').then(drawer => {
                         drawer.setupSearchDrawer({
-                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/4b622489aaf2a2e40cf9e52036ac45e8/',
+                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/108ee1408a2b7d19ee45763ff751448b/',
                             variant: 'default',
                         });
                     });
