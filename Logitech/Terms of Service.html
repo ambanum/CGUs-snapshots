@@ -2,7 +2,8 @@
 <!DOCTYPE HTML>
 <html lang="en-GB">
     <head>
-
+   
+   
    
 
     
@@ -406,7 +407,7 @@
    
 
     
-<link rel="stylesheet" href="/etc.clientlibs/logitech/clientlibs/replatform.min.8429bcf5047da2872275bd21f548b8f8.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/logitech/clientlibs/replatform.min.44c3d7e2b7bc9a4e3d84c87a7520025a.css" type="text/css">
 
 
 
@@ -455,7 +456,7 @@
 </head>
     
     
-    <body class="contentpage basepage page basicpage wcm-publish ">
+    <body class="contentpage basepage page basicpage wcm-publish " data-analytics-section="body">
 
 
 		
@@ -491,7 +492,7 @@
  
 
         
-        <div class="commerce-config" data-productinfo-path="/bin/logitech/productinfo.json" data-enable-paypal="true" data-page-path="/content/logitech-com/emea/live/en_gb/tos/terms" data-hcaptcha-site-key="c5192344-47cc-46c6-9561-d94dc893366f" data-extend-enabled="false" data-session-get="https://buy.logitech.com/store/logib2c/SessionToken?format=json" data-commerce-provider="digitalriver" data-free-shipping-threshold="39" data-cart-banner-text="&lt;p style=&#34;color: #FF2947;&#34;>To enjoy a complimentary Adobe Creative Cloud subscription with your eligible MX &amp;amp; ERGO product purchase, please &lt;a href=&#34;/bin/cart/view&#34;>click here to checkout&lt;/a>.&lt;br>&lt;a href=&#34;https://www.logitech.com/en-gb/mx/adobe-creative-cloud-subscription.html&#34;>Offer Details&lt;/a>&lt;/p>" data-special-message="Free shipping on orders GBP39.00 and over." data-enable-googlepay="true" data-dr-locale="en-gb" data-privacy-policy="https://buy.logitech.com/store/defaults/en_GB/DisplayDRPrivacyPolicyPage/eCommerceProvider.DR+globalTech+Inc." data-api-domain="https://api.digitalriver.com" data-about-dr-link="https://buy.logitech.com/store/defaults/en_GB/DisplayDRAboutDigitalRiverPage/eCommerceProvider.DR+globalTech+Inc." data-price-disclaimer-pos="below" data-sf-disabled="true" data-enable-applepay="true" data-klarna-enabled="true" data-cte-enabled="false" data-session-set="/content/logitech-com/emea/live/en_gb/tos/terms.logitechtoken.json" data-terms-of-sale="https://buy.logitech.com/store/defaults/en_GB/DisplayDRTermsAndConditionsPage/eCommerceProvider.DR+globalTech+Inc." data-docked-cart-enabled="true"></div>
+        <div class="commerce-config" data-productinfo-path="/bin/logitech/productinfo.json" data-enable-paypal="true" data-page-path="/content/logitech-com/emea/live/en_gb/tos/terms" data-hcaptcha-site-key="205e3f6b-2d35-44d7-9097-93cbf63229c0" data-extend-enabled="false" data-session-get="https://buy.logitech.com/store/logib2c/SessionToken?format=json" data-commerce-provider="digitalriver" data-free-shipping-threshold="39" data-special-message="Free shipping on orders GBP39.00 and over." data-enable-googlepay="true" data-dr-locale="en-gb" data-privacy-policy="https://buy.logitech.com/store/defaults/en_GB/DisplayDRPrivacyPolicyPage/eCommerceProvider.DR+globalTech+Inc." data-api-domain="https://api.digitalriver.com" data-about-dr-link="https://buy.logitech.com/store/defaults/en_GB/DisplayDRAboutDigitalRiverPage/eCommerceProvider.DR+globalTech+Inc." data-price-disclaimer-pos="below" data-sf-disabled="true" data-enable-applepay="true" data-klarna-enabled="true" data-cte-enabled="false" data-session-set="/content/logitech-com/emea/live/en_gb/tos/terms.logitechtoken.json" data-terms-of-sale="https://buy.logitech.com/store/defaults/en_GB/DisplayDRTermsAndConditionsPage/eCommerceProvider.DR+globalTech+Inc." data-docked-cart-enabled="true"></div>
         
         
             
@@ -501,7 +502,7 @@
             <div class="site-wrapper" role="region" aria-label="Logitech">
 	            <h1 class="seo-pagetitle">Terms of Use</h1>
 	              
-  <header>
+  <header data-analytics-section="header">
      
 
      
@@ -538,7 +539,7 @@
 
 
 
-	  <nav style="background-color: " class="component-brand-navigation theme-dark" data-country-code="GB" data-language-code="en" aria-label="Logitech Brands">
+	  <nav style="background-color: " class="component-brand-navigation theme-dark" data-country-code="GB" data-language-code="en" aria-label="Logitech Brands" data-analytics-section="brand-account-bar">
             <div id="skiptocontent"><a href="#maincontent" class="">SKIP TO MAIN CONTENT</a></div>
 			<!-- Top Brands Bar Sub Component -->
             <div class="top-bar hidden-xs hidden-sm">
@@ -785,9 +786,9 @@
 	
 		<!--googleoff: all-->
 		<!-- stopindex -->
-		<div class="primary-nav-container" data-theme-desktop="theme-dark" data-theme-tablet="theme-dark" data-theme-mobile="theme-dark">
+		<div class="primary-nav-container" data-theme-desktop="theme-dark" data-theme-tablet="theme-dark" data-theme-mobile="theme-dark" data-analytics-section="global-nav">
 		 <!-- mobile slide push menu, dynamically assembled based on desktop menu -->
-	            <nav class="mp-menu mp-cover" id="mp-menu" aria-label="Primary - Mobile">
+	            <nav class="mp-menu mp-cover" id="mp-menu" aria-label="Primary - Mobile" tabindex="0">
 	                <div class="mp-level">
 	                    <ul>
 	                    	
@@ -3984,33 +3985,33 @@ breadcrumbs not clickable
             }
         });
         
-        // https://jira.logitech.com/browse/LOGIB2B-1088
-        // HTML was added to comparison chart that breaks all instances at tablet/mobile
-        const compareChartAddToCarts = document.querySelectorAll('.js-pangea-comparison-chart .ctas-ctn');
-        compareChartAddToCarts.forEach(el => {
-            el.parentNode.removeChild(el);
-        });
+        // // https://jira.logitech.com/browse/LOGIB2B-1088
+        // // HTML was added to comparison chart that breaks all instances at tablet/mobile
+        // const compareChartAddToCarts = document.querySelectorAll('.js-pangea-comparison-chart .ctas-ctn');
+        // compareChartAddToCarts.forEach(el => {
+        //     el.parentNode.removeChild(el);
+        // });
         
-        // https://jira.logitech.com/browse/LOGIB2B-1088
-        // if description field is empty for all rows, don't show that column at tablet/mobile
-        const compareChartDescs = document.querySelectorAll('.js-pangea-comparison-chart .product-desc');
-        let anyDescsExist = false;
-        compareChartDescs.forEach(el => {
-            const text = el.textContent;
-            if(text !== null && text.trim() !== '') {
-                anyDescsExist = true;
-            }
-        });
-        if(!anyDescsExist) {
-            compareChartDescs.forEach(el => {
-                const cell = el.parentNode;
-                cell.parentNode.removeChild(cell);
-            });
-            const cellTitles = document.querySelectorAll('.js-pangea-comparison-chart .cell.description');
-            cellTitles.forEach(el => {
-                el.parentNode.removeChild(el);
-            });
-        }
+        // // https://jira.logitech.com/browse/LOGIB2B-1088
+        // // if description field is empty for all rows, don't show that column at tablet/mobile
+        // const compareChartDescs = document.querySelectorAll('.js-pangea-comparison-chart .product-desc');
+        // let anyDescsExist = false;
+        // compareChartDescs.forEach(el => {
+        //     const text = el.textContent;
+        //     if(text !== null && text.trim() !== '') {
+        //         anyDescsExist = true;
+        //     }
+        // });
+        // if(!anyDescsExist) {
+        //     compareChartDescs.forEach(el => {
+        //         const cell = el.parentNode;
+        //         cell.parentNode.removeChild(cell);
+        //     });
+        //     const cellTitles = document.querySelectorAll('.js-pangea-comparison-chart .cell.description');
+        //     cellTitles.forEach(el => {
+        //         el.parentNode.removeChild(el);
+        //     });
+        // }
     }
  
     // Wait until DOM is ready
@@ -4675,7 +4676,7 @@ This site is owned and operated by Logitech.</h5>
 
 		<!--googleoff: all-->
 		<!-- stopindex -->
-		<footer class="component-global-footer">
+		<footer class="component-global-footer" data-analytics-section="footer">
 		<div class="container">
 
 			<div class="footer-sitemap">
@@ -4772,7 +4773,7 @@ This site is owned and operated by Logitech.</h5>
 
     <div class="email-subscription js-email-subscription">
         <div class="email-subscription-content">
-            <form class="email-subscription-form js-email-subscription-form" name="email-subscription" action="/bin/user/subscribeService" method="post" novalidate data-error-unauthorised="The Request is not authorised" data-error-servlet-not-found="Sorry, service is currently not available. Please try after some time">
+            <form class="email-subscription-form js-email-subscription-form" name="email-subscription" action="/bin/user/subscribeservice" method="post" novalidate data-error-unauthorised="The Request is not authorised" data-error-servlet-not-found="Sorry, service is currently not available. Please try after some time">
                 <!-- Form Body -->
                 <div class="form-body js-form-body">
                     <input type="hidden" name="locale" value="en-gb" data-rule="required"/>
@@ -4915,7 +4916,7 @@ This site is owned and operated by Logitech.</h5>
                     </div>
                     <div class="email-subscription">
                         <div class="email-subscription-ctn">
-                            <form class="email-subscription-form js-email-subscription-form" name="email-subscription" action="/bin/user/subscribeService" method="post" novalidate data-error-unauthorised="Request an Unauthorised error message." data-error-servlet-not-found="An Invalid Subscription ID is authored." data-error-form-default="Subscription ID is not authored properly.">
+                            <form class="email-subscription-form js-email-subscription-form" name="email-subscription" action="/bin/user/subscribeservice" method="post" novalidate data-error-unauthorised="Request an Unauthorised error message." data-error-servlet-not-found="An Invalid Subscription ID is authored." data-error-form-default="Subscription ID is not authored properly.">
                                 <!-- Form Body -->
                                 <div class="form-body js-form-body">
                                     <input type="hidden" name="locale" value="en-gb" data-rule="required"/>
@@ -4984,7 +4985,7 @@ This site is owned and operated by Logitech.</h5>
     
 <script src="/etc.clientlibs/logitech/clientlibs/logitech-dependencies.min.669a5c8af979e693dcb3206e2df8adcd.js"></script>
 <script src="/etc.clientlibs/clientlibs/granite/jquery/granite/csrf.min.652a558c3774088b61b0530c184710d1.js"></script>
-<script src="/etc.clientlibs/logitech/clientlibs/replatform.min.9c45bfe1ce051a86e8dc9720803ecaf5.js"></script>
+<script src="/etc.clientlibs/logitech/clientlibs/replatform.min.2ce0b2526b3a13a581328d64451bacec.js"></script>
 
 
 
